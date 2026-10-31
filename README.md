@@ -54,7 +54,7 @@ Rejection does not grant permission to proceed. Independent controls can continu
 
 An auditor enters an assignment and selects the available development dataset. Grok retrieves requirements and drafts a scoped plan covering controls and a work program. A human can expand, edit, save, approve, reject, or request changes to the proposal.
 
-The approved plan governs subsequent work. Follow-up verification can be explicitly authorized within a reviewed window, normally 90 days after the original audit end when proposed by the agent. Work outside approved bounds requires appropriate scope approval.
+The approved plan governs subsequent work. Follow-up verification can be explicitly authorized within a reviewed window, normally 30 days after the original audit end when proposed by the agent. Work outside approved bounds requires appropriate scope approval.
 
 The chat composer starts a new audit assignment. Existing work resumes from saved events; it is not an unrestricted conversational assistant.
 
