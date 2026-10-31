@@ -1,6 +1,6 @@
 # Internal Audit Manager
 
-Phase 1-4 audit agent with a connected React workspace. Azure Grok chooses permitted actions through eight typed tools; LangGraph checkpoints workflow progress. SQLite stores evidence, results, reviews and simulated communication. Human approval remains required for plans, findings, escalations and closure. Gmail and later phases are not implemented.
+audit agent with a connected React workspace. Azure Grok chooses permitted actions through eight typed tools; LangGraph checkpoints workflow progress. SQLite stores evidence, results, reviews and simulated communication. Human approval remains required for plans, findings, escalations and closure. Gmail and later phases are not implemented.
 
 This repository contains the connected UI only. It excludes the standalone mock prototype, superseded UI builds, local audit sessions, databases, checkpoints, credentials and browser profiles. Evaluation records are retained as testing evidence, not active audit state.
 
