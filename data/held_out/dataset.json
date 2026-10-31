@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "id": "digital-risk-heldout.v1",
+    "version": 1,
+    "split": "held_out",
+    "department": "Digital Risk",
+    "description": "Separate fictional evaluation partition for February-April 2027. Not loaded by default."
+  },
+  "entities": [
+    {
+      "id": "HX-NODE-J",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Evaluation endpoint 4",
+      "active_from": "2027-02-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "eval-endpoint-3"
+      }
+    },
+    {
+      "id": "HX-ADMIN-F",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Evaluation admin 4",
+      "active_from": "2027-02-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Evaluation employee 4",
+        "role": "Security administrator"
+      }
+    },
+    {
+      "id": "HX-TEAL",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Evaluation project 4",
+      "active_from": "2027-04-30",
+      "active_to": "2027-04-30",
+      "facts": {
+        "deployed_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "HX-NODE-R",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Evaluation endpoint 3",
+      "active_from": "2027-02-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "eval-endpoint-2"
+      }
+    },
+    {
+      "id": "HX-ADMIN-Q",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Evaluation admin 3",
+      "active_from": "2027-02-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Evaluation employee 3",
+        "role": "Security administrator"
+      }
+    },
+    {
+      "id": "HX-IRIS",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Evaluation project 3",
+      "active_from": "2027-04-29",
+      "active_to": "2027-04-29",
+      "facts": {
+        "deployed_on": "2027-04-29"
+      }
+    },
+    {
+      "id": "HX-NODE-C",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Evaluation endpoint 2",
+      "active_from": "2027-02-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "eval-endpoint-1"
+      }
+    },
+    {
+      "id": "HX-ADMIN-B",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Evaluation admin 2",
+      "active_from": "2027-02-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Evaluation employee 2",
+        "role": "Security administrator"
+      }
+    },
+    {
+      "id": "HX-ONYX",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Evaluation project 2",
+      "active_from": "2027-03-17",
+      "active_to": "2027-03-17",
+      "facts": {
+        "deployed_on": "2027-03-17"
+      }
+    },
+    {
+      "id": "HX-NODE-N",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Evaluation endpoint 1",
+      "active_from": "2027-02-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "eval-endpoint-0"
+      }
+    },
+    {
+      "id": "HX-ADMIN-K",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Evaluation admin 1",
+      "active_from": "2027-02-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Evaluation employee 1",
+        "role": "Security administrator"
+      }
+    },
+    {
+      "id": "HX-LIME",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Evaluation project 1",
+      "active_from": "2027-02-01",
+      "active_to": "2027-02-01",
+      "facts": {
+        "deployed_on": "2027-02-01"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-HX-NODE-J-encryption.v1",
+      "entity_id": "HX-NODE-J",
+      "source_id": "defender",
+      "source_record_id": "SRC-HX-NODE-J-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": false,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-J-vulnerability_scan.v1",
+      "entity_id": "HX-NODE-J",
+      "source_id": "qualys",
+      "source_record_id": "SRC-HX-NODE-J-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2027-03-31"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-J-edr.v1",
+      "entity_id": "HX-NODE-J",
+      "source_id": "defender",
+      "source_record_id": "SRC-HX-NODE-J-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "covered": true,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-F-access_review.v1",
+      "entity_id": "HX-ADMIN-F",
+      "source_id": "access",
+      "source_record_id": "SRC-HX-ADMIN-F-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2027-01-29"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-F-mfa.v1",
+      "entity_id": "HX-ADMIN-F",
+      "source_id": "access",
+      "source_record_id": "SRC-HX-ADMIN-F-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-F-employment.v1",
+      "entity_id": "HX-ADMIN-F",
+      "source_id": "hr",
+      "source_record_id": "SRC-HX-ADMIN-F-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": null
+      }
+    },
+    {
+      "id": "EV-HX-TEAL-grc_approval.v1",
+      "entity_id": "HX-TEAL",
+      "source_id": "compass",
+      "source_record_id": "SRC-HX-TEAL-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-TEAL-risk_assessment.v1",
+      "entity_id": "HX-TEAL",
+      "source_id": "projects",
+      "source_record_id": "SRC-HX-TEAL-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2027-04-28"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-R-encryption.v1",
+      "entity_id": "HX-NODE-R",
+      "source_id": "defender",
+      "source_record_id": "SRC-HX-NODE-R-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-R-vulnerability_scan.v1",
+      "entity_id": "HX-NODE-R",
+      "source_id": "qualys",
+      "source_record_id": "SRC-HX-NODE-R-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2027-03-30"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-R-edr.v1",
+      "entity_id": "HX-NODE-R",
+      "source_id": "defender",
+      "source_record_id": "SRC-HX-NODE-R-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "covered": true,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-Q-access_review.v1",
+      "entity_id": "HX-ADMIN-Q",
+      "source_id": "access",
+      "source_record_id": "SRC-HX-ADMIN-Q-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2027-04-01"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-Q-mfa.v1",
+      "entity_id": "HX-ADMIN-Q",
+      "source_id": "access",
+      "source_record_id": "SRC-HX-ADMIN-Q-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": false,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-Q-employment.v1",
+      "entity_id": "HX-ADMIN-Q",
+      "source_id": "hr",
+      "source_record_id": "SRC-HX-ADMIN-Q-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": null
+      }
+    },
+    {
+      "id": "EV-HX-IRIS-grc_approval.v1",
+      "entity_id": "HX-IRIS",
+      "source_id": "compass",
+      "source_record_id": "SRC-HX-IRIS-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2027-04-28"
+      }
+    },
+    {
+      "id": "EV-HX-IRIS-project_approval.v1",
+      "entity_id": "HX-IRIS",
+      "source_id": "approvals",
+      "source_record_id": "SRC-HX-IRIS-project_approval",
+      "kind": "project_approval",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2027-04-28"
+      }
+    },
+    {
+      "id": "EV-HX-IRIS-risk_assessment.v1",
+      "entity_id": "HX-IRIS",
+      "source_id": "projects",
+      "source_record_id": "SRC-HX-IRIS-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-C-encryption.v1",
+      "entity_id": "HX-NODE-C",
+      "source_id": "defender",
+      "source_record_id": "SRC-HX-NODE-C-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-C-vulnerability_scan.v1",
+      "entity_id": "HX-NODE-C",
+      "source_id": "qualys",
+      "source_record_id": "SRC-HX-NODE-C-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2027-03-31"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-C-edr.v1",
+      "entity_id": "HX-NODE-C",
+      "source_id": "defender",
+      "source_record_id": "SRC-HX-NODE-C-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "covered": true,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-B-access_review.v1",
+      "entity_id": "HX-ADMIN-B",
+      "source_id": "access",
+      "source_record_id": "SRC-HX-ADMIN-B-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2027-01-30"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-B-mfa.v1",
+      "entity_id": "HX-ADMIN-B",
+      "source_id": "access",
+      "source_record_id": "SRC-HX-ADMIN-B-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-B-employment.v1",
+      "entity_id": "HX-ADMIN-B",
+      "source_id": "hr",
+      "source_record_id": "SRC-HX-ADMIN-B-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": null
+      }
+    },
+    {
+      "id": "EV-HX-ONYX-grc_approval.v1",
+      "entity_id": "HX-ONYX",
+      "source_id": "compass",
+      "source_record_id": "SRC-HX-ONYX-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2027-03-14"
+      }
+    },
+    {
+      "id": "EV-HX-ONYX-project_approval.v1",
+      "entity_id": "HX-ONYX",
+      "source_id": "approvals",
+      "source_record_id": "SRC-HX-ONYX-project_approval",
+      "kind": "project_approval",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2027-03-16"
+      }
+    },
+    {
+      "id": "EV-HX-ONYX-risk_assessment.v1",
+      "entity_id": "HX-ONYX",
+      "source_id": "projects",
+      "source_record_id": "SRC-HX-ONYX-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2027-03-15"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-N-encryption.v1",
+      "entity_id": "HX-NODE-N",
+      "source_id": "defender",
+      "source_record_id": "SRC-HX-NODE-N-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-N-vulnerability_scan.v1",
+      "entity_id": "HX-NODE-N",
+      "source_id": "qualys",
+      "source_record_id": "SRC-HX-NODE-N-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2027-03-31"
+      }
+    },
+    {
+      "id": "EV-HX-NODE-N-edr.v1",
+      "entity_id": "HX-NODE-N",
+      "source_id": "defender",
+      "source_record_id": "SRC-HX-NODE-N-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "covered": false,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-K-access_review.v1",
+      "entity_id": "HX-ADMIN-K",
+      "source_id": "access",
+      "source_record_id": "SRC-HX-ADMIN-K-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2027-04-01"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-K-mfa.v1",
+      "entity_id": "HX-ADMIN-K",
+      "source_id": "access",
+      "source_record_id": "SRC-HX-ADMIN-K-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-ADMIN-K-employment.v1",
+      "entity_id": "HX-ADMIN-K",
+      "source_id": "hr",
+      "source_record_id": "SRC-HX-ADMIN-K-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": "2027-04-30"
+      }
+    },
+    {
+      "id": "EV-HX-LIME-grc_approval.v1",
+      "entity_id": "HX-LIME",
+      "source_id": "compass",
+      "source_record_id": "SRC-HX-LIME-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2027-02-02"
+      }
+    },
+    {
+      "id": "EV-HX-LIME-project_approval.v1",
+      "entity_id": "HX-LIME",
+      "source_id": "approvals",
+      "source_record_id": "SRC-HX-LIME-project_approval",
+      "kind": "project_approval",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2027-02-02"
+      }
+    },
+    {
+      "id": "EV-HX-LIME-risk_assessment.v1",
+      "entity_id": "HX-LIME",
+      "source_id": "projects",
+      "source_record_id": "SRC-HX-LIME-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2027-04-30",
+      "captured_on": "2027-04-30",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2027-01-31"
+      }
+    }
+  ]
+}

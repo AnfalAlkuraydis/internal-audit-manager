@@ -1,0 +1,688 @@
+{
+  "schema_version": 1,
+  "dataset_id": "digital-risk-dev.v1",
+  "split": "development",
+  "provenance": "Manually specified expected outcomes, authored without a control-testing implementation. Not human-validated; review before performance evaluation. Runtime code must not read this file.",
+  "engagement": {
+    "period_start": "2026-01-01",
+    "period_end": "2026-08-31"
+  },
+  "labels": [
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "PRJ-001",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-001-risk_assessment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "PRJ-002",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-002-risk_assessment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "PRJ-003",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-003-risk_assessment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "PRJ-004",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-004-risk_assessment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "PRJ-005",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-PRJ-005-risk_assessment.v1"
+      ],
+      "rationale": "Risk assessment occurred after deployment."
+    },
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "PRJ-006",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-006-risk_assessment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "PRJ-007",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-007-risk_assessment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "PRJ-008",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-008-risk_assessment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "PRJ-001",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-001-project_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "PRJ-002",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-PRJ-002-project_approval.v1"
+      ],
+      "rationale": "Approval occurred after deployment."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "PRJ-003",
+      "expected_outcome": "MISSING_EVIDENCE",
+      "evidence_ids": [],
+      "rationale": "Original approval is unavailable; a GRC claim does not substitute."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "PRJ-004",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-004-project_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "PRJ-005",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-005-project_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "PRJ-006",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-006-project_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "PRJ-007",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-007-project_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "PRJ-008",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-008-project_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "PRJ-001",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-001-project_approval.v1",
+        "EV-PRJ-001-grc_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "PRJ-002",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-002-project_approval.v1",
+        "EV-PRJ-002-grc_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "PRJ-003",
+      "expected_outcome": "MISSING_EVIDENCE",
+      "evidence_ids": [
+        "EV-PRJ-003-grc_approval.v1"
+      ],
+      "rationale": "Original approval is unavailable; a GRC claim does not substitute."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "PRJ-004",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-PRJ-004-project_approval.v1",
+        "EV-PRJ-004-grc_approval.v1"
+      ],
+      "rationale": "GRC and original approval dates differ; investigate the discrepancy."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "PRJ-005",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-005-project_approval.v1",
+        "EV-PRJ-005-grc_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "PRJ-006",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-006-project_approval.v1",
+        "EV-PRJ-006-grc_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "PRJ-007",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-007-project_approval.v1",
+        "EV-PRJ-007-grc_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "PRJ-008",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-PRJ-008-project_approval.v1",
+        "EV-PRJ-008-grc_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "ACC-001",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-001-employment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "ACC-002",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-002-employment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "ACC-003",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-003-employment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "ACC-004",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-ACC-004-employment.v1"
+      ],
+      "rationale": "Owner's employment ended on or before the in-scope date."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "ACC-005",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-005-employment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "ACC-006",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-006-employment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "ACC-007",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-007-employment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "ACC-008",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-008-employment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "ACC-001",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-001-mfa.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "ACC-002",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-ACC-002-mfa.v1"
+      ],
+      "rationale": "MFA disabled."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "ACC-003",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-003-mfa.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "ACC-004",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-004-mfa.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "ACC-005",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-005-mfa.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "ACC-006",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-006-mfa.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "ACC-007",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-007-mfa.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "ACC-008",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-008-mfa.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "ACC-001",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-001-access_review.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "ACC-002",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-002-access_review.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "ACC-003",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-003-access_review.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "ACC-004",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-004-access_review.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "ACC-005",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-ACC-005-access_review.v1"
+      ],
+      "rationale": "Access review older than 90 days."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "ACC-006",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-006-access_review.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "ACC-007",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-007-access_review.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "ACC-008",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-ACC-008-access_review.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "DEV-001",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-001-edr.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "DEV-002",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-002-edr.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "DEV-003",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-DEV-003-edr.v1"
+      ],
+      "rationale": "Endpoint coverage disabled."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "DEV-004",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-004-edr.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "DEV-005",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-005-edr.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "DEV-006",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-006-edr.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "DEV-007",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-007-edr.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "DEV-008",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-008-edr.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "DEV-001",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-001-vulnerability_scan.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "DEV-002",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-002-vulnerability_scan.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "DEV-003",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-003-vulnerability_scan.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "DEV-004",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-DEV-004-vulnerability_scan.v1"
+      ],
+      "rationale": "Vulnerability scan older than 30 days."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "DEV-005",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-005-vulnerability_scan.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "DEV-006",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-006-vulnerability_scan.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "DEV-007",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-007-vulnerability_scan.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "DEV-008",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-008-vulnerability_scan.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "DEV-001",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-001-encryption.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "DEV-002",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-002-encryption.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "DEV-003",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-003-encryption.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "DEV-004",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-004-encryption.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "DEV-005",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-DEV-005-encryption.v1"
+      ],
+      "rationale": "Encryption disabled."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "DEV-006",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-006-encryption.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "DEV-007",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-007-encryption.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "DEV-008",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-DEV-008-encryption.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    }
+  ],
+  "followup_expectations": [
+    {
+      "message_id": "EMAIL-APPROVAL-REPLY-01",
+      "control_id": "PR-02.v1",
+      "entity_id": "PRJ-003",
+      "expected_outcome": "FAIL",
+      "rationale": "22 March approval follows 20 March deployment."
+    },
+    {
+      "message_id": "EMAIL-APPROVAL-REPLY-01",
+      "control_id": "PR-03.v1",
+      "entity_id": "PRJ-003",
+      "expected_outcome": "PASS",
+      "rationale": "Received original approval agrees with the GRC date."
+    },
+    {
+      "message_id": "EMAIL-IMPLEMENTATION-01",
+      "control_id": "PR-02.v1",
+      "entity_id": "PRJ-REMEDIATION-01",
+      "expected_outcome": "PASS",
+      "rationale": "18 September approval precedes 20 September deployment. Historical failures remain unchanged; closure still requires human approval."
+    }
+  ]
+}

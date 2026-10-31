@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "description": "Future synthetic departmental messages. Not loaded into initial audit evidence. No email processor or remediation workflow is implemented yet.",
+  "original_engagement": {
+    "period_start": "2026-01-01",
+    "period_end": "2026-08-31"
+  },
+  "messages": [
+    {
+      "id": "EMAIL-APPROVAL-REPLY-01",
+      "sender": "digital-risk@department.example",
+      "received_on": "2026-09-03",
+      "purpose": "missing_approval_reply",
+      "body": "Original approval was recorded on 22 March, after deployment on 20 March.",
+      "evidence": [
+        {
+          "id": "EV-PRJ-003-project_approval.v1",
+          "entity_id": "PRJ-003",
+          "source_id": "approvals",
+          "source_record_id": "SRC-PRJ-003-project_approval",
+          "kind": "project_approval",
+          "version": 1,
+          "observed_on": "2026-09-03",
+          "captured_on": "2026-09-03",
+          "supersedes_id": null,
+          "facts": {
+            "approved_on": "2026-03-22"
+          }
+        }
+      ]
+    },
+    {
+      "id": "EMAIL-CAP-01",
+      "sender": "digital-risk@department.example",
+      "received_on": "2026-09-04",
+      "purpose": "corrective_action_plan",
+      "action_plan": {
+        "owner": "Fictional Digital Risk process owner",
+        "due_on": "2026-09-25",
+        "action": "Require recorded approval before deployment; independently inspect a new deployment."
+      }
+    },
+    {
+      "id": "EMAIL-IMPLEMENTATION-01",
+      "sender": "digital-risk@department.example",
+      "received_on": "2026-09-25",
+      "purpose": "implementation_evidence",
+      "verification_period": {
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30"
+      },
+      "entities": [
+        {
+          "id": "PRJ-REMEDIATION-01",
+          "source_id": "projects",
+          "kind": "project",
+          "name": "New project after approval-process improvement",
+          "active_from": "2026-09-20",
+          "active_to": "2026-09-20",
+          "facts": {
+            "deployed_on": "2026-09-20"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "id": "EV-PRJ-REMEDIATION-01-risk_assessment.v1",
+          "entity_id": "PRJ-REMEDIATION-01",
+          "source_id": "projects",
+          "source_record_id": "SRC-PRJ-REMEDIATION-01-risk_assessment",
+          "kind": "risk_assessment",
+          "version": 1,
+          "observed_on": "2026-09-25",
+          "captured_on": "2026-09-25",
+          "supersedes_id": null,
+          "facts": {
+            "assessed_on": "2026-09-17"
+          }
+        },
+        {
+          "id": "EV-PRJ-REMEDIATION-01-project_approval.v1",
+          "entity_id": "PRJ-REMEDIATION-01",
+          "source_id": "approvals",
+          "source_record_id": "SRC-PRJ-REMEDIATION-01-project_approval",
+          "kind": "project_approval",
+          "version": 1,
+          "observed_on": "2026-09-25",
+          "captured_on": "2026-09-25",
+          "supersedes_id": null,
+          "facts": {
+            "approved_on": "2026-09-18"
+          }
+        },
+        {
+          "id": "EV-PRJ-REMEDIATION-01-grc_approval.v1",
+          "entity_id": "PRJ-REMEDIATION-01",
+          "source_id": "compass",
+          "source_record_id": "SRC-PRJ-REMEDIATION-01-grc_approval",
+          "kind": "grc_approval",
+          "version": 1,
+          "observed_on": "2026-09-25",
+          "captured_on": "2026-09-25",
+          "supersedes_id": null,
+          "facts": {
+            "approved_on": "2026-09-18"
+          }
+        }
+      ]
+    }
+  ]
+}

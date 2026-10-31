@@ -1,0 +1,1304 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "id": "digital-risk-dev.v1",
+    "version": 1,
+    "split": "development",
+    "department": "Digital Risk",
+    "description": "Fictional development data for January-August 2026. No real enterprise data."
+  },
+  "entities": [
+    {
+      "id": "PRJ-001",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Fictional project 1",
+      "active_from": "2026-01-01",
+      "active_to": "2026-01-01",
+      "facts": {
+        "deployed_on": "2026-01-01"
+      }
+    },
+    {
+      "id": "ACC-001",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Fictional admin account 1",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Fictional employee 1",
+        "role": "Infrastructure administrator"
+      }
+    },
+    {
+      "id": "DEV-001",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Fictional managed device 1",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "fictional-host-1"
+      }
+    },
+    {
+      "id": "PRJ-002",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Fictional project 2",
+      "active_from": "2026-02-10",
+      "active_to": "2026-02-10",
+      "facts": {
+        "deployed_on": "2026-02-10"
+      }
+    },
+    {
+      "id": "ACC-002",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Fictional admin account 2",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Fictional employee 2",
+        "role": "Infrastructure administrator"
+      }
+    },
+    {
+      "id": "DEV-002",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Fictional managed device 2",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "fictional-host-2"
+      }
+    },
+    {
+      "id": "PRJ-003",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Fictional project 3",
+      "active_from": "2026-03-20",
+      "active_to": "2026-03-20",
+      "facts": {
+        "deployed_on": "2026-03-20"
+      }
+    },
+    {
+      "id": "ACC-003",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Fictional admin account 3",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Fictional employee 3",
+        "role": "Infrastructure administrator"
+      }
+    },
+    {
+      "id": "DEV-003",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Fictional managed device 3",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "fictional-host-3"
+      }
+    },
+    {
+      "id": "PRJ-004",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Fictional project 4",
+      "active_from": "2026-04-15",
+      "active_to": "2026-04-15",
+      "facts": {
+        "deployed_on": "2026-04-15"
+      }
+    },
+    {
+      "id": "ACC-004",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Fictional admin account 4",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Fictional employee 4",
+        "role": "Infrastructure administrator"
+      }
+    },
+    {
+      "id": "DEV-004",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Fictional managed device 4",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "fictional-host-4"
+      }
+    },
+    {
+      "id": "PRJ-005",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Fictional project 5",
+      "active_from": "2026-05-12",
+      "active_to": "2026-05-12",
+      "facts": {
+        "deployed_on": "2026-05-12"
+      }
+    },
+    {
+      "id": "ACC-005",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Fictional admin account 5",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Fictional employee 5",
+        "role": "Infrastructure administrator"
+      }
+    },
+    {
+      "id": "DEV-005",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Fictional managed device 5",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "fictional-host-5"
+      }
+    },
+    {
+      "id": "PRJ-006",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Fictional project 6",
+      "active_from": "2026-06-18",
+      "active_to": "2026-06-18",
+      "facts": {
+        "deployed_on": "2026-06-18"
+      }
+    },
+    {
+      "id": "ACC-006",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Fictional admin account 6",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Fictional employee 6",
+        "role": "Infrastructure administrator"
+      }
+    },
+    {
+      "id": "DEV-006",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Fictional managed device 6",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "fictional-host-6"
+      }
+    },
+    {
+      "id": "PRJ-007",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Fictional project 7",
+      "active_from": "2026-07-21",
+      "active_to": "2026-07-21",
+      "facts": {
+        "deployed_on": "2026-07-21"
+      }
+    },
+    {
+      "id": "ACC-007",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Fictional admin account 7",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Fictional employee 7",
+        "role": "Infrastructure administrator"
+      }
+    },
+    {
+      "id": "DEV-007",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Fictional managed device 7",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "fictional-host-7"
+      }
+    },
+    {
+      "id": "PRJ-008",
+      "source_id": "projects",
+      "kind": "project",
+      "name": "Fictional project 8",
+      "active_from": "2026-08-31",
+      "active_to": "2026-08-31",
+      "facts": {
+        "deployed_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "ACC-008",
+      "source_id": "access",
+      "kind": "privileged_account",
+      "name": "Fictional admin account 8",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "owner": "Fictional employee 8",
+        "role": "Infrastructure administrator"
+      }
+    },
+    {
+      "id": "DEV-008",
+      "source_id": "defender",
+      "kind": "device",
+      "name": "Fictional managed device 8",
+      "active_from": "2026-01-01",
+      "active_to": null,
+      "facts": {
+        "hostname": "fictional-host-8"
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EV-PRJ-001-risk_assessment.v1",
+      "entity_id": "PRJ-001",
+      "source_id": "projects",
+      "source_record_id": "SRC-PRJ-001-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2026-01-01"
+      }
+    },
+    {
+      "id": "EV-PRJ-001-project_approval.v1",
+      "entity_id": "PRJ-001",
+      "source_id": "approvals",
+      "source_record_id": "SRC-PRJ-001-project_approval",
+      "kind": "project_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-01-01"
+      }
+    },
+    {
+      "id": "EV-PRJ-001-grc_approval.v1",
+      "entity_id": "PRJ-001",
+      "source_id": "compass",
+      "source_record_id": "SRC-PRJ-001-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-01-01"
+      }
+    },
+    {
+      "id": "EV-ACC-001-employment.v1",
+      "entity_id": "ACC-001",
+      "source_id": "hr",
+      "source_record_id": "SRC-ACC-001-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": null
+      }
+    },
+    {
+      "id": "EV-ACC-001-mfa.v1",
+      "entity_id": "ACC-001",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-001-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-ACC-001-access_review.v1",
+      "entity_id": "ACC-001",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-001-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2026-08-01"
+      }
+    },
+    {
+      "id": "EV-DEV-001-edr.v1",
+      "entity_id": "DEV-001",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-001-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "covered": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-DEV-001-vulnerability_scan.v1",
+      "entity_id": "DEV-001",
+      "source_id": "qualys",
+      "source_record_id": "SRC-DEV-001-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2026-08-15"
+      }
+    },
+    {
+      "id": "EV-DEV-001-encryption.v1",
+      "entity_id": "DEV-001",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-001-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-PRJ-002-risk_assessment.v1",
+      "entity_id": "PRJ-002",
+      "source_id": "projects",
+      "source_record_id": "SRC-PRJ-002-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2026-02-01"
+      }
+    },
+    {
+      "id": "EV-PRJ-002-project_approval.v1",
+      "entity_id": "PRJ-002",
+      "source_id": "approvals",
+      "source_record_id": "SRC-PRJ-002-project_approval",
+      "kind": "project_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-02-12"
+      }
+    },
+    {
+      "id": "EV-PRJ-002-grc_approval.v1",
+      "entity_id": "PRJ-002",
+      "source_id": "compass",
+      "source_record_id": "SRC-PRJ-002-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-02-12"
+      }
+    },
+    {
+      "id": "EV-ACC-002-employment.v1",
+      "entity_id": "ACC-002",
+      "source_id": "hr",
+      "source_record_id": "SRC-ACC-002-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": null
+      }
+    },
+    {
+      "id": "EV-ACC-002-mfa.v1",
+      "entity_id": "ACC-002",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-002-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": false,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-ACC-002-access_review.v1",
+      "entity_id": "ACC-002",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-002-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2026-08-01"
+      }
+    },
+    {
+      "id": "EV-DEV-002-edr.v1",
+      "entity_id": "DEV-002",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-002-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "covered": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-DEV-002-vulnerability_scan.v1",
+      "entity_id": "DEV-002",
+      "source_id": "qualys",
+      "source_record_id": "SRC-DEV-002-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2026-08-15"
+      }
+    },
+    {
+      "id": "EV-DEV-002-encryption.v1",
+      "entity_id": "DEV-002",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-002-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-PRJ-003-risk_assessment.v1",
+      "entity_id": "PRJ-003",
+      "source_id": "projects",
+      "source_record_id": "SRC-PRJ-003-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2026-03-10"
+      }
+    },
+    {
+      "id": "EV-PRJ-003-grc_approval.v1",
+      "entity_id": "PRJ-003",
+      "source_id": "compass",
+      "source_record_id": "SRC-PRJ-003-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-03-22"
+      }
+    },
+    {
+      "id": "EV-ACC-003-employment.v1",
+      "entity_id": "ACC-003",
+      "source_id": "hr",
+      "source_record_id": "SRC-ACC-003-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": null
+      }
+    },
+    {
+      "id": "EV-ACC-003-mfa.v1",
+      "entity_id": "ACC-003",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-003-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-ACC-003-access_review.v1",
+      "entity_id": "ACC-003",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-003-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2026-08-01"
+      }
+    },
+    {
+      "id": "EV-DEV-003-edr.v1",
+      "entity_id": "DEV-003",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-003-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "covered": false,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-DEV-003-vulnerability_scan.v1",
+      "entity_id": "DEV-003",
+      "source_id": "qualys",
+      "source_record_id": "SRC-DEV-003-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2026-08-15"
+      }
+    },
+    {
+      "id": "EV-DEV-003-encryption.v1",
+      "entity_id": "DEV-003",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-003-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-PRJ-004-risk_assessment.v1",
+      "entity_id": "PRJ-004",
+      "source_id": "projects",
+      "source_record_id": "SRC-PRJ-004-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2026-04-01"
+      }
+    },
+    {
+      "id": "EV-PRJ-004-project_approval.v1",
+      "entity_id": "PRJ-004",
+      "source_id": "approvals",
+      "source_record_id": "SRC-PRJ-004-project_approval",
+      "kind": "project_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-04-10"
+      }
+    },
+    {
+      "id": "EV-PRJ-004-grc_approval.v1",
+      "entity_id": "PRJ-004",
+      "source_id": "compass",
+      "source_record_id": "SRC-PRJ-004-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-04-09"
+      }
+    },
+    {
+      "id": "EV-ACC-004-employment.v1",
+      "entity_id": "ACC-004",
+      "source_id": "hr",
+      "source_record_id": "SRC-ACC-004-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": "2026-08-15"
+      }
+    },
+    {
+      "id": "EV-ACC-004-mfa.v1",
+      "entity_id": "ACC-004",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-004-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-ACC-004-access_review.v1",
+      "entity_id": "ACC-004",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-004-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2026-08-01"
+      }
+    },
+    {
+      "id": "EV-DEV-004-edr.v1",
+      "entity_id": "DEV-004",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-004-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "covered": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-DEV-004-vulnerability_scan.v1",
+      "entity_id": "DEV-004",
+      "source_id": "qualys",
+      "source_record_id": "SRC-DEV-004-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2026-07-01"
+      }
+    },
+    {
+      "id": "EV-DEV-004-encryption.v1",
+      "entity_id": "DEV-004",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-004-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-PRJ-005-risk_assessment.v1",
+      "entity_id": "PRJ-005",
+      "source_id": "projects",
+      "source_record_id": "SRC-PRJ-005-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2026-05-13"
+      }
+    },
+    {
+      "id": "EV-PRJ-005-project_approval.v1",
+      "entity_id": "PRJ-005",
+      "source_id": "approvals",
+      "source_record_id": "SRC-PRJ-005-project_approval",
+      "kind": "project_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-05-10"
+      }
+    },
+    {
+      "id": "EV-PRJ-005-grc_approval.v1",
+      "entity_id": "PRJ-005",
+      "source_id": "compass",
+      "source_record_id": "SRC-PRJ-005-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-05-10"
+      }
+    },
+    {
+      "id": "EV-ACC-005-employment.v1",
+      "entity_id": "ACC-005",
+      "source_id": "hr",
+      "source_record_id": "SRC-ACC-005-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": null
+      }
+    },
+    {
+      "id": "EV-ACC-005-mfa.v1",
+      "entity_id": "ACC-005",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-005-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-ACC-005-access_review.v1",
+      "entity_id": "ACC-005",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-005-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2026-05-01"
+      }
+    },
+    {
+      "id": "EV-DEV-005-edr.v1",
+      "entity_id": "DEV-005",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-005-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "covered": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-DEV-005-vulnerability_scan.v1",
+      "entity_id": "DEV-005",
+      "source_id": "qualys",
+      "source_record_id": "SRC-DEV-005-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2026-08-15"
+      }
+    },
+    {
+      "id": "EV-DEV-005-encryption.v1",
+      "entity_id": "DEV-005",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-005-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": false,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-PRJ-006-risk_assessment.v1",
+      "entity_id": "PRJ-006",
+      "source_id": "projects",
+      "source_record_id": "SRC-PRJ-006-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2026-06-10"
+      }
+    },
+    {
+      "id": "EV-PRJ-006-project_approval.v1",
+      "entity_id": "PRJ-006",
+      "source_id": "approvals",
+      "source_record_id": "SRC-PRJ-006-project_approval",
+      "kind": "project_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-06-15"
+      }
+    },
+    {
+      "id": "EV-PRJ-006-grc_approval.v1",
+      "entity_id": "PRJ-006",
+      "source_id": "compass",
+      "source_record_id": "SRC-PRJ-006-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-06-15"
+      }
+    },
+    {
+      "id": "EV-ACC-006-employment.v1",
+      "entity_id": "ACC-006",
+      "source_id": "hr",
+      "source_record_id": "SRC-ACC-006-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": null
+      }
+    },
+    {
+      "id": "EV-ACC-006-mfa.v1",
+      "entity_id": "ACC-006",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-006-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-ACC-006-access_review.v1",
+      "entity_id": "ACC-006",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-006-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2026-08-01"
+      }
+    },
+    {
+      "id": "EV-DEV-006-edr.v1",
+      "entity_id": "DEV-006",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-006-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "covered": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-DEV-006-vulnerability_scan.v1",
+      "entity_id": "DEV-006",
+      "source_id": "qualys",
+      "source_record_id": "SRC-DEV-006-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2026-08-15"
+      }
+    },
+    {
+      "id": "EV-DEV-006-encryption.v1",
+      "entity_id": "DEV-006",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-006-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-PRJ-007-risk_assessment.v1",
+      "entity_id": "PRJ-007",
+      "source_id": "projects",
+      "source_record_id": "SRC-PRJ-007-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2026-07-01"
+      }
+    },
+    {
+      "id": "EV-PRJ-007-project_approval.v1",
+      "entity_id": "PRJ-007",
+      "source_id": "approvals",
+      "source_record_id": "SRC-PRJ-007-project_approval",
+      "kind": "project_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-07-15"
+      }
+    },
+    {
+      "id": "EV-PRJ-007-grc_approval.v1",
+      "entity_id": "PRJ-007",
+      "source_id": "compass",
+      "source_record_id": "SRC-PRJ-007-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-07-15"
+      }
+    },
+    {
+      "id": "EV-ACC-007-employment.v1",
+      "entity_id": "ACC-007",
+      "source_id": "hr",
+      "source_record_id": "SRC-ACC-007-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": null
+      }
+    },
+    {
+      "id": "EV-ACC-007-mfa.v1",
+      "entity_id": "ACC-007",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-007-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-ACC-007-access_review.v1",
+      "entity_id": "ACC-007",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-007-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2026-08-01"
+      }
+    },
+    {
+      "id": "EV-DEV-007-edr.v1",
+      "entity_id": "DEV-007",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-007-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "covered": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-DEV-007-vulnerability_scan.v1",
+      "entity_id": "DEV-007",
+      "source_id": "qualys",
+      "source_record_id": "SRC-DEV-007-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2026-08-15"
+      }
+    },
+    {
+      "id": "EV-DEV-007-encryption.v1",
+      "entity_id": "DEV-007",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-007-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-PRJ-008-risk_assessment.v1",
+      "entity_id": "PRJ-008",
+      "source_id": "projects",
+      "source_record_id": "SRC-PRJ-008-risk_assessment",
+      "kind": "risk_assessment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "assessed_on": "2026-08-20"
+      }
+    },
+    {
+      "id": "EV-PRJ-008-project_approval.v1",
+      "entity_id": "PRJ-008",
+      "source_id": "approvals",
+      "source_record_id": "SRC-PRJ-008-project_approval",
+      "kind": "project_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-08-30"
+      }
+    },
+    {
+      "id": "EV-PRJ-008-grc_approval.v1",
+      "entity_id": "PRJ-008",
+      "source_id": "compass",
+      "source_record_id": "SRC-PRJ-008-grc_approval",
+      "kind": "grc_approval",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "approved_on": "2026-08-30"
+      }
+    },
+    {
+      "id": "EV-ACC-008-employment.v1",
+      "entity_id": "ACC-008",
+      "source_id": "hr",
+      "source_record_id": "SRC-ACC-008-employment",
+      "kind": "employment",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "employment_end": null
+      }
+    },
+    {
+      "id": "EV-ACC-008-mfa.v1",
+      "entity_id": "ACC-008",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-008-mfa",
+      "kind": "mfa",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-ACC-008-access_review.v1",
+      "entity_id": "ACC-008",
+      "source_id": "access",
+      "source_record_id": "SRC-ACC-008-access_review",
+      "kind": "access_review",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "reviewed_on": "2026-08-01"
+      }
+    },
+    {
+      "id": "EV-DEV-008-edr.v1",
+      "entity_id": "DEV-008",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-008-edr",
+      "kind": "edr",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "covered": true,
+        "snapshot_on": "2026-08-31"
+      }
+    },
+    {
+      "id": "EV-DEV-008-vulnerability_scan.v1",
+      "entity_id": "DEV-008",
+      "source_id": "qualys",
+      "source_record_id": "SRC-DEV-008-vulnerability_scan",
+      "kind": "vulnerability_scan",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "scanned_on": "2026-08-15"
+      }
+    },
+    {
+      "id": "EV-DEV-008-encryption.v1",
+      "entity_id": "DEV-008",
+      "source_id": "defender",
+      "source_record_id": "SRC-DEV-008-encryption",
+      "kind": "encryption",
+      "version": 1,
+      "observed_on": "2026-08-31",
+      "captured_on": "2026-08-31",
+      "supersedes_id": null,
+      "facts": {
+        "enabled": true,
+        "snapshot_on": "2026-08-31"
+      }
+    }
+  ]
+}

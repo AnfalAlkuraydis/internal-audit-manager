@@ -1,0 +1,3104 @@
+{
+  "report": {
+    "case": "project_governance",
+    "status": "PASS",
+    "checks": {
+      "correct_scope": true,
+      "full_population_tested": true,
+      "results_match_frozen_labels": true,
+      "confirmed_exceptions_proposed": true,
+      "missing_evidence_requested": true,
+      "valid_tool_arguments": true,
+      "no_self_approval": true,
+      "appropriate_stop": true
+    },
+    "execution_date_utc": "2026-10-31T13:03:16.466257+00:00",
+    "session_status": "waiting",
+    "error_code": null,
+    "tool_calls": 16,
+    "failed_tool_calls": 0,
+    "duration_seconds": 46.258
+  },
+  "inferences": [
+    {
+      "id": "63e38faa-7493-4334-ae94-a1d8700e6b2d",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "turn_key": "scope",
+      "request_digest": "dae895019e98a3cd39d77b2123232863c0e282928037c1c5ca7c281633ba9a88",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"department\": \"Digital Risk\",\n  \"period_start\": \"2027-02-01\",\n  \"period_end\": \"2027-04-30\"\n}",
+          "tool_calls": [],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 92,
+          "output_tokens": 36,
+          "total_tokens": 646
+        },
+        "finish_reason": "stop",
+        "latency_ms": 6324.241100111976,
+        "mode": "live"
+      },
+      "offered_tools": [],
+      "created_at": "2026-10-31T13:02:36.965184+00:00"
+    },
+    {
+      "id": "51081958-2751-4e11-ab49-62a679072223",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "turn_key": "turn:0",
+      "request_digest": "13be79994bb243e03db4789897455cbfda50d293b50f4f5f16ee7c32b8b1acd8",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-dcad165c-62cd-4cf7-9c44-b41443fe238f-0",
+              "name": "get_audit_requirements",
+              "arguments": {}
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 1359,
+          "output_tokens": 8,
+          "total_tokens": 1765
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 4769.738600123674,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan"
+      ],
+      "created_at": "2026-10-31T13:02:41.809386+00:00"
+    },
+    {
+      "id": "f3d8c151-6c6f-42e2-9e68-e8f129027c2a",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "turn_key": "turn:1",
+      "request_digest": "4926eaf5fc4c90d03009c82d7dcda377d5325d4659f54b421ac31228f9566c69",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-e9dc4018-77cd-4abb-9c35-93a1ca452dea-1",
+              "name": "draft_audit_plan",
+              "arguments": {
+                "plan": {
+                  "objective": "Audit Digital Risk for project deployment controls over 2027-02-01 to 2027-04-30, testing full population of every applicable control.",
+                  "work_program": "Retrieve full population of deployed projects. For each control (PR-01.v1, PR-02.v1, PR-03.v1) obtain original evidence from authorized sources (projects, approvals), run deterministic rule tests, investigate contradictions or missing evidence, propose findings only on confirmed FAIL results. Authorize 90-day follow-up verification for any approved findings.",
+                  "control_ids": [
+                    "PR-01.v1",
+                    "PR-02.v1",
+                    "PR-03.v1"
+                  ],
+                  "allow_followup_verification": true,
+                  "verification_window_days": 90
+                }
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 2410,
+          "output_tokens": 166,
+          "total_tokens": 2980
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 4486.56120011583,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan"
+      ],
+      "created_at": "2026-10-31T13:02:46.429428+00:00"
+    },
+    {
+      "id": "964cc54b-ae1a-4cf5-93d6-bb34c188b8ee",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "turn_key": "turn:2",
+      "request_digest": "cbabf5aaa2318e3752c7a140279269a4669f86a9349dc63acd93a1cd2fa4bf8f",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "Work program proposal (v1) submitted; awaiting mandatory human approval before control population/testing.",
+          "tool_calls": [],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 5299,
+          "output_tokens": 18,
+          "total_tokens": 5551
+        },
+        "finish_reason": "stop",
+        "latency_ms": 3610.991499852389,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:02:50.265877+00:00"
+    },
+    {
+      "id": "184b6467-8861-4673-9293-61b17c18680f",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "turn_key": "turn:3",
+      "request_digest": "126e79cd94b01698e18b86b42dabf5be6d38f19160d85e886dda6a374eddab9e",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-2",
+              "name": "get_test_population",
+              "arguments": {
+                "control_id": "PR-01.v1"
+              }
+            },
+            {
+              "id": "call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-3",
+              "name": "get_test_population",
+              "arguments": {
+                "control_id": "PR-02.v1"
+              }
+            },
+            {
+              "id": "call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-4",
+              "name": "get_test_population",
+              "arguments": {
+                "control_id": "PR-03.v1"
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 5579,
+          "output_tokens": 51,
+          "total_tokens": 5880
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 3369.2266000434756,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:02:53.707843+00:00"
+    },
+    {
+      "id": "01731317-06c2-4163-aa0f-5a8778f85758",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "turn_key": "turn:4",
+      "request_digest": "fe751bbca00f58d21e615416644f91ce065fd24928963614c5ec2b6bdd7fd7f0",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-5e053d81-1d4a-438b-8e33-e5df808d6da7-3",
+              "name": "search_evidence",
+              "arguments": {
+                "population_snapshot_id": "cf2157c9-9661-46da-913e-6869f86a225d"
+              }
+            },
+            {
+              "id": "call-5e053d81-1d4a-438b-8e33-e5df808d6da7-4",
+              "name": "search_evidence",
+              "arguments": {
+                "population_snapshot_id": "4a4a283c-b601-43aa-9035-f90ef2651afc"
+              }
+            },
+            {
+              "id": "call-5e053d81-1d4a-438b-8e33-e5df808d6da7-5",
+              "name": "search_evidence",
+              "arguments": {
+                "population_snapshot_id": "58d20885-8663-4989-aea8-9c30c160e22d"
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 5337,
+          "output_tokens": 103,
+          "total_tokens": 5625
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 3380.3240000270307,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:02:57.434059+00:00"
+    },
+    {
+      "id": "b697b844-8453-4b5d-a9cb-579105c8b926",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "turn_key": "turn:5",
+      "request_digest": "477befbcde84541c8dd040ba9b3af50a40141c57f00a6484050fd52a278e7d3d",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-6",
+              "name": "run_control_test",
+              "arguments": {
+                "population_snapshot_id": "cf2157c9-9661-46da-913e-6869f86a225d",
+                "evidence_snapshot_id": "217b4fb4-59de-427c-9c08-886c265284c3"
+              }
+            },
+            {
+              "id": "call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-7",
+              "name": "run_control_test",
+              "arguments": {
+                "population_snapshot_id": "4a4a283c-b601-43aa-9035-f90ef2651afc",
+                "evidence_snapshot_id": "af5d83cb-ccdc-48be-bb72-4bf78f8ef1ef"
+              }
+            },
+            {
+              "id": "call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-8",
+              "name": "run_control_test",
+              "arguments": {
+                "population_snapshot_id": "58d20885-8663-4989-aea8-9c30c160e22d",
+                "evidence_snapshot_id": "199b93eb-bd8f-4f52-ad66-96d5042ab64d"
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 7844,
+          "output_tokens": 188,
+          "total_tokens": 8204
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 3857.8197001479566,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:03:01.571605+00:00"
+    },
+    {
+      "id": "6a0f3e2d-97c9-462c-bd1e-7235fee2ae0d",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "turn_key": "turn:6",
+      "request_digest": "78bd414d6deca0e41567717061b2d53439cf84ed1fa3e186d7e782d06025c282",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-f17ae15a-56b6-41a5-9f85-f561fa835986-6",
+              "name": "propose_finding",
+              "arguments": {
+                "result_ids": [
+                  "55e99902-0ba7-4cc8-a1e0-375b11b2df3f"
+                ],
+                "finding": {
+                  "title": "PR-01.v1 Failure on HX-IRIS: Risk assessment not met",
+                  "wording": "Project HX-IRIS failed the risk assessment requirement for control PR-01.v1.",
+                  "severity": "medium",
+                  "rationale": "Deterministic test result 55e99902-0ba7-4cc8-a1e0-375b11b2df3f shows requirement_not_met on original risk_assessment evidence.",
+                  "recommendation": "Review and remediate the risk assessment process for HX-IRIS."
+                }
+              }
+            },
+            {
+              "id": "call-f17ae15a-56b6-41a5-9f85-f561fa835986-7",
+              "name": "propose_finding",
+              "arguments": {
+                "result_ids": [
+                  "dddbbe8b-7689-4f3b-bab5-21284f55efe7"
+                ],
+                "finding": {
+                  "title": "PR-02.v1 Failure on HX-LIME: Project approval not met",
+                  "wording": "Project HX-LIME failed the project approval requirement for control PR-02.v1.",
+                  "severity": "medium",
+                  "rationale": "Deterministic test result dddbbe8b-7689-4f3b-bab5-21284f55efe7 shows requirement_not_met on original project_approval evidence.",
+                  "recommendation": "Obtain and document proper project approval for HX-LIME."
+                }
+              }
+            },
+            {
+              "id": "call-f17ae15a-56b6-41a5-9f85-f561fa835986-8",
+              "name": "propose_finding",
+              "arguments": {
+                "result_ids": [
+                  "9c37c9f8-d1ee-4448-bcef-11f7af445ca5"
+                ],
+                "finding": {
+                  "title": "PR-03.v1 Failure on HX-ONYX: GRC approval not met",
+                  "wording": "Project HX-ONYX failed the GRC approval requirement for control PR-03.v1.",
+                  "severity": "medium",
+                  "rationale": "Deterministic test result 9c37c9f8-d1ee-4448-bcef-11f7af445ca5 shows requirement_not_met on provided approvals evidence.",
+                  "recommendation": "Ensure GRC approval is obtained and documented for HX-ONYX."
+                }
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 9260,
+          "output_tokens": 461,
+          "total_tokens": 10436
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 7211.098399944603,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:03:09.084848+00:00"
+    },
+    {
+      "id": "d22a2ed2-dd86-407c-b1ed-324658f3b701",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "turn_key": "turn:7",
+      "request_digest": "67dd45afab683b12185312561b38171e4cca164c83cb9ba9a021b9562a09fcfa",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-912ee2b3-96c8-45e9-ab08-305ddc8872b8-6",
+              "name": "request_department_input",
+              "arguments": {
+                "evidence_snapshot_id": "af5d83cb-ccdc-48be-bb72-4bf78f8ef1ef",
+                "entity_ids": [
+                  "HX-TEAL"
+                ],
+                "recipient": "digital-risk@department.example",
+                "subject": "Missing project approval evidence for HX-TEAL under PR-02.v1",
+                "message": "Please provide the original project approval evidence for project HX-TEAL to complete the audit test for control PR-02.v1."
+              }
+            },
+            {
+              "id": "call-912ee2b3-96c8-45e9-ab08-305ddc8872b8-7",
+              "name": "request_department_input",
+              "arguments": {
+                "evidence_snapshot_id": "199b93eb-bd8f-4f52-ad66-96d5042ab64d",
+                "entity_ids": [
+                  "HX-TEAL"
+                ],
+                "recipient": "digital-risk@department.example",
+                "subject": "Missing project approval evidence for HX-TEAL under PR-03.v1",
+                "message": "Please provide the original project approval evidence for project HX-TEAL to complete the audit test for control PR-03.v1."
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 8541,
+          "output_tokens": 214,
+          "total_tokens": 8795
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 3267.385199898854,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:03:12.666160+00:00"
+    },
+    {
+      "id": "9bd4eaf4-1873-4766-a504-b4750431b657",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "turn_key": "turn:8",
+      "request_digest": "cc93c360cd097f604c6766229cb645334b3f1fabce99a781c60fdf6db637e938",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "Proposed 3 confirmed findings (pending review) for FAIL results on PR-01.v1 (HX-IRIS), PR-02.v1 (HX-LIME), PR-03.v1 (HX-ONYX). Requested missing project approval evidence for HX-TEAL (PR-02/PR-03). Awaiting human review or department input.",
+          "tool_calls": [],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 7800,
+          "output_tokens": 70,
+          "total_tokens": 7997
+        },
+        "finish_reason": "stop",
+        "latency_ms": 3440.5777999199927,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:03:16.417543+00:00"
+    }
+  ],
+  "tool_calls": [
+    {
+      "id": "96806ce8-8094-415d-bc39-dee6ff5a69c1",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-dcad165c-62cd-4cf7-9c44-b41443fe238f-0",
+      "tool": "get_audit_requirements",
+      "arguments": {},
+      "result": {
+        "ok": true,
+        "result": {
+          "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+          "period_start": "2027-02-01",
+          "period_end": "2027-04-30",
+          "controls": [
+            {
+              "control_id": "PR-01.v1",
+              "title": "Risk assessment before deployment",
+              "requirement": "A risk assessment exists and assessed_on <= deployed_on.",
+              "policy_id": "POL-PROJECT.v1",
+              "policy_version": 1,
+              "policy_text": "Every deployed project must have a risk assessment and documented approval dated on or before deployment. The GRC approval date must agree with original approval history. A GRC claim alone is not approval evidence.",
+              "procedure_id": "PROC-PR-01.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "on_or_before",
+                "evidence_kind": "risk_assessment",
+                "evidence_field": "assessed_on",
+                "entity_field": "deployed_on"
+              }
+            },
+            {
+              "control_id": "PR-02.v1",
+              "title": "Approval before deployment",
+              "requirement": "Original approval history exists and approved_on <= deployed_on.",
+              "policy_id": "POL-PROJECT.v1",
+              "policy_version": 1,
+              "policy_text": "Every deployed project must have a risk assessment and documented approval dated on or before deployment. The GRC approval date must agree with original approval history. A GRC claim alone is not approval evidence.",
+              "procedure_id": "PROC-PR-02.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "on_or_before",
+                "evidence_kind": "project_approval",
+                "evidence_field": "approved_on",
+                "entity_field": "deployed_on"
+              }
+            },
+            {
+              "control_id": "PR-03.v1",
+              "title": "GRC approval agrees with source",
+              "requirement": "GRC and original approval dates are equal. Investigate mismatches before proposing a finding.",
+              "policy_id": "POL-PROJECT.v1",
+              "policy_version": 1,
+              "policy_text": "Every deployed project must have a risk assessment and documented approval dated on or before deployment. The GRC approval date must agree with original approval history. A GRC claim alone is not approval evidence.",
+              "procedure_id": "PROC-PR-03.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "dates_agree",
+                "evidence_kind": "project_approval",
+                "other_evidence_kind": "grc_approval",
+                "field": "approved_on"
+              }
+            }
+          ],
+          "sources": [
+            {
+              "id": "projects",
+              "system": "Fictional project register",
+              "authority": "original",
+              "allowed_kinds": [
+                "risk_assessment"
+              ]
+            },
+            {
+              "id": "approvals",
+              "system": "Fictional approval history",
+              "authority": "original",
+              "allowed_kinds": [
+                "project_approval"
+              ]
+            },
+            {
+              "id": "compass",
+              "system": "Fictional Compass-style GRC",
+              "authority": "secondary",
+              "allowed_kinds": [
+                "grc_approval"
+              ]
+            },
+            {
+              "id": "hr",
+              "system": "Fictional HR records",
+              "authority": "original",
+              "allowed_kinds": [
+                "employment"
+              ]
+            },
+            {
+              "id": "access",
+              "system": "Fictional access register",
+              "authority": "original",
+              "allowed_kinds": [
+                "mfa",
+                "access_review"
+              ]
+            },
+            {
+              "id": "defender",
+              "system": "Fictional Defender-style inventory",
+              "authority": "original",
+              "allowed_kinds": [
+                "edr",
+                "encryption"
+              ]
+            },
+            {
+              "id": "qualys",
+              "system": "Fictional Qualys-style scans",
+              "authority": "original",
+              "allowed_kinds": [
+                "vulnerability_scan"
+              ]
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 30.121199786663055,
+      "created_at": "2026-10-31T13:02:41.881570+00:00"
+    },
+    {
+      "id": "0c6790a3-9c8b-4270-96f8-6c315bc10662",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-e9dc4018-77cd-4abb-9c35-93a1ca452dea-1",
+      "tool": "draft_audit_plan",
+      "arguments": {
+        "plan": {
+          "objective": "Audit Digital Risk for project deployment controls over 2027-02-01 to 2027-04-30, testing full population of every applicable control.",
+          "work_program": "Retrieve full population of deployed projects. For each control (PR-01.v1, PR-02.v1, PR-03.v1) obtain original evidence from authorized sources (projects, approvals), run deterministic rule tests, investigate contradictions or missing evidence, propose findings only on confirmed FAIL results. Authorize 90-day follow-up verification for any approved findings.",
+          "control_ids": [
+            "PR-01.v1",
+            "PR-02.v1",
+            "PR-03.v1"
+          ],
+          "allow_followup_verification": true,
+          "verification_window_days": 90
+        }
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "proposal_id": "b6d92aee-5993-4666-8f9d-9f067502b77b",
+          "version_id": "1cad9a46-6db4-4bcf-a6aa-adcc0ec9f5f3",
+          "version": 1,
+          "kind": "plan",
+          "status": "pending"
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 32.55259990692139,
+      "created_at": "2026-10-31T13:02:46.483649+00:00"
+    },
+    {
+      "id": "1d77e157-d5b5-4b92-985b-5bef41f34189",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-2",
+      "tool": "get_test_population",
+      "arguments": {
+        "control_id": "PR-01.v1"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "cf2157c9-9661-46da-913e-6869f86a225d",
+          "control_id": "PR-01.v1",
+          "plan_version_id": "1cad9a46-6db4-4bcf-a6aa-adcc0ec9f5f3",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-IRIS",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 3",
+              "active_from": "2027-04-29",
+              "active_to": "2027-04-29",
+              "facts": {
+                "deployed_on": "2027-04-29"
+              }
+            },
+            {
+              "id": "HX-LIME",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 1",
+              "active_from": "2027-02-01",
+              "active_to": "2027-02-01",
+              "facts": {
+                "deployed_on": "2027-02-01"
+              }
+            },
+            {
+              "id": "HX-ONYX",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 2",
+              "active_from": "2027-03-17",
+              "active_to": "2027-03-17",
+              "facts": {
+                "deployed_on": "2027-03-17"
+              }
+            },
+            {
+              "id": "HX-TEAL",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 4",
+              "active_from": "2027-04-30",
+              "active_to": "2027-04-30",
+              "facts": {
+                "deployed_on": "2027-04-30"
+              }
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 49.489600118249655,
+      "created_at": "2026-10-31T13:02:53.798935+00:00"
+    },
+    {
+      "id": "88f5aa63-5107-41fc-b778-0d672ae0595f",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-3",
+      "tool": "get_test_population",
+      "arguments": {
+        "control_id": "PR-02.v1"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "4a4a283c-b601-43aa-9035-f90ef2651afc",
+          "control_id": "PR-02.v1",
+          "plan_version_id": "1cad9a46-6db4-4bcf-a6aa-adcc0ec9f5f3",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-IRIS",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 3",
+              "active_from": "2027-04-29",
+              "active_to": "2027-04-29",
+              "facts": {
+                "deployed_on": "2027-04-29"
+              }
+            },
+            {
+              "id": "HX-LIME",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 1",
+              "active_from": "2027-02-01",
+              "active_to": "2027-02-01",
+              "facts": {
+                "deployed_on": "2027-02-01"
+              }
+            },
+            {
+              "id": "HX-ONYX",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 2",
+              "active_from": "2027-03-17",
+              "active_to": "2027-03-17",
+              "facts": {
+                "deployed_on": "2027-03-17"
+              }
+            },
+            {
+              "id": "HX-TEAL",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 4",
+              "active_from": "2027-04-30",
+              "active_to": "2027-04-30",
+              "facts": {
+                "deployed_on": "2027-04-30"
+              }
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 37.749300012364984,
+      "created_at": "2026-10-31T13:02:53.880006+00:00"
+    },
+    {
+      "id": "95bf2320-c3a7-4c94-abb2-460d5606f491",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-4",
+      "tool": "get_test_population",
+      "arguments": {
+        "control_id": "PR-03.v1"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "58d20885-8663-4989-aea8-9c30c160e22d",
+          "control_id": "PR-03.v1",
+          "plan_version_id": "1cad9a46-6db4-4bcf-a6aa-adcc0ec9f5f3",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-IRIS",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 3",
+              "active_from": "2027-04-29",
+              "active_to": "2027-04-29",
+              "facts": {
+                "deployed_on": "2027-04-29"
+              }
+            },
+            {
+              "id": "HX-LIME",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 1",
+              "active_from": "2027-02-01",
+              "active_to": "2027-02-01",
+              "facts": {
+                "deployed_on": "2027-02-01"
+              }
+            },
+            {
+              "id": "HX-ONYX",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 2",
+              "active_from": "2027-03-17",
+              "active_to": "2027-03-17",
+              "facts": {
+                "deployed_on": "2027-03-17"
+              }
+            },
+            {
+              "id": "HX-TEAL",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 4",
+              "active_from": "2027-04-30",
+              "active_to": "2027-04-30",
+              "facts": {
+                "deployed_on": "2027-04-30"
+              }
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 53.152100183069706,
+      "created_at": "2026-10-31T13:02:53.974046+00:00"
+    },
+    {
+      "id": "aafc7210-a647-47ed-b2a2-3cc0316e31db",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-5e053d81-1d4a-438b-8e33-e5df808d6da7-3",
+      "tool": "search_evidence",
+      "arguments": {
+        "population_snapshot_id": "cf2157c9-9661-46da-913e-6869f86a225d"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "217b4fb4-59de-427c-9c08-886c265284c3",
+          "population_snapshot_id": "cf2157c9-9661-46da-913e-6869f86a225d",
+          "records": [
+            {
+              "id": "EV-HX-IRIS-risk_assessment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-IRIS",
+              "source_id": "projects",
+              "source_record_id": "SRC-HX-IRIS-risk_assessment",
+              "kind": "risk_assessment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "assessed_on": "2027-04-30"
+              },
+              "fingerprint": "422a3b76fb14e463da0c9bfc938ebe577253424f1d94e3ff41d88973f412d0be",
+              "authority": "original",
+              "system": "Fictional project register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-LIME-risk_assessment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-LIME",
+              "source_id": "projects",
+              "source_record_id": "SRC-HX-LIME-risk_assessment",
+              "kind": "risk_assessment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "assessed_on": "2027-01-31"
+              },
+              "fingerprint": "49cd4e6ae8b9a8283146048a7809c1b7ed4ff3f4861089a3b02dc2d5d26dc25b",
+              "authority": "original",
+              "system": "Fictional project register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ONYX-risk_assessment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ONYX",
+              "source_id": "projects",
+              "source_record_id": "SRC-HX-ONYX-risk_assessment",
+              "kind": "risk_assessment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "assessed_on": "2027-03-15"
+              },
+              "fingerprint": "37f5c1fa498a576d32604bf92392258d3798bf2da8358ae8e50345b3bdf2ac65",
+              "authority": "original",
+              "system": "Fictional project register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-TEAL-risk_assessment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-TEAL",
+              "source_id": "projects",
+              "source_record_id": "SRC-HX-TEAL-risk_assessment",
+              "kind": "risk_assessment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "assessed_on": "2027-04-28"
+              },
+              "fingerprint": "9515157bf140a583935748149729d69f5f7b164a87e58b875670235356596310",
+              "authority": "original",
+              "system": "Fictional project register",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": []
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 50.34059984609485,
+      "created_at": "2026-10-31T13:02:57.541703+00:00"
+    },
+    {
+      "id": "da5175ba-9707-46c8-a7d0-88b9e27cfa69",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-5e053d81-1d4a-438b-8e33-e5df808d6da7-4",
+      "tool": "search_evidence",
+      "arguments": {
+        "population_snapshot_id": "4a4a283c-b601-43aa-9035-f90ef2651afc"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "af5d83cb-ccdc-48be-bb72-4bf78f8ef1ef",
+          "population_snapshot_id": "4a4a283c-b601-43aa-9035-f90ef2651afc",
+          "records": [
+            {
+              "id": "EV-HX-IRIS-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-IRIS",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-IRIS-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-04-28"
+              },
+              "fingerprint": "892aa0e7ef860b39563b3e32860dfcbc3a74f0ae45ea6a850e2d3dd77fa71cc4",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-LIME-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-LIME",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-LIME-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-02-02"
+              },
+              "fingerprint": "c00131143bf5f1f6049ec025b7e3a07fdbb572d91179faef7ec2fda36178dc79",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ONYX-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ONYX",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-ONYX-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-03-16"
+              },
+              "fingerprint": "9b847f7c3cae04ac7b806d78aee753b894b5f34676c79078e73c68e68dd7a7de",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": [
+            {
+              "entity_id": "HX-TEAL",
+              "evidence_kind": "project_approval"
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 25.59810015372932,
+      "created_at": "2026-10-31T13:02:57.601169+00:00"
+    },
+    {
+      "id": "38575732-5a2e-4f61-887b-38c3726308d9",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-5e053d81-1d4a-438b-8e33-e5df808d6da7-5",
+      "tool": "search_evidence",
+      "arguments": {
+        "population_snapshot_id": "58d20885-8663-4989-aea8-9c30c160e22d"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "199b93eb-bd8f-4f52-ad66-96d5042ab64d",
+          "population_snapshot_id": "58d20885-8663-4989-aea8-9c30c160e22d",
+          "records": [
+            {
+              "id": "EV-HX-IRIS-grc_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-IRIS",
+              "source_id": "compass",
+              "source_record_id": "SRC-HX-IRIS-grc_approval",
+              "kind": "grc_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-04-28"
+              },
+              "fingerprint": "f3ee73beea70313293a337727140c39f5f6c59536372a5673cf67dda7798566e",
+              "authority": "secondary",
+              "system": "Fictional Compass-style GRC",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-IRIS-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-IRIS",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-IRIS-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-04-28"
+              },
+              "fingerprint": "892aa0e7ef860b39563b3e32860dfcbc3a74f0ae45ea6a850e2d3dd77fa71cc4",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-LIME-grc_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-LIME",
+              "source_id": "compass",
+              "source_record_id": "SRC-HX-LIME-grc_approval",
+              "kind": "grc_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-02-02"
+              },
+              "fingerprint": "12ad8afa83cb38141f7d183d34fcd4e5ac918a0c8cc3fd694c9d8e829e245375",
+              "authority": "secondary",
+              "system": "Fictional Compass-style GRC",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-LIME-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-LIME",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-LIME-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-02-02"
+              },
+              "fingerprint": "c00131143bf5f1f6049ec025b7e3a07fdbb572d91179faef7ec2fda36178dc79",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ONYX-grc_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ONYX",
+              "source_id": "compass",
+              "source_record_id": "SRC-HX-ONYX-grc_approval",
+              "kind": "grc_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-03-14"
+              },
+              "fingerprint": "8152b8c14144d15d23c65d91c2d2df7802ac556ff30352a8849b583884a544e2",
+              "authority": "secondary",
+              "system": "Fictional Compass-style GRC",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ONYX-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ONYX",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-ONYX-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-03-16"
+              },
+              "fingerprint": "9b847f7c3cae04ac7b806d78aee753b894b5f34676c79078e73c68e68dd7a7de",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-TEAL-grc_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-TEAL",
+              "source_id": "compass",
+              "source_record_id": "SRC-HX-TEAL-grc_approval",
+              "kind": "grc_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-04-30"
+              },
+              "fingerprint": "c098c1c2e0039d8cb39cd9ec203d5da86d936d2a8a7d061904957194a7ca3f1e",
+              "authority": "secondary",
+              "system": "Fictional Compass-style GRC",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": [
+            {
+              "entity_id": "HX-TEAL",
+              "evidence_kind": "project_approval"
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 28.902699938043952,
+      "created_at": "2026-10-31T13:02:57.659406+00:00"
+    },
+    {
+      "id": "86affbb4-c085-458a-a43e-35a93b576739",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-6",
+      "tool": "run_control_test",
+      "arguments": {
+        "population_snapshot_id": "cf2157c9-9661-46da-913e-6869f86a225d",
+        "evidence_snapshot_id": "217b4fb4-59de-427c-9c08-886c265284c3"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "run_id": "951d6b7d-f627-44b6-96dd-593d5e15e6ed",
+          "control_id": "PR-01.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "55e99902-0ba7-4cc8-a1e0-375b11b2df3f",
+              "entity_id": "HX-IRIS",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-IRIS-risk_assessment.v1"
+              ]
+            },
+            {
+              "id": "3462de9d-e9d6-4337-9602-4a37328f60f3",
+              "entity_id": "HX-LIME",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-LIME-risk_assessment.v1"
+              ]
+            },
+            {
+              "id": "464336ba-ace9-462b-ab0b-4d391f06c713",
+              "entity_id": "HX-ONYX",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ONYX-risk_assessment.v1"
+              ]
+            },
+            {
+              "id": "c14249af-1478-4cf2-9f9e-c1d81c23b31c",
+              "entity_id": "HX-TEAL",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-TEAL-risk_assessment.v1"
+              ]
+            }
+          ],
+          "counts": {
+            "PASS": 3,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 0,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 44.7265999391675,
+      "created_at": "2026-10-31T13:03:01.664456+00:00"
+    },
+    {
+      "id": "93a1e19b-a385-41d4-8485-27fbc2632e45",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-7",
+      "tool": "run_control_test",
+      "arguments": {
+        "population_snapshot_id": "4a4a283c-b601-43aa-9035-f90ef2651afc",
+        "evidence_snapshot_id": "af5d83cb-ccdc-48be-bb72-4bf78f8ef1ef"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "run_id": "c1593e77-6a26-4b61-97ce-c907c7224460",
+          "control_id": "PR-02.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "767f3d58-565d-4a1b-aadc-77c9cfc974c3",
+              "entity_id": "HX-IRIS",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-IRIS-project_approval.v1"
+              ]
+            },
+            {
+              "id": "dddbbe8b-7689-4f3b-bab5-21284f55efe7",
+              "entity_id": "HX-LIME",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-LIME-project_approval.v1"
+              ]
+            },
+            {
+              "id": "b7ffbb65-5d94-4c07-8f62-f2982fc60eae",
+              "entity_id": "HX-ONYX",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ONYX-project_approval.v1"
+              ]
+            },
+            {
+              "id": "0d13c0de-7a8c-4384-af60-66dcde2efbf4",
+              "entity_id": "HX-TEAL",
+              "outcome": "MISSING_EVIDENCE",
+              "reason": "missing_project_approval",
+              "evidence_ids": []
+            }
+          ],
+          "counts": {
+            "PASS": 2,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 1,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 40.27430014684796,
+      "created_at": "2026-10-31T13:03:01.731781+00:00"
+    },
+    {
+      "id": "dc9f5a39-2268-4e18-8e51-bbaa11af8f81",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-8",
+      "tool": "run_control_test",
+      "arguments": {
+        "population_snapshot_id": "58d20885-8663-4989-aea8-9c30c160e22d",
+        "evidence_snapshot_id": "199b93eb-bd8f-4f52-ad66-96d5042ab64d"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "run_id": "4524eb7a-1edc-4f0c-93af-ee5b80c9bde7",
+          "control_id": "PR-03.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "5e99393f-2951-40d5-95f2-b5e34dd30448",
+              "entity_id": "HX-IRIS",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-IRIS-grc_approval.v1",
+                "EV-HX-IRIS-project_approval.v1"
+              ]
+            },
+            {
+              "id": "cd226a87-7d22-48f8-8d0b-4455004f9063",
+              "entity_id": "HX-LIME",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-LIME-grc_approval.v1",
+                "EV-HX-LIME-project_approval.v1"
+              ]
+            },
+            {
+              "id": "9c37c9f8-d1ee-4448-bcef-11f7af445ca5",
+              "entity_id": "HX-ONYX",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-ONYX-grc_approval.v1",
+                "EV-HX-ONYX-project_approval.v1"
+              ]
+            },
+            {
+              "id": "81484053-16c9-40e5-b6c8-ee9e686b1b4a",
+              "entity_id": "HX-TEAL",
+              "outcome": "MISSING_EVIDENCE",
+              "reason": "missing_project_approval",
+              "evidence_ids": []
+            }
+          ],
+          "counts": {
+            "PASS": 2,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 1,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 47.551200026646256,
+      "created_at": "2026-10-31T13:03:01.799418+00:00"
+    },
+    {
+      "id": "764a9806-ce26-4d9e-b68b-cd0c970f271d",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-f17ae15a-56b6-41a5-9f85-f561fa835986-6",
+      "tool": "propose_finding",
+      "arguments": {
+        "result_ids": [
+          "55e99902-0ba7-4cc8-a1e0-375b11b2df3f"
+        ],
+        "finding": {
+          "title": "PR-01.v1 Failure on HX-IRIS: Risk assessment not met",
+          "wording": "Project HX-IRIS failed the risk assessment requirement for control PR-01.v1.",
+          "severity": "medium",
+          "rationale": "Deterministic test result 55e99902-0ba7-4cc8-a1e0-375b11b2df3f shows requirement_not_met on original risk_assessment evidence.",
+          "recommendation": "Review and remediate the risk assessment process for HX-IRIS."
+        }
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "proposal_id": "703708f8-6951-41e3-bf5e-0e05b7ddc931",
+          "version_id": "2c325123-838b-4dca-b016-ef6f62e15470",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 40.80220009200275,
+      "created_at": "2026-10-31T13:03:09.169203+00:00"
+    },
+    {
+      "id": "27c9dcfc-dd69-4e07-af6c-a936cc5a1465",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-f17ae15a-56b6-41a5-9f85-f561fa835986-7",
+      "tool": "propose_finding",
+      "arguments": {
+        "result_ids": [
+          "dddbbe8b-7689-4f3b-bab5-21284f55efe7"
+        ],
+        "finding": {
+          "title": "PR-02.v1 Failure on HX-LIME: Project approval not met",
+          "wording": "Project HX-LIME failed the project approval requirement for control PR-02.v1.",
+          "severity": "medium",
+          "rationale": "Deterministic test result dddbbe8b-7689-4f3b-bab5-21284f55efe7 shows requirement_not_met on original project_approval evidence.",
+          "recommendation": "Obtain and document proper project approval for HX-LIME."
+        }
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "proposal_id": "77b3eaea-7e16-4c47-970d-6d03ec66df9e",
+          "version_id": "2aa2a9f5-709a-4535-9e25-64dd6b045e77",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 34.85070005990565,
+      "created_at": "2026-10-31T13:03:09.234268+00:00"
+    },
+    {
+      "id": "d9c384b9-cc01-410c-8d86-c41c924745e8",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-f17ae15a-56b6-41a5-9f85-f561fa835986-8",
+      "tool": "propose_finding",
+      "arguments": {
+        "result_ids": [
+          "9c37c9f8-d1ee-4448-bcef-11f7af445ca5"
+        ],
+        "finding": {
+          "title": "PR-03.v1 Failure on HX-ONYX: GRC approval not met",
+          "wording": "Project HX-ONYX failed the GRC approval requirement for control PR-03.v1.",
+          "severity": "medium",
+          "rationale": "Deterministic test result 9c37c9f8-d1ee-4448-bcef-11f7af445ca5 shows requirement_not_met on provided approvals evidence.",
+          "recommendation": "Ensure GRC approval is obtained and documented for HX-ONYX."
+        }
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "proposal_id": "08d3b7d0-e079-4fd7-a8e7-0c700ab5a97f",
+          "version_id": "ca3309c1-f416-4e95-a522-2517c4304284",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 47.11359995417297,
+      "created_at": "2026-10-31T13:03:09.300345+00:00"
+    },
+    {
+      "id": "d6fba7ed-5255-4ef9-aa31-f28a8163557c",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-912ee2b3-96c8-45e9-ab08-305ddc8872b8-6",
+      "tool": "request_department_input",
+      "arguments": {
+        "evidence_snapshot_id": "af5d83cb-ccdc-48be-bb72-4bf78f8ef1ef",
+        "entity_ids": [
+          "HX-TEAL"
+        ],
+        "recipient": "digital-risk@department.example",
+        "subject": "Missing project approval evidence for HX-TEAL under PR-02.v1",
+        "message": "Please provide the original project approval evidence for project HX-TEAL to complete the audit test for control PR-02.v1."
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "request_id": "b0a99734-49ca-40d9-8fdd-38f6de36ac2d",
+          "status": "queued",
+          "review": null
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 31.539299990981817,
+      "created_at": "2026-10-31T13:03:12.726884+00:00"
+    },
+    {
+      "id": "d58c65d8-1075-4b1b-a2e2-b10e48075e12",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "call_id": "call-912ee2b3-96c8-45e9-ab08-305ddc8872b8-7",
+      "tool": "request_department_input",
+      "arguments": {
+        "evidence_snapshot_id": "199b93eb-bd8f-4f52-ad66-96d5042ab64d",
+        "entity_ids": [
+          "HX-TEAL"
+        ],
+        "recipient": "digital-risk@department.example",
+        "subject": "Missing project approval evidence for HX-TEAL under PR-03.v1",
+        "message": "Please provide the original project approval evidence for project HX-TEAL to complete the audit test for control PR-03.v1."
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "request_id": "b0a99734-49ca-40d9-8fdd-38f6de36ac2d",
+          "status": "queued",
+          "review": null
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 33.174300100654364,
+      "created_at": "2026-10-31T13:03:12.775763+00:00"
+    }
+  ],
+  "results": [
+    {
+      "id": "55e99902-0ba7-4cc8-a1e0-375b11b2df3f",
+      "run_id": "951d6b7d-f627-44b6-96dd-593d5e15e6ed",
+      "entity_id": "HX-IRIS",
+      "control_id": "PR-01.v1",
+      "outcome": "FAIL",
+      "reason": "requirement_not_met",
+      "evidence_ids": [
+        "EV-HX-IRIS-risk_assessment.v1"
+      ]
+    },
+    {
+      "id": "3462de9d-e9d6-4337-9602-4a37328f60f3",
+      "run_id": "951d6b7d-f627-44b6-96dd-593d5e15e6ed",
+      "entity_id": "HX-LIME",
+      "control_id": "PR-01.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-LIME-risk_assessment.v1"
+      ]
+    },
+    {
+      "id": "464336ba-ace9-462b-ab0b-4d391f06c713",
+      "run_id": "951d6b7d-f627-44b6-96dd-593d5e15e6ed",
+      "entity_id": "HX-ONYX",
+      "control_id": "PR-01.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ONYX-risk_assessment.v1"
+      ]
+    },
+    {
+      "id": "c14249af-1478-4cf2-9f9e-c1d81c23b31c",
+      "run_id": "951d6b7d-f627-44b6-96dd-593d5e15e6ed",
+      "entity_id": "HX-TEAL",
+      "control_id": "PR-01.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-TEAL-risk_assessment.v1"
+      ]
+    },
+    {
+      "id": "767f3d58-565d-4a1b-aadc-77c9cfc974c3",
+      "run_id": "c1593e77-6a26-4b61-97ce-c907c7224460",
+      "entity_id": "HX-IRIS",
+      "control_id": "PR-02.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-IRIS-project_approval.v1"
+      ]
+    },
+    {
+      "id": "dddbbe8b-7689-4f3b-bab5-21284f55efe7",
+      "run_id": "c1593e77-6a26-4b61-97ce-c907c7224460",
+      "entity_id": "HX-LIME",
+      "control_id": "PR-02.v1",
+      "outcome": "FAIL",
+      "reason": "requirement_not_met",
+      "evidence_ids": [
+        "EV-HX-LIME-project_approval.v1"
+      ]
+    },
+    {
+      "id": "b7ffbb65-5d94-4c07-8f62-f2982fc60eae",
+      "run_id": "c1593e77-6a26-4b61-97ce-c907c7224460",
+      "entity_id": "HX-ONYX",
+      "control_id": "PR-02.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ONYX-project_approval.v1"
+      ]
+    },
+    {
+      "id": "0d13c0de-7a8c-4384-af60-66dcde2efbf4",
+      "run_id": "c1593e77-6a26-4b61-97ce-c907c7224460",
+      "entity_id": "HX-TEAL",
+      "control_id": "PR-02.v1",
+      "outcome": "MISSING_EVIDENCE",
+      "reason": "missing_project_approval",
+      "evidence_ids": []
+    },
+    {
+      "id": "5e99393f-2951-40d5-95f2-b5e34dd30448",
+      "run_id": "4524eb7a-1edc-4f0c-93af-ee5b80c9bde7",
+      "entity_id": "HX-IRIS",
+      "control_id": "PR-03.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-IRIS-grc_approval.v1",
+        "EV-HX-IRIS-project_approval.v1"
+      ]
+    },
+    {
+      "id": "cd226a87-7d22-48f8-8d0b-4455004f9063",
+      "run_id": "4524eb7a-1edc-4f0c-93af-ee5b80c9bde7",
+      "entity_id": "HX-LIME",
+      "control_id": "PR-03.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-LIME-grc_approval.v1",
+        "EV-HX-LIME-project_approval.v1"
+      ]
+    },
+    {
+      "id": "9c37c9f8-d1ee-4448-bcef-11f7af445ca5",
+      "run_id": "4524eb7a-1edc-4f0c-93af-ee5b80c9bde7",
+      "entity_id": "HX-ONYX",
+      "control_id": "PR-03.v1",
+      "outcome": "FAIL",
+      "reason": "requirement_not_met",
+      "evidence_ids": [
+        "EV-HX-ONYX-grc_approval.v1",
+        "EV-HX-ONYX-project_approval.v1"
+      ]
+    },
+    {
+      "id": "81484053-16c9-40e5-b6c8-ee9e686b1b4a",
+      "run_id": "4524eb7a-1edc-4f0c-93af-ee5b80c9bde7",
+      "entity_id": "HX-TEAL",
+      "control_id": "PR-03.v1",
+      "outcome": "MISSING_EVIDENCE",
+      "reason": "missing_project_approval",
+      "evidence_ids": []
+    }
+  ],
+  "requests": [
+    {
+      "id": "b0a99734-49ca-40d9-8fdd-38f6de36ac2d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "business_key": "ea32af0a5d41693e171fe45925fddaca2d62205e305d81dd10c5f367ad62a246",
+      "document": {
+        "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+        "evidence_snapshot_id": "af5d83cb-ccdc-48be-bb72-4bf78f8ef1ef",
+        "entity_ids": [
+          "HX-TEAL"
+        ],
+        "recipient": "digital-risk@department.example",
+        "subject": "Missing project approval evidence for HX-TEAL under PR-02.v1",
+        "message": "Please provide the original project approval evidence for project HX-TEAL to complete the audit test for control PR-02.v1.",
+        "escalation": false,
+        "purpose": "evidence",
+        "finding_id": null,
+        "due_at": null,
+        "reminder_interval_days": 3
+      },
+      "status": "sent",
+      "proposal_id": null,
+      "created_at": "2026-10-31T13:03:12.717090+00:00"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "b6d92aee-5993-4666-8f9d-9f067502b77b",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "kind": "plan",
+      "business_key": "work_program"
+    },
+    {
+      "id": "703708f8-6951-41e3-bf5e-0e05b7ddc931",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "kind": "finding",
+      "business_key": "c37b9bb2ab9089dcc8f886e3340ebe4d1cb91190de383b15c6efe09daf770f60"
+    },
+    {
+      "id": "77b3eaea-7e16-4c47-970d-6d03ec66df9e",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "kind": "finding",
+      "business_key": "b8deb9d231d800b8a76a8b5f3722a3257968b7d18e05aea8d2d407d8c7eab579"
+    },
+    {
+      "id": "08d3b7d0-e079-4fd7-a8e7-0c700ab5a97f",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "kind": "finding",
+      "business_key": "0183b6495ac7b6c1514a90c9a025904df43705f2c13de365e8cf7d861cc6b0b5"
+    }
+  ],
+  "versions": [
+    {
+      "id": "1cad9a46-6db4-4bcf-a6aa-adcc0ec9f5f3",
+      "proposal_id": "b6d92aee-5993-4666-8f9d-9f067502b77b",
+      "version": 1,
+      "document": {
+        "objective": "Audit Digital Risk for project deployment controls over 2027-02-01 to 2027-04-30, testing full population of every applicable control.",
+        "work_program": "Retrieve full population of deployed projects. For each control (PR-01.v1, PR-02.v1, PR-03.v1) obtain original evidence from authorized sources (projects, approvals), run deterministic rule tests, investigate contradictions or missing evidence, propose findings only on confirmed FAIL results. Authorize 90-day follow-up verification for any approved findings.",
+        "control_ids": [
+          "PR-01.v1",
+          "PR-02.v1",
+          "PR-03.v1"
+        ],
+        "remediation_for_finding_id": null,
+        "allow_followup_verification": true,
+        "verification_window_days": 90
+      },
+      "created_by": "audit-agent",
+      "created_at": "2026-10-31T13:02:46.466985+00:00"
+    },
+    {
+      "id": "2c325123-838b-4dca-b016-ef6f62e15470",
+      "proposal_id": "703708f8-6951-41e3-bf5e-0e05b7ddc931",
+      "version": 1,
+      "document": {
+        "title": "PR-01.v1 Failure on HX-IRIS: Risk assessment not met",
+        "wording": "Project HX-IRIS failed the risk assessment requirement for control PR-01.v1.",
+        "severity": "medium",
+        "rationale": "Deterministic test result 55e99902-0ba7-4cc8-a1e0-375b11b2df3f shows requirement_not_met on original risk_assessment evidence.",
+        "recommendation": "Review and remediate the risk assessment process for HX-IRIS.",
+        "result_ids": [
+          "55e99902-0ba7-4cc8-a1e0-375b11b2df3f"
+        ],
+        "control_id": "PR-01.v1",
+        "policy_id": "POL-PROJECT.v1",
+        "evidence_ids": [
+          "EV-HX-IRIS-risk_assessment.v1"
+        ]
+      },
+      "created_by": "audit-agent",
+      "created_at": "2026-10-31T13:03:09.159945+00:00"
+    },
+    {
+      "id": "2aa2a9f5-709a-4535-9e25-64dd6b045e77",
+      "proposal_id": "77b3eaea-7e16-4c47-970d-6d03ec66df9e",
+      "version": 1,
+      "document": {
+        "title": "PR-02.v1 Failure on HX-LIME: Project approval not met",
+        "wording": "Project HX-LIME failed the project approval requirement for control PR-02.v1.",
+        "severity": "medium",
+        "rationale": "Deterministic test result dddbbe8b-7689-4f3b-bab5-21284f55efe7 shows requirement_not_met on original project_approval evidence.",
+        "recommendation": "Obtain and document proper project approval for HX-LIME.",
+        "result_ids": [
+          "dddbbe8b-7689-4f3b-bab5-21284f55efe7"
+        ],
+        "control_id": "PR-02.v1",
+        "policy_id": "POL-PROJECT.v1",
+        "evidence_ids": [
+          "EV-HX-LIME-project_approval.v1"
+        ]
+      },
+      "created_by": "audit-agent",
+      "created_at": "2026-10-31T13:03:09.228642+00:00"
+    },
+    {
+      "id": "ca3309c1-f416-4e95-a522-2517c4304284",
+      "proposal_id": "08d3b7d0-e079-4fd7-a8e7-0c700ab5a97f",
+      "version": 1,
+      "document": {
+        "title": "PR-03.v1 Failure on HX-ONYX: GRC approval not met",
+        "wording": "Project HX-ONYX failed the GRC approval requirement for control PR-03.v1.",
+        "severity": "medium",
+        "rationale": "Deterministic test result 9c37c9f8-d1ee-4448-bcef-11f7af445ca5 shows requirement_not_met on provided approvals evidence.",
+        "recommendation": "Ensure GRC approval is obtained and documented for HX-ONYX.",
+        "result_ids": [
+          "9c37c9f8-d1ee-4448-bcef-11f7af445ca5"
+        ],
+        "control_id": "PR-03.v1",
+        "policy_id": "POL-PROJECT.v1",
+        "evidence_ids": [
+          "EV-HX-ONYX-grc_approval.v1",
+          "EV-HX-ONYX-project_approval.v1"
+        ]
+      },
+      "created_by": "audit-agent",
+      "created_at": "2026-10-31T13:03:09.300345+00:00"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "c687574e-9438-4e38-928d-e4317b3586d6",
+      "version_id": "1cad9a46-6db4-4bcf-a6aa-adcc0ec9f5f3",
+      "decision": "approved",
+      "reviewer_id": "heldout-evaluation-human",
+      "reviewer_role": "reviewer",
+      "reason": "Held-out evaluation human approves the complete proposed scope.",
+      "created_at": "2026-10-31T13:02:46.535278+00:00"
+    }
+  ],
+  "activity": [
+    {
+      "id": 1,
+      "event_key": "assignment:ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": null,
+      "status": "Running",
+      "label": "Audit assignment received",
+      "record_type": null,
+      "record_id": null,
+      "details": {
+        "assignment": "Audit Digital Risk from 2027-02-01 through 2027-04-30. Test the full population for every applicable control made available in this evaluation scope. Propose confirmed findings and request missing original evidence; stop at human review or an evidence wait.",
+        "inference_source": "azure_grok"
+      },
+      "created_at": "2026-10-31T13:02:30.540693+00:00"
+    },
+    {
+      "id": 2,
+      "event_key": "scope:ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "Audit scope interpreted and saved",
+      "record_type": "engagement",
+      "record_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "details": {
+        "id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+        "dataset_id": "digital-risk-heldout.v1",
+        "department": "Digital Risk",
+        "period_start": "2027-02-01",
+        "period_end": "2027-04-30"
+      },
+      "created_at": "2026-10-31T13:02:36.983478+00:00"
+    },
+    {
+      "id": 3,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-dcad165c-62cd-4cf7-9c44-b41443fe238f-0:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running get_audit_requirements",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:02:41.839604+00:00"
+    },
+    {
+      "id": 4,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-dcad165c-62cd-4cf7-9c44-b41443fe238f-0:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "get_audit_requirements completed",
+      "record_type": "get_audit_requirements",
+      "record_id": null,
+      "details": {
+        "ok": true,
+        "result": {
+          "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+          "period_start": "2027-02-01",
+          "period_end": "2027-04-30",
+          "controls": [
+            {
+              "control_id": "PR-01.v1",
+              "title": "Risk assessment before deployment",
+              "requirement": "A risk assessment exists and assessed_on <= deployed_on.",
+              "policy_id": "POL-PROJECT.v1",
+              "policy_version": 1,
+              "policy_text": "Every deployed project must have a risk assessment and documented approval dated on or before deployment. The GRC approval date must agree with original approval history. A GRC claim alone is not approval evidence.",
+              "procedure_id": "PROC-PR-01.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "on_or_before",
+                "evidence_kind": "risk_assessment",
+                "evidence_field": "assessed_on",
+                "entity_field": "deployed_on"
+              }
+            },
+            {
+              "control_id": "PR-02.v1",
+              "title": "Approval before deployment",
+              "requirement": "Original approval history exists and approved_on <= deployed_on.",
+              "policy_id": "POL-PROJECT.v1",
+              "policy_version": 1,
+              "policy_text": "Every deployed project must have a risk assessment and documented approval dated on or before deployment. The GRC approval date must agree with original approval history. A GRC claim alone is not approval evidence.",
+              "procedure_id": "PROC-PR-02.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "on_or_before",
+                "evidence_kind": "project_approval",
+                "evidence_field": "approved_on",
+                "entity_field": "deployed_on"
+              }
+            },
+            {
+              "control_id": "PR-03.v1",
+              "title": "GRC approval agrees with source",
+              "requirement": "GRC and original approval dates are equal. Investigate mismatches before proposing a finding.",
+              "policy_id": "POL-PROJECT.v1",
+              "policy_version": 1,
+              "policy_text": "Every deployed project must have a risk assessment and documented approval dated on or before deployment. The GRC approval date must agree with original approval history. A GRC claim alone is not approval evidence.",
+              "procedure_id": "PROC-PR-03.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "dates_agree",
+                "evidence_kind": "project_approval",
+                "other_evidence_kind": "grc_approval",
+                "field": "approved_on"
+              }
+            }
+          ],
+          "sources": [
+            {
+              "id": "projects",
+              "system": "Fictional project register",
+              "authority": "original",
+              "allowed_kinds": [
+                "risk_assessment"
+              ]
+            },
+            {
+              "id": "approvals",
+              "system": "Fictional approval history",
+              "authority": "original",
+              "allowed_kinds": [
+                "project_approval"
+              ]
+            },
+            {
+              "id": "compass",
+              "system": "Fictional Compass-style GRC",
+              "authority": "secondary",
+              "allowed_kinds": [
+                "grc_approval"
+              ]
+            },
+            {
+              "id": "hr",
+              "system": "Fictional HR records",
+              "authority": "original",
+              "allowed_kinds": [
+                "employment"
+              ]
+            },
+            {
+              "id": "access",
+              "system": "Fictional access register",
+              "authority": "original",
+              "allowed_kinds": [
+                "mfa",
+                "access_review"
+              ]
+            },
+            {
+              "id": "defender",
+              "system": "Fictional Defender-style inventory",
+              "authority": "original",
+              "allowed_kinds": [
+                "edr",
+                "encryption"
+              ]
+            },
+            {
+              "id": "qualys",
+              "system": "Fictional Qualys-style scans",
+              "authority": "original",
+              "allowed_kinds": [
+                "vulnerability_scan"
+              ]
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T13:02:41.884111+00:00"
+    },
+    {
+      "id": 5,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-e9dc4018-77cd-4abb-9c35-93a1ca452dea-1:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running draft_audit_plan",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:02:46.440786+00:00"
+    },
+    {
+      "id": 6,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-e9dc4018-77cd-4abb-9c35-93a1ca452dea-1:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Waiting for Approval",
+      "label": "draft_audit_plan completed",
+      "record_type": "draft_audit_plan",
+      "record_id": "b6d92aee-5993-4666-8f9d-9f067502b77b",
+      "details": {
+        "ok": true,
+        "result": {
+          "proposal_id": "b6d92aee-5993-4666-8f9d-9f067502b77b",
+          "version_id": "1cad9a46-6db4-4bcf-a6aa-adcc0ec9f5f3",
+          "version": 1,
+          "kind": "plan",
+          "status": "pending"
+        }
+      },
+      "created_at": "2026-10-31T13:02:46.491331+00:00"
+    },
+    {
+      "id": 7,
+      "event_key": "review-event:b48f4c13-e041-41c7-bcfd-4c6438ff38ff",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Resumed",
+      "label": "review approved",
+      "record_type": "review",
+      "record_id": "b6d92aee-5993-4666-8f9d-9f067502b77b",
+      "details": {},
+      "created_at": "2026-10-31T13:02:46.564057+00:00"
+    },
+    {
+      "id": 8,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-2:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running get_test_population",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:02:53.736092+00:00"
+    },
+    {
+      "id": 9,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-2:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "get_test_population completed",
+      "record_type": "get_test_population",
+      "record_id": "cf2157c9-9661-46da-913e-6869f86a225d",
+      "details": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "cf2157c9-9661-46da-913e-6869f86a225d",
+          "control_id": "PR-01.v1",
+          "plan_version_id": "1cad9a46-6db4-4bcf-a6aa-adcc0ec9f5f3",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-IRIS",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 3",
+              "active_from": "2027-04-29",
+              "active_to": "2027-04-29",
+              "facts": {
+                "deployed_on": "2027-04-29"
+              }
+            },
+            {
+              "id": "HX-LIME",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 1",
+              "active_from": "2027-02-01",
+              "active_to": "2027-02-01",
+              "facts": {
+                "deployed_on": "2027-02-01"
+              }
+            },
+            {
+              "id": "HX-ONYX",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 2",
+              "active_from": "2027-03-17",
+              "active_to": "2027-03-17",
+              "facts": {
+                "deployed_on": "2027-03-17"
+              }
+            },
+            {
+              "id": "HX-TEAL",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 4",
+              "active_from": "2027-04-30",
+              "active_to": "2027-04-30",
+              "facts": {
+                "deployed_on": "2027-04-30"
+              }
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T13:02:53.804078+00:00"
+    },
+    {
+      "id": 10,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-3:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running get_test_population",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:02:53.827754+00:00"
+    },
+    {
+      "id": 11,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-3:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "get_test_population completed",
+      "record_type": "get_test_population",
+      "record_id": "4a4a283c-b601-43aa-9035-f90ef2651afc",
+      "details": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "4a4a283c-b601-43aa-9035-f90ef2651afc",
+          "control_id": "PR-02.v1",
+          "plan_version_id": "1cad9a46-6db4-4bcf-a6aa-adcc0ec9f5f3",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-IRIS",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 3",
+              "active_from": "2027-04-29",
+              "active_to": "2027-04-29",
+              "facts": {
+                "deployed_on": "2027-04-29"
+              }
+            },
+            {
+              "id": "HX-LIME",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 1",
+              "active_from": "2027-02-01",
+              "active_to": "2027-02-01",
+              "facts": {
+                "deployed_on": "2027-02-01"
+              }
+            },
+            {
+              "id": "HX-ONYX",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 2",
+              "active_from": "2027-03-17",
+              "active_to": "2027-03-17",
+              "facts": {
+                "deployed_on": "2027-03-17"
+              }
+            },
+            {
+              "id": "HX-TEAL",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 4",
+              "active_from": "2027-04-30",
+              "active_to": "2027-04-30",
+              "facts": {
+                "deployed_on": "2027-04-30"
+              }
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T13:02:53.885023+00:00"
+    },
+    {
+      "id": 12,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-4:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running get_test_population",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:02:53.907907+00:00"
+    },
+    {
+      "id": 13,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-ac70bee2-fe1e-4b8d-8135-d31890e9562d-4:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "get_test_population completed",
+      "record_type": "get_test_population",
+      "record_id": "58d20885-8663-4989-aea8-9c30c160e22d",
+      "details": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "58d20885-8663-4989-aea8-9c30c160e22d",
+          "control_id": "PR-03.v1",
+          "plan_version_id": "1cad9a46-6db4-4bcf-a6aa-adcc0ec9f5f3",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-IRIS",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 3",
+              "active_from": "2027-04-29",
+              "active_to": "2027-04-29",
+              "facts": {
+                "deployed_on": "2027-04-29"
+              }
+            },
+            {
+              "id": "HX-LIME",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 1",
+              "active_from": "2027-02-01",
+              "active_to": "2027-02-01",
+              "facts": {
+                "deployed_on": "2027-02-01"
+              }
+            },
+            {
+              "id": "HX-ONYX",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 2",
+              "active_from": "2027-03-17",
+              "active_to": "2027-03-17",
+              "facts": {
+                "deployed_on": "2027-03-17"
+              }
+            },
+            {
+              "id": "HX-TEAL",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Evaluation project 4",
+              "active_from": "2027-04-30",
+              "active_to": "2027-04-30",
+              "facts": {
+                "deployed_on": "2027-04-30"
+              }
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T13:02:53.978068+00:00"
+    },
+    {
+      "id": 14,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-5e053d81-1d4a-438b-8e33-e5df808d6da7-3:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running search_evidence",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:02:57.474070+00:00"
+    },
+    {
+      "id": 15,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-5e053d81-1d4a-438b-8e33-e5df808d6da7-3:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "search_evidence completed",
+      "record_type": "search_evidence",
+      "record_id": "217b4fb4-59de-427c-9c08-886c265284c3",
+      "details": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "217b4fb4-59de-427c-9c08-886c265284c3",
+          "population_snapshot_id": "cf2157c9-9661-46da-913e-6869f86a225d",
+          "records": [
+            {
+              "id": "EV-HX-IRIS-risk_assessment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-IRIS",
+              "source_id": "projects",
+              "source_record_id": "SRC-HX-IRIS-risk_assessment",
+              "kind": "risk_assessment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "assessed_on": "2027-04-30"
+              },
+              "fingerprint": "422a3b76fb14e463da0c9bfc938ebe577253424f1d94e3ff41d88973f412d0be",
+              "authority": "original",
+              "system": "Fictional project register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-LIME-risk_assessment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-LIME",
+              "source_id": "projects",
+              "source_record_id": "SRC-HX-LIME-risk_assessment",
+              "kind": "risk_assessment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "assessed_on": "2027-01-31"
+              },
+              "fingerprint": "49cd4e6ae8b9a8283146048a7809c1b7ed4ff3f4861089a3b02dc2d5d26dc25b",
+              "authority": "original",
+              "system": "Fictional project register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ONYX-risk_assessment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ONYX",
+              "source_id": "projects",
+              "source_record_id": "SRC-HX-ONYX-risk_assessment",
+              "kind": "risk_assessment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "assessed_on": "2027-03-15"
+              },
+              "fingerprint": "37f5c1fa498a576d32604bf92392258d3798bf2da8358ae8e50345b3bdf2ac65",
+              "authority": "original",
+              "system": "Fictional project register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-TEAL-risk_assessment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-TEAL",
+              "source_id": "projects",
+              "source_record_id": "SRC-HX-TEAL-risk_assessment",
+              "kind": "risk_assessment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "assessed_on": "2027-04-28"
+              },
+              "fingerprint": "9515157bf140a583935748149729d69f5f7b164a87e58b875670235356596310",
+              "authority": "original",
+              "system": "Fictional project register",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": []
+        }
+      },
+      "created_at": "2026-10-31T13:02:57.545839+00:00"
+    },
+    {
+      "id": 16,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-5e053d81-1d4a-438b-8e33-e5df808d6da7-4:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running search_evidence",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:02:57.566027+00:00"
+    },
+    {
+      "id": 17,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-5e053d81-1d4a-438b-8e33-e5df808d6da7-4:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "search_evidence completed",
+      "record_type": "search_evidence",
+      "record_id": "af5d83cb-ccdc-48be-bb72-4bf78f8ef1ef",
+      "details": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "af5d83cb-ccdc-48be-bb72-4bf78f8ef1ef",
+          "population_snapshot_id": "4a4a283c-b601-43aa-9035-f90ef2651afc",
+          "records": [
+            {
+              "id": "EV-HX-IRIS-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-IRIS",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-IRIS-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-04-28"
+              },
+              "fingerprint": "892aa0e7ef860b39563b3e32860dfcbc3a74f0ae45ea6a850e2d3dd77fa71cc4",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-LIME-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-LIME",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-LIME-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-02-02"
+              },
+              "fingerprint": "c00131143bf5f1f6049ec025b7e3a07fdbb572d91179faef7ec2fda36178dc79",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ONYX-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ONYX",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-ONYX-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-03-16"
+              },
+              "fingerprint": "9b847f7c3cae04ac7b806d78aee753b894b5f34676c79078e73c68e68dd7a7de",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": [
+            {
+              "entity_id": "HX-TEAL",
+              "evidence_kind": "project_approval"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T13:02:57.603141+00:00"
+    },
+    {
+      "id": 18,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-5e053d81-1d4a-438b-8e33-e5df808d6da7-5:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running search_evidence",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:02:57.621149+00:00"
+    },
+    {
+      "id": 19,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-5e053d81-1d4a-438b-8e33-e5df808d6da7-5:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "search_evidence completed",
+      "record_type": "search_evidence",
+      "record_id": "199b93eb-bd8f-4f52-ad66-96d5042ab64d",
+      "details": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "199b93eb-bd8f-4f52-ad66-96d5042ab64d",
+          "population_snapshot_id": "58d20885-8663-4989-aea8-9c30c160e22d",
+          "records": [
+            {
+              "id": "EV-HX-IRIS-grc_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-IRIS",
+              "source_id": "compass",
+              "source_record_id": "SRC-HX-IRIS-grc_approval",
+              "kind": "grc_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-04-28"
+              },
+              "fingerprint": "f3ee73beea70313293a337727140c39f5f6c59536372a5673cf67dda7798566e",
+              "authority": "secondary",
+              "system": "Fictional Compass-style GRC",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-IRIS-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-IRIS",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-IRIS-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-04-28"
+              },
+              "fingerprint": "892aa0e7ef860b39563b3e32860dfcbc3a74f0ae45ea6a850e2d3dd77fa71cc4",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-LIME-grc_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-LIME",
+              "source_id": "compass",
+              "source_record_id": "SRC-HX-LIME-grc_approval",
+              "kind": "grc_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-02-02"
+              },
+              "fingerprint": "12ad8afa83cb38141f7d183d34fcd4e5ac918a0c8cc3fd694c9d8e829e245375",
+              "authority": "secondary",
+              "system": "Fictional Compass-style GRC",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-LIME-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-LIME",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-LIME-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-02-02"
+              },
+              "fingerprint": "c00131143bf5f1f6049ec025b7e3a07fdbb572d91179faef7ec2fda36178dc79",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ONYX-grc_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ONYX",
+              "source_id": "compass",
+              "source_record_id": "SRC-HX-ONYX-grc_approval",
+              "kind": "grc_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-03-14"
+              },
+              "fingerprint": "8152b8c14144d15d23c65d91c2d2df7802ac556ff30352a8849b583884a544e2",
+              "authority": "secondary",
+              "system": "Fictional Compass-style GRC",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ONYX-project_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ONYX",
+              "source_id": "approvals",
+              "source_record_id": "SRC-HX-ONYX-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-03-16"
+              },
+              "fingerprint": "9b847f7c3cae04ac7b806d78aee753b894b5f34676c79078e73c68e68dd7a7de",
+              "authority": "original",
+              "system": "Fictional approval history",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-TEAL-grc_approval.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-TEAL",
+              "source_id": "compass",
+              "source_record_id": "SRC-HX-TEAL-grc_approval",
+              "kind": "grc_approval",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2027-04-30"
+              },
+              "fingerprint": "c098c1c2e0039d8cb39cd9ec203d5da86d936d2a8a7d061904957194a7ca3f1e",
+              "authority": "secondary",
+              "system": "Fictional Compass-style GRC",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": [
+            {
+              "entity_id": "HX-TEAL",
+              "evidence_kind": "project_approval"
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T13:02:57.662641+00:00"
+    },
+    {
+      "id": 20,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-6:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running run_control_test",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:01.600173+00:00"
+    },
+    {
+      "id": 21,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-6:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "Control testing saved: 3 PASS, 1 FAIL",
+      "record_type": "run_control_test",
+      "record_id": "951d6b7d-f627-44b6-96dd-593d5e15e6ed",
+      "details": {
+        "ok": true,
+        "result": {
+          "run_id": "951d6b7d-f627-44b6-96dd-593d5e15e6ed",
+          "control_id": "PR-01.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "55e99902-0ba7-4cc8-a1e0-375b11b2df3f",
+              "entity_id": "HX-IRIS",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-IRIS-risk_assessment.v1"
+              ]
+            },
+            {
+              "id": "3462de9d-e9d6-4337-9602-4a37328f60f3",
+              "entity_id": "HX-LIME",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-LIME-risk_assessment.v1"
+              ]
+            },
+            {
+              "id": "464336ba-ace9-462b-ab0b-4d391f06c713",
+              "entity_id": "HX-ONYX",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ONYX-risk_assessment.v1"
+              ]
+            },
+            {
+              "id": "c14249af-1478-4cf2-9f9e-c1d81c23b31c",
+              "entity_id": "HX-TEAL",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-TEAL-risk_assessment.v1"
+              ]
+            }
+          ],
+          "counts": {
+            "PASS": 3,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 0,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "created_at": "2026-10-31T13:03:01.666937+00:00"
+    },
+    {
+      "id": 22,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-7:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running run_control_test",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:01.682686+00:00"
+    },
+    {
+      "id": 23,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-7:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "Control testing saved: 2 PASS, 1 FAIL, 1 MISSING_EVIDENCE",
+      "record_type": "run_control_test",
+      "record_id": "c1593e77-6a26-4b61-97ce-c907c7224460",
+      "details": {
+        "ok": true,
+        "result": {
+          "run_id": "c1593e77-6a26-4b61-97ce-c907c7224460",
+          "control_id": "PR-02.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "767f3d58-565d-4a1b-aadc-77c9cfc974c3",
+              "entity_id": "HX-IRIS",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-IRIS-project_approval.v1"
+              ]
+            },
+            {
+              "id": "dddbbe8b-7689-4f3b-bab5-21284f55efe7",
+              "entity_id": "HX-LIME",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-LIME-project_approval.v1"
+              ]
+            },
+            {
+              "id": "b7ffbb65-5d94-4c07-8f62-f2982fc60eae",
+              "entity_id": "HX-ONYX",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ONYX-project_approval.v1"
+              ]
+            },
+            {
+              "id": "0d13c0de-7a8c-4384-af60-66dcde2efbf4",
+              "entity_id": "HX-TEAL",
+              "outcome": "MISSING_EVIDENCE",
+              "reason": "missing_project_approval",
+              "evidence_ids": []
+            }
+          ],
+          "counts": {
+            "PASS": 2,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 1,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "created_at": "2026-10-31T13:03:01.732888+00:00"
+    },
+    {
+      "id": 24,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-8:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running run_control_test",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:01.751530+00:00"
+    },
+    {
+      "id": 25,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-e4af1b11-73cd-42d2-91ee-0751aa674e4d-8:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "Control testing saved: 2 PASS, 1 FAIL, 1 MISSING_EVIDENCE",
+      "record_type": "run_control_test",
+      "record_id": "4524eb7a-1edc-4f0c-93af-ee5b80c9bde7",
+      "details": {
+        "ok": true,
+        "result": {
+          "run_id": "4524eb7a-1edc-4f0c-93af-ee5b80c9bde7",
+          "control_id": "PR-03.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "5e99393f-2951-40d5-95f2-b5e34dd30448",
+              "entity_id": "HX-IRIS",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-IRIS-grc_approval.v1",
+                "EV-HX-IRIS-project_approval.v1"
+              ]
+            },
+            {
+              "id": "cd226a87-7d22-48f8-8d0b-4455004f9063",
+              "entity_id": "HX-LIME",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-LIME-grc_approval.v1",
+                "EV-HX-LIME-project_approval.v1"
+              ]
+            },
+            {
+              "id": "9c37c9f8-d1ee-4448-bcef-11f7af445ca5",
+              "entity_id": "HX-ONYX",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-ONYX-grc_approval.v1",
+                "EV-HX-ONYX-project_approval.v1"
+              ]
+            },
+            {
+              "id": "81484053-16c9-40e5-b6c8-ee9e686b1b4a",
+              "entity_id": "HX-TEAL",
+              "outcome": "MISSING_EVIDENCE",
+              "reason": "missing_project_approval",
+              "evidence_ids": []
+            }
+          ],
+          "counts": {
+            "PASS": 2,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 1,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "created_at": "2026-10-31T13:03:01.799418+00:00"
+    },
+    {
+      "id": 26,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-f17ae15a-56b6-41a5-9f85-f561fa835986-6:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running propose_finding",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:09.115926+00:00"
+    },
+    {
+      "id": 27,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-f17ae15a-56b6-41a5-9f85-f561fa835986-6:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Waiting for Approval",
+      "label": "propose_finding completed",
+      "record_type": "propose_finding",
+      "record_id": "703708f8-6951-41e3-bf5e-0e05b7ddc931",
+      "details": {
+        "ok": true,
+        "result": {
+          "proposal_id": "703708f8-6951-41e3-bf5e-0e05b7ddc931",
+          "version_id": "2c325123-838b-4dca-b016-ef6f62e15470",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "created_at": "2026-10-31T13:03:09.169203+00:00"
+    },
+    {
+      "id": 28,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-f17ae15a-56b6-41a5-9f85-f561fa835986-7:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running propose_finding",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:09.188467+00:00"
+    },
+    {
+      "id": 29,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-f17ae15a-56b6-41a5-9f85-f561fa835986-7:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Waiting for Approval",
+      "label": "propose_finding completed",
+      "record_type": "propose_finding",
+      "record_id": "77b3eaea-7e16-4c47-970d-6d03ec66df9e",
+      "details": {
+        "ok": true,
+        "result": {
+          "proposal_id": "77b3eaea-7e16-4c47-970d-6d03ec66df9e",
+          "version_id": "2aa2a9f5-709a-4535-9e25-64dd6b045e77",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "created_at": "2026-10-31T13:03:09.234268+00:00"
+    },
+    {
+      "id": 30,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-f17ae15a-56b6-41a5-9f85-f561fa835986-8:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running propose_finding",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:09.256324+00:00"
+    },
+    {
+      "id": 31,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-f17ae15a-56b6-41a5-9f85-f561fa835986-8:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Waiting for Approval",
+      "label": "propose_finding completed",
+      "record_type": "propose_finding",
+      "record_id": "08d3b7d0-e079-4fd7-a8e7-0c700ab5a97f",
+      "details": {
+        "ok": true,
+        "result": {
+          "proposal_id": "08d3b7d0-e079-4fd7-a8e7-0c700ab5a97f",
+          "version_id": "ca3309c1-f416-4e95-a522-2517c4304284",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "created_at": "2026-10-31T13:03:09.315564+00:00"
+    },
+    {
+      "id": 32,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-912ee2b3-96c8-45e9-ab08-305ddc8872b8-6:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running request_department_input",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:12.682751+00:00"
+    },
+    {
+      "id": 33,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-912ee2b3-96c8-45e9-ab08-305ddc8872b8-6:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "request_department_input completed",
+      "record_type": "request_department_input",
+      "record_id": "b0a99734-49ca-40d9-8fdd-38f6de36ac2d",
+      "details": {
+        "ok": true,
+        "result": {
+          "request_id": "b0a99734-49ca-40d9-8fdd-38f6de36ac2d",
+          "status": "queued",
+          "review": null
+        }
+      },
+      "created_at": "2026-10-31T13:03:12.727925+00:00"
+    },
+    {
+      "id": 34,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-912ee2b3-96c8-45e9-ab08-305ddc8872b8-7:running",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Running",
+      "label": "Running request_department_input",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:12.732752+00:00"
+    },
+    {
+      "id": 35,
+      "event_key": "ba04b8af-50f9-4228-9022-46951a17bb5d:call-912ee2b3-96c8-45e9-ab08-305ddc8872b8-7:done",
+      "session_id": "ba04b8af-50f9-4228-9022-46951a17bb5d",
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "request_department_input completed",
+      "record_type": "request_department_input",
+      "record_id": "b0a99734-49ca-40d9-8fdd-38f6de36ac2d",
+      "details": {
+        "ok": true,
+        "result": {
+          "request_id": "b0a99734-49ca-40d9-8fdd-38f6de36ac2d",
+          "status": "queued",
+          "review": null
+        }
+      },
+      "created_at": "2026-10-31T13:03:12.775763+00:00"
+    },
+    {
+      "id": 36,
+      "event_key": "delivered:28c5aa1c-d12e-4c13-aaec-94c315ff329f",
+      "session_id": null,
+      "engagement_id": "d1a49873-7a28-58c4-a6f6-1b9e9528e2da",
+      "status": "Completed",
+      "label": "Simulated email delivered: initial",
+      "record_type": "request",
+      "record_id": "b0a99734-49ca-40d9-8fdd-38f6de36ac2d",
+      "details": {
+        "message_id": "<28c5aa1c-d12e-4c13-aaec-94c315ff329f@internal-audit.local>",
+        "kind": "initial"
+      },
+      "created_at": "2026-10-31T13:03:12.814423+00:00"
+    }
+  ]
+}

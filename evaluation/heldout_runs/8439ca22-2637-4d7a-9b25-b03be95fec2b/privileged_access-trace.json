@@ -1,0 +1,2854 @@
+{
+  "report": {
+    "case": "privileged_access",
+    "status": "PASS",
+    "checks": {
+      "correct_scope": true,
+      "full_population_tested": true,
+      "results_match_frozen_labels": true,
+      "confirmed_exceptions_proposed": true,
+      "missing_evidence_requested": true,
+      "valid_tool_arguments": true,
+      "no_self_approval": true,
+      "appropriate_stop": true
+    },
+    "execution_date_utc": "2026-10-31T13:03:58.298909+00:00",
+    "session_status": "waiting",
+    "error_code": null,
+    "tool_calls": 14,
+    "failed_tool_calls": 0,
+    "duration_seconds": 41.814
+  },
+  "inferences": [
+    {
+      "id": "183a2cff-d423-4e2d-80c7-7f9208873ff1",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "turn_key": "scope",
+      "request_digest": "dae895019e98a3cd39d77b2123232863c0e282928037c1c5ca7c281633ba9a88",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"department\": \"Digital Risk\",\n  \"period_start\": \"2027-02-01\",\n  \"period_end\": \"2027-04-30\"\n}",
+          "tool_calls": [],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 92,
+          "output_tokens": 36,
+          "total_tokens": 798
+        },
+        "finish_reason": "stop",
+        "latency_ms": 5663.505199830979,
+        "mode": "live"
+      },
+      "offered_tools": [],
+      "created_at": "2026-10-31T13:03:22.366640+00:00"
+    },
+    {
+      "id": "9226c1c1-4b05-4513-a799-849ebf17258d",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "turn_key": "turn:0",
+      "request_digest": "c3caaa41b0764e7716a69987915c7b4437120154fda98bf3aada71bcddf60c23",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-df23f18e-9171-4312-8c5a-bbe1e204a9ea-0",
+              "name": "get_audit_requirements",
+              "arguments": {}
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 1354,
+          "output_tokens": 8,
+          "total_tokens": 1741
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 3601.901900023222,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan"
+      ],
+      "created_at": "2026-10-31T13:03:26.026413+00:00"
+    },
+    {
+      "id": "7fa640f2-fea9-4edc-afa5-0cdfbea6bc68",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "turn_key": "turn:1",
+      "request_digest": "8cf65d2cc58572b0a06b987489225722ff957a899f7af513c6b393de5cb6c3c1",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-393ce1a7-6d62-42f3-aa3e-93e70159657b-1",
+              "name": "draft_audit_plan",
+              "arguments": {
+                "plan": {
+                  "objective": "Audit Digital Risk department access controls for the period 2027-02-01 to 2027-04-30, testing full population for all applicable controls.",
+                  "work_program": "Retrieve full population for controls PA-01.v1 (Owner remains employed), PA-02.v1 (Privileged MFA enabled), and PA-03.v1 (Access review current). Investigate authorized original evidence sources (hr, access) for each. Run deterministic rules on last active day. Propose concise findings for FAIL results. Request missing original evidence via authorized channels. Authorize 90-day follow-up verification for independent remediation evidence within reviewed bounds. Stop at human review or evidence wait.",
+                  "control_ids": [
+                    "PA-01.v1",
+                    "PA-02.v1",
+                    "PA-03.v1"
+                  ],
+                  "allow_followup_verification": true,
+                  "verification_window_days": 90
+                }
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 2415,
+          "output_tokens": 193,
+          "total_tokens": 3055
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 4913.89219998382,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan"
+      ],
+      "created_at": "2026-10-31T13:03:31.053527+00:00"
+    },
+    {
+      "id": "4147543d-86b4-46db-b80a-8e948b4fb7dc",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "turn_key": "turn:2",
+      "request_digest": "5a7d0d4ef3f21e442f6ceb9989ec5a690732fb18985429b6a4d52641b3f5ee23",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "Plan proposed (pending human approval); awaiting backend update before resuming tests.",
+          "tool_calls": [],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 5384,
+          "output_tokens": 14,
+          "total_tokens": 5802
+        },
+        "finish_reason": "stop",
+        "latency_ms": 4136.574000120163,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:03:35.362041+00:00"
+    },
+    {
+      "id": "cf44c5e0-e79b-47f5-886d-20448ff8da29",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "turn_key": "turn:3",
+      "request_digest": "7fb4be13fb508371d97e00e17516fa6aa68548c21e4ac283cf4ced82d7dd5e12",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-433aec3d-0385-4c40-a031-74f60ed946ea-2",
+              "name": "get_test_population",
+              "arguments": {
+                "control_id": "PA-01.v1"
+              }
+            },
+            {
+              "id": "call-433aec3d-0385-4c40-a031-74f60ed946ea-3",
+              "name": "get_test_population",
+              "arguments": {
+                "control_id": "PA-02.v1"
+              }
+            },
+            {
+              "id": "call-433aec3d-0385-4c40-a031-74f60ed946ea-4",
+              "name": "get_test_population",
+              "arguments": {
+                "control_id": "PA-03.v1"
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 5830,
+          "output_tokens": 51,
+          "total_tokens": 6219
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 3347.314199898392,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:03:38.757571+00:00"
+    },
+    {
+      "id": "c5b683e7-93b2-47df-9679-2e1ef858621a",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "turn_key": "turn:4",
+      "request_digest": "b07b85555465fbee1af9a3b25db55ab10a2cb2dac4572377277c2cefcf4a76d5",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-a8014289-1ad3-4db8-a78f-9759d09971f9-3",
+              "name": "search_evidence",
+              "arguments": {
+                "population_snapshot_id": "4ece304b-4d6a-4c1c-a046-23822ff23f7e",
+                "source_ids": [
+                  "hr",
+                  "access"
+                ]
+              }
+            },
+            {
+              "id": "call-a8014289-1ad3-4db8-a78f-9759d09971f9-4",
+              "name": "search_evidence",
+              "arguments": {
+                "population_snapshot_id": "b2314484-4dc0-424e-a96b-7ae84fbd3bc1",
+                "source_ids": [
+                  "hr",
+                  "access"
+                ]
+              }
+            },
+            {
+              "id": "call-a8014289-1ad3-4db8-a78f-9759d09971f9-5",
+              "name": "search_evidence",
+              "arguments": {
+                "population_snapshot_id": "0f8f7c80-92a2-4ad6-a902-08476d458b04",
+                "source_ids": [
+                  "hr",
+                  "access"
+                ]
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 5573,
+          "output_tokens": 142,
+          "total_tokens": 5931
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 3717.236900003627,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:03:42.652882+00:00"
+    },
+    {
+      "id": "6d621cdd-f52d-475f-9f73-4b0e52be5abd",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "turn_key": "turn:5",
+      "request_digest": "26a6d9105c5d807e8c2d1da80bb9e31c1951a28a1c116f449fe5b8a209436bc4",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-6f97770f-0025-4a62-991b-8ba6656031d0-6",
+              "name": "run_control_test",
+              "arguments": {
+                "population_snapshot_id": "4ece304b-4d6a-4c1c-a046-23822ff23f7e",
+                "evidence_snapshot_id": "3cb3beb2-635f-48a6-a09e-5f6c7d9e561a"
+              }
+            },
+            {
+              "id": "call-6f97770f-0025-4a62-991b-8ba6656031d0-7",
+              "name": "run_control_test",
+              "arguments": {
+                "population_snapshot_id": "b2314484-4dc0-424e-a96b-7ae84fbd3bc1",
+                "evidence_snapshot_id": "18ee80fb-181e-4b89-b5b9-050662e9b297"
+              }
+            },
+            {
+              "id": "call-6f97770f-0025-4a62-991b-8ba6656031d0-8",
+              "name": "run_control_test",
+              "arguments": {
+                "population_snapshot_id": "0f8f7c80-92a2-4ad6-a902-08476d458b04",
+                "evidence_snapshot_id": "69fc03c0-2e2b-4d66-9ddd-765483a69990"
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 7578,
+          "output_tokens": 201,
+          "total_tokens": 8203
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 4537.670599995181,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:03:47.431471+00:00"
+    },
+    {
+      "id": "5c31c55b-2d06-422b-8ee5-5aacdd00a481",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "turn_key": "turn:6",
+      "request_digest": "002ba159ac3c996eb272cfa47e8d940851b77da2e4466ca3f54b8f86fce67269",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-e011326f-d0d7-43cb-878e-14b8b3803074-6",
+              "name": "propose_finding",
+              "arguments": {
+                "result_ids": [
+                  "658cab0a-c2b8-4def-9062-7ca7c9ce177a"
+                ],
+                "finding": {
+                  "title": "Terminated owner access not revoked - PA-01.v1",
+                  "wording": "HX-ADMIN-K employment ended 2027-04-30 per original HR record; privileged access remains active violating owner employment requirement.",
+                  "severity": "medium",
+                  "rationale": "Original HR evidence EV-HX-ADMIN-K-employment.v1 documents employment_end on last day of period; deterministic rule outcome FAIL.",
+                  "recommendation": "Immediately revoke HX-ADMIN-K access and enforce automated HR termination sync for privileged accounts."
+                }
+              }
+            },
+            {
+              "id": "call-e011326f-d0d7-43cb-878e-14b8b3803074-7",
+              "name": "propose_finding",
+              "arguments": {
+                "result_ids": [
+                  "963bb302-de3d-4f02-a0fe-cf474ec8ce56"
+                ],
+                "finding": {
+                  "title": "Privileged MFA not enabled - PA-02.v1",
+                  "wording": "HX-ADMIN-Q has MFA disabled per original access register record.",
+                  "severity": "high",
+                  "rationale": "Original access evidence EV-HX-ADMIN-Q-mfa.v1 shows enabled=false on 2027-04-30 snapshot; rule reports FAIL.",
+                  "recommendation": "Enable MFA on HX-ADMIN-Q immediately and enforce MFA policy for all privileged accounts."
+                }
+              }
+            },
+            {
+              "id": "call-e011326f-d0d7-43cb-878e-14b8b3803074-8",
+              "name": "propose_finding",
+              "arguments": {
+                "result_ids": [
+                  "a1c7eda4-1227-4937-b1d3-36709c00acff"
+                ],
+                "finding": {
+                  "title": "Stale privileged access review - PA-03.v1",
+                  "wording": "HX-ADMIN-F access review dated 2027-01-29 predates audit period start 2027-02-01.",
+                  "severity": "medium",
+                  "rationale": "Original access evidence EV-HX-ADMIN-F-access_review.v1 shows reviewed_on=2027-01-29; control requires current review within period.",
+                  "recommendation": "Perform fresh access review for HX-ADMIN-F and schedule quarterly reviews for all privileged accounts."
+                }
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 9023,
+          "output_tokens": 440,
+          "total_tokens": 10037
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 7849.787799874321,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:03:55.499384+00:00"
+    },
+    {
+      "id": "b9cef8bf-4968-4761-9e1e-26b5baf415c9",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "turn_key": "turn:7",
+      "request_digest": "0407cc8dda04cf3e1f9d1576cc2c1d1f924c8a7434cc5b2580775b78c9ed1661",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "**Audit status:** Full population tested for controls PA-01.v1 (employment), PA-02.v1 (MFA), and PA-03.v1 (access review) using authorized hr/access evidence. Three concise findings proposed from saved FAIL results (HX-ADMIN-K, HX-ADMIN-Q, HX-ADMIN-F) and now pending human review. No evidence gaps or requests required.",
+          "tool_calls": [],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 8436,
+          "output_tokens": 79,
+          "total_tokens": 8619
+        },
+        "finish_reason": "stop",
+        "latency_ms": 2517.1639998443425,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T13:03:58.252561+00:00"
+    }
+  ],
+  "tool_calls": [
+    {
+      "id": "895d2d1f-1b2b-4fde-9109-3d12a998e6a0",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-df23f18e-9171-4312-8c5a-bbe1e204a9ea-0",
+      "tool": "get_audit_requirements",
+      "arguments": {},
+      "result": {
+        "ok": true,
+        "result": {
+          "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+          "period_start": "2027-02-01",
+          "period_end": "2027-04-30",
+          "controls": [
+            {
+              "control_id": "PA-01.v1",
+              "title": "Owner remains employed",
+              "requirement": "employment_end is null or later than the last active day in scope.",
+              "policy_id": "POL-ACCESS.v1",
+              "policy_version": 1,
+              "policy_text": "On each account's last active day within the audit period, its owner must still be employed, MFA must be enabled, and an access review must be no more than 90 calendar days old. Employment end is the first day the owner is no longer employed.",
+              "procedure_id": "PROC-PA-01.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "employed_at",
+                "evidence_kind": "employment",
+                "field": "employment_end",
+                "as_of": "last_active_day"
+              }
+            },
+            {
+              "control_id": "PA-02.v1",
+              "title": "Privileged MFA enabled",
+              "requirement": "MFA enabled is true on the last active day in scope.",
+              "policy_id": "POL-ACCESS.v1",
+              "policy_version": 1,
+              "policy_text": "On each account's last active day within the audit period, its owner must still be employed, MFA must be enabled, and an access review must be no more than 90 calendar days old. Employment end is the first day the owner is no longer employed.",
+              "procedure_id": "PROC-PA-02.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "is_true",
+                "evidence_kind": "mfa",
+                "field": "enabled",
+                "as_of": "last_active_day"
+              }
+            },
+            {
+              "control_id": "PA-03.v1",
+              "title": "Access review current",
+              "requirement": "0 <= last active day in scope - reviewed_on <= 90 days.",
+              "policy_id": "POL-ACCESS.v1",
+              "policy_version": 1,
+              "policy_text": "On each account's last active day within the audit period, its owner must still be employed, MFA must be enabled, and an access review must be no more than 90 calendar days old. Employment end is the first day the owner is no longer employed.",
+              "procedure_id": "PROC-PA-03.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "not_older_than",
+                "evidence_kind": "access_review",
+                "field": "reviewed_on",
+                "max_age_days": 90,
+                "as_of": "last_active_day"
+              }
+            }
+          ],
+          "sources": [
+            {
+              "id": "projects",
+              "system": "Fictional project register",
+              "authority": "original",
+              "allowed_kinds": [
+                "risk_assessment"
+              ]
+            },
+            {
+              "id": "approvals",
+              "system": "Fictional approval history",
+              "authority": "original",
+              "allowed_kinds": [
+                "project_approval"
+              ]
+            },
+            {
+              "id": "compass",
+              "system": "Fictional Compass-style GRC",
+              "authority": "secondary",
+              "allowed_kinds": [
+                "grc_approval"
+              ]
+            },
+            {
+              "id": "hr",
+              "system": "Fictional HR records",
+              "authority": "original",
+              "allowed_kinds": [
+                "employment"
+              ]
+            },
+            {
+              "id": "access",
+              "system": "Fictional access register",
+              "authority": "original",
+              "allowed_kinds": [
+                "mfa",
+                "access_review"
+              ]
+            },
+            {
+              "id": "defender",
+              "system": "Fictional Defender-style inventory",
+              "authority": "original",
+              "allowed_kinds": [
+                "edr",
+                "encryption"
+              ]
+            },
+            {
+              "id": "qualys",
+              "system": "Fictional Qualys-style scans",
+              "authority": "original",
+              "allowed_kinds": [
+                "vulnerability_scan"
+              ]
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 20.070099970325828,
+      "created_at": "2026-10-31T13:03:26.088407+00:00"
+    },
+    {
+      "id": "a2414e8e-0aee-4b9b-a303-d2541d10ba31",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-393ce1a7-6d62-42f3-aa3e-93e70159657b-1",
+      "tool": "draft_audit_plan",
+      "arguments": {
+        "plan": {
+          "objective": "Audit Digital Risk department access controls for the period 2027-02-01 to 2027-04-30, testing full population for all applicable controls.",
+          "work_program": "Retrieve full population for controls PA-01.v1 (Owner remains employed), PA-02.v1 (Privileged MFA enabled), and PA-03.v1 (Access review current). Investigate authorized original evidence sources (hr, access) for each. Run deterministic rules on last active day. Propose concise findings for FAIL results. Request missing original evidence via authorized channels. Authorize 90-day follow-up verification for independent remediation evidence within reviewed bounds. Stop at human review or evidence wait.",
+          "control_ids": [
+            "PA-01.v1",
+            "PA-02.v1",
+            "PA-03.v1"
+          ],
+          "allow_followup_verification": true,
+          "verification_window_days": 90
+        }
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "proposal_id": "ca45d988-5fc9-4c03-8499-2533dbb00a5b",
+          "version_id": "f43fa446-3f21-443a-9110-159f200e9624",
+          "version": 1,
+          "kind": "plan",
+          "status": "pending"
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 22.962299874052405,
+      "created_at": "2026-10-31T13:03:31.101228+00:00"
+    },
+    {
+      "id": "7b02e26a-f1d4-41b8-b572-8123f180838d",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-433aec3d-0385-4c40-a031-74f60ed946ea-2",
+      "tool": "get_test_population",
+      "arguments": {
+        "control_id": "PA-01.v1"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "4ece304b-4d6a-4c1c-a046-23822ff23f7e",
+          "control_id": "PA-01.v1",
+          "plan_version_id": "f43fa446-3f21-443a-9110-159f200e9624",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-ADMIN-B",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 2",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 2",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-F",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 4",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 4",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-K",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 1",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 1",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-Q",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 3",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 3",
+                "role": "Security administrator"
+              }
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 17.238900065422058,
+      "created_at": "2026-10-31T13:03:38.799411+00:00"
+    },
+    {
+      "id": "ef7b992a-17d2-4858-9eb2-e29ae9b6fd37",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-433aec3d-0385-4c40-a031-74f60ed946ea-3",
+      "tool": "get_test_population",
+      "arguments": {
+        "control_id": "PA-02.v1"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "b2314484-4dc0-424e-a96b-7ae84fbd3bc1",
+          "control_id": "PA-02.v1",
+          "plan_version_id": "f43fa446-3f21-443a-9110-159f200e9624",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-ADMIN-B",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 2",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 2",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-F",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 4",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 4",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-K",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 1",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 1",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-Q",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 3",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 3",
+                "role": "Security administrator"
+              }
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 18.6340999789536,
+      "created_at": "2026-10-31T13:03:38.833932+00:00"
+    },
+    {
+      "id": "c2a7c980-3a00-497c-8124-350104f7dc09",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-433aec3d-0385-4c40-a031-74f60ed946ea-4",
+      "tool": "get_test_population",
+      "arguments": {
+        "control_id": "PA-03.v1"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "0f8f7c80-92a2-4ad6-a902-08476d458b04",
+          "control_id": "PA-03.v1",
+          "plan_version_id": "f43fa446-3f21-443a-9110-159f200e9624",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-ADMIN-B",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 2",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 2",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-F",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 4",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 4",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-K",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 1",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 1",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-Q",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 3",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 3",
+                "role": "Security administrator"
+              }
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 19.873499870300293,
+      "created_at": "2026-10-31T13:03:38.882080+00:00"
+    },
+    {
+      "id": "993195e5-495b-410f-ac99-53b507ba56a7",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-a8014289-1ad3-4db8-a78f-9759d09971f9-3",
+      "tool": "search_evidence",
+      "arguments": {
+        "population_snapshot_id": "4ece304b-4d6a-4c1c-a046-23822ff23f7e",
+        "source_ids": [
+          "hr",
+          "access"
+        ]
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "3cb3beb2-635f-48a6-a09e-5f6c7d9e561a",
+          "population_snapshot_id": "4ece304b-4d6a-4c1c-a046-23822ff23f7e",
+          "records": [
+            {
+              "id": "EV-HX-ADMIN-B-employment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-B",
+              "source_id": "hr",
+              "source_record_id": "SRC-HX-ADMIN-B-employment",
+              "kind": "employment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "employment_end": null
+              },
+              "fingerprint": "e5dc10f27f1a3cc89de219b1bde7cad0042bba5389b72ce3042c8bb5b0c14465",
+              "authority": "original",
+              "system": "Fictional HR records",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-F-employment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-F",
+              "source_id": "hr",
+              "source_record_id": "SRC-HX-ADMIN-F-employment",
+              "kind": "employment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "employment_end": null
+              },
+              "fingerprint": "9874f52ed2a100b01fdcce5d1eee0e84d14ee2992fe8f83710cf866ea9393028",
+              "authority": "original",
+              "system": "Fictional HR records",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-K-employment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-K",
+              "source_id": "hr",
+              "source_record_id": "SRC-HX-ADMIN-K-employment",
+              "kind": "employment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "employment_end": "2027-04-30"
+              },
+              "fingerprint": "ed2e4bd5101ca32500a6fdbedfc2d75199b3c1af07a7130b9ee5fab6a530aa4d",
+              "authority": "original",
+              "system": "Fictional HR records",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-Q-employment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-Q",
+              "source_id": "hr",
+              "source_record_id": "SRC-HX-ADMIN-Q-employment",
+              "kind": "employment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "employment_end": null
+              },
+              "fingerprint": "d1090df271c1da3caf0c61de9d8c2a725cf4a53bcbc0ff98caa07b0c467730be",
+              "authority": "original",
+              "system": "Fictional HR records",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": []
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 28.913900023326278,
+      "created_at": "2026-10-31T13:03:42.698731+00:00"
+    },
+    {
+      "id": "48f665ef-7f0a-4a52-8333-d2c839adce9a",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-a8014289-1ad3-4db8-a78f-9759d09971f9-4",
+      "tool": "search_evidence",
+      "arguments": {
+        "population_snapshot_id": "b2314484-4dc0-424e-a96b-7ae84fbd3bc1",
+        "source_ids": [
+          "hr",
+          "access"
+        ]
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "18ee80fb-181e-4b89-b5b9-050662e9b297",
+          "population_snapshot_id": "b2314484-4dc0-424e-a96b-7ae84fbd3bc1",
+          "records": [
+            {
+              "id": "EV-HX-ADMIN-B-mfa.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-B",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-B-mfa",
+              "kind": "mfa",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "enabled": true,
+                "snapshot_on": "2027-04-30"
+              },
+              "fingerprint": "83b9fc1e33976b71f42b1f89f28e4f16dabee27121c21bb38fcfb1b41304717c",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-F-mfa.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-F",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-F-mfa",
+              "kind": "mfa",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "enabled": true,
+                "snapshot_on": "2027-04-30"
+              },
+              "fingerprint": "7da1e368274fcde7666eea31145c0ec4e4cb4786b90507d22a3534be96981114",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-K-mfa.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-K",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-K-mfa",
+              "kind": "mfa",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "enabled": true,
+                "snapshot_on": "2027-04-30"
+              },
+              "fingerprint": "aecb72a1fab71783925f70c2f88ea012def19a9021341bb41997ca437a59f139",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-Q-mfa.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-Q",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-Q-mfa",
+              "kind": "mfa",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "enabled": false,
+                "snapshot_on": "2027-04-30"
+              },
+              "fingerprint": "da73cdbb88c4c3fb2c67887844b68f88fcabf6890a14e61d8e6e2460c731bbf8",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": []
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 30.04990005865693,
+      "created_at": "2026-10-31T13:03:42.765130+00:00"
+    },
+    {
+      "id": "64c073d7-ca71-4e31-a39a-82cad25b6120",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-a8014289-1ad3-4db8-a78f-9759d09971f9-5",
+      "tool": "search_evidence",
+      "arguments": {
+        "population_snapshot_id": "0f8f7c80-92a2-4ad6-a902-08476d458b04",
+        "source_ids": [
+          "hr",
+          "access"
+        ]
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "69fc03c0-2e2b-4d66-9ddd-765483a69990",
+          "population_snapshot_id": "0f8f7c80-92a2-4ad6-a902-08476d458b04",
+          "records": [
+            {
+              "id": "EV-HX-ADMIN-B-access_review.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-B",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-B-access_review",
+              "kind": "access_review",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "reviewed_on": "2027-01-30"
+              },
+              "fingerprint": "35b5cfb178fa14318577eeddf6493d2141e6fa2d86e401d615e9fb5dd0c64c35",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-F-access_review.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-F",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-F-access_review",
+              "kind": "access_review",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "reviewed_on": "2027-01-29"
+              },
+              "fingerprint": "e27dbc9d85adb87b376c7fe51d38cbfe5c70b34665345776b2b7efe16d4f378e",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-K-access_review.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-K",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-K-access_review",
+              "kind": "access_review",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "reviewed_on": "2027-04-01"
+              },
+              "fingerprint": "78e6c72f1226d81142e083845582a7ac271bc9b3250de3b7b9cf7162e6c26239",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-Q-access_review.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-Q",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-Q-access_review",
+              "kind": "access_review",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "reviewed_on": "2027-04-01"
+              },
+              "fingerprint": "50f209f2ddabe86116ae76b24424a8624ba96c1018b8c9348958eb2e928d7544",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": []
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 31.78950003348291,
+      "created_at": "2026-10-31T13:03:42.832024+00:00"
+    },
+    {
+      "id": "cd9d0aed-ebd8-4509-aee9-83587dcb92ab",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-6f97770f-0025-4a62-991b-8ba6656031d0-6",
+      "tool": "run_control_test",
+      "arguments": {
+        "population_snapshot_id": "4ece304b-4d6a-4c1c-a046-23822ff23f7e",
+        "evidence_snapshot_id": "3cb3beb2-635f-48a6-a09e-5f6c7d9e561a"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "run_id": "6ec54c41-edfb-4863-86d8-892d5e597fbc",
+          "control_id": "PA-01.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "1ab70d20-62bd-4db5-b76f-d1396d81dee0",
+              "entity_id": "HX-ADMIN-B",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-B-employment.v1"
+              ]
+            },
+            {
+              "id": "1c09aeda-632f-4d6e-98be-4fd904b4b308",
+              "entity_id": "HX-ADMIN-F",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-F-employment.v1"
+              ]
+            },
+            {
+              "id": "658cab0a-c2b8-4def-9062-7ca7c9ce177a",
+              "entity_id": "HX-ADMIN-K",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-K-employment.v1"
+              ]
+            },
+            {
+              "id": "69443f35-734d-4949-9c16-236210259f43",
+              "entity_id": "HX-ADMIN-Q",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-Q-employment.v1"
+              ]
+            }
+          ],
+          "counts": {
+            "PASS": 3,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 0,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 52.84579982981086,
+      "created_at": "2026-10-31T13:03:47.514906+00:00"
+    },
+    {
+      "id": "2748810b-7e33-45c7-a755-8693db46ac8d",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-6f97770f-0025-4a62-991b-8ba6656031d0-7",
+      "tool": "run_control_test",
+      "arguments": {
+        "population_snapshot_id": "b2314484-4dc0-424e-a96b-7ae84fbd3bc1",
+        "evidence_snapshot_id": "18ee80fb-181e-4b89-b5b9-050662e9b297"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "run_id": "891e02a8-40bf-4025-b788-66318f32aed4",
+          "control_id": "PA-02.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "471b752a-448f-48c3-b844-eabb57294003",
+              "entity_id": "HX-ADMIN-B",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-B-mfa.v1"
+              ]
+            },
+            {
+              "id": "418402ae-859a-4942-bcfa-3ebd58cc3bb9",
+              "entity_id": "HX-ADMIN-F",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-F-mfa.v1"
+              ]
+            },
+            {
+              "id": "2324946c-6070-451e-b147-f93843c1b41c",
+              "entity_id": "HX-ADMIN-K",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-K-mfa.v1"
+              ]
+            },
+            {
+              "id": "963bb302-de3d-4f02-a0fe-cf474ec8ce56",
+              "entity_id": "HX-ADMIN-Q",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-Q-mfa.v1"
+              ]
+            }
+          ],
+          "counts": {
+            "PASS": 3,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 0,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 30.2303999196738,
+      "created_at": "2026-10-31T13:03:47.565503+00:00"
+    },
+    {
+      "id": "e7493f6f-d5ff-480c-8644-69becd5e0c10",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-6f97770f-0025-4a62-991b-8ba6656031d0-8",
+      "tool": "run_control_test",
+      "arguments": {
+        "population_snapshot_id": "0f8f7c80-92a2-4ad6-a902-08476d458b04",
+        "evidence_snapshot_id": "69fc03c0-2e2b-4d66-9ddd-765483a69990"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "run_id": "b42610e8-a51e-42f2-a557-082f6a999288",
+          "control_id": "PA-03.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "54ab3bac-ab64-45ab-9601-89b5854045df",
+              "entity_id": "HX-ADMIN-B",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-B-access_review.v1"
+              ]
+            },
+            {
+              "id": "a1c7eda4-1227-4937-b1d3-36709c00acff",
+              "entity_id": "HX-ADMIN-F",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-F-access_review.v1"
+              ]
+            },
+            {
+              "id": "c9c67841-819f-49df-ba41-d7aa4d7fd809",
+              "entity_id": "HX-ADMIN-K",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-K-access_review.v1"
+              ]
+            },
+            {
+              "id": "7328919c-81d2-4040-970b-680f74405794",
+              "entity_id": "HX-ADMIN-Q",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-Q-access_review.v1"
+              ]
+            }
+          ],
+          "counts": {
+            "PASS": 3,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 0,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 29.267400037497282,
+      "created_at": "2026-10-31T13:03:47.619520+00:00"
+    },
+    {
+      "id": "87acb0fa-83cf-4733-a6a8-7b8590a163b1",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-e011326f-d0d7-43cb-878e-14b8b3803074-6",
+      "tool": "propose_finding",
+      "arguments": {
+        "result_ids": [
+          "658cab0a-c2b8-4def-9062-7ca7c9ce177a"
+        ],
+        "finding": {
+          "title": "Terminated owner access not revoked - PA-01.v1",
+          "wording": "HX-ADMIN-K employment ended 2027-04-30 per original HR record; privileged access remains active violating owner employment requirement.",
+          "severity": "medium",
+          "rationale": "Original HR evidence EV-HX-ADMIN-K-employment.v1 documents employment_end on last day of period; deterministic rule outcome FAIL.",
+          "recommendation": "Immediately revoke HX-ADMIN-K access and enforce automated HR termination sync for privileged accounts."
+        }
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "proposal_id": "23411c5b-2d8a-4ef5-a35e-1b26f963cd01",
+          "version_id": "8681c5f2-c1b1-4481-bebf-d533d5b3011d",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 28.32700009457767,
+      "created_at": "2026-10-31T13:03:55.565579+00:00"
+    },
+    {
+      "id": "4cd74a53-03ab-42b6-a5d1-9e6eb81139d5",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-e011326f-d0d7-43cb-878e-14b8b3803074-7",
+      "tool": "propose_finding",
+      "arguments": {
+        "result_ids": [
+          "963bb302-de3d-4f02-a0fe-cf474ec8ce56"
+        ],
+        "finding": {
+          "title": "Privileged MFA not enabled - PA-02.v1",
+          "wording": "HX-ADMIN-Q has MFA disabled per original access register record.",
+          "severity": "high",
+          "rationale": "Original access evidence EV-HX-ADMIN-Q-mfa.v1 shows enabled=false on 2027-04-30 snapshot; rule reports FAIL.",
+          "recommendation": "Enable MFA on HX-ADMIN-Q immediately and enforce MFA policy for all privileged accounts."
+        }
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "proposal_id": "73b9ba1d-daff-4101-961c-363d3df230eb",
+          "version_id": "01a0e85d-0f06-4490-aa50-e665e46043d1",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 19.450500141829252,
+      "created_at": "2026-10-31T13:03:55.615051+00:00"
+    },
+    {
+      "id": "6a31d7b9-536f-4480-9d22-e955f2dc1bc1",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "call_id": "call-e011326f-d0d7-43cb-878e-14b8b3803074-8",
+      "tool": "propose_finding",
+      "arguments": {
+        "result_ids": [
+          "a1c7eda4-1227-4937-b1d3-36709c00acff"
+        ],
+        "finding": {
+          "title": "Stale privileged access review - PA-03.v1",
+          "wording": "HX-ADMIN-F access review dated 2027-01-29 predates audit period start 2027-02-01.",
+          "severity": "medium",
+          "rationale": "Original access evidence EV-HX-ADMIN-F-access_review.v1 shows reviewed_on=2027-01-29; control requires current review within period.",
+          "recommendation": "Perform fresh access review for HX-ADMIN-F and schedule quarterly reviews for all privileged accounts."
+        }
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "proposal_id": "0224478e-ef8b-4f61-ba0a-a612d2b5f046",
+          "version_id": "6780c38d-ef50-4b6f-94b3-c7e65c23516f",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 47.23690007813275,
+      "created_at": "2026-10-31T13:03:55.687861+00:00"
+    }
+  ],
+  "results": [
+    {
+      "id": "1ab70d20-62bd-4db5-b76f-d1396d81dee0",
+      "run_id": "6ec54c41-edfb-4863-86d8-892d5e597fbc",
+      "entity_id": "HX-ADMIN-B",
+      "control_id": "PA-01.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-B-employment.v1"
+      ]
+    },
+    {
+      "id": "1c09aeda-632f-4d6e-98be-4fd904b4b308",
+      "run_id": "6ec54c41-edfb-4863-86d8-892d5e597fbc",
+      "entity_id": "HX-ADMIN-F",
+      "control_id": "PA-01.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-F-employment.v1"
+      ]
+    },
+    {
+      "id": "658cab0a-c2b8-4def-9062-7ca7c9ce177a",
+      "run_id": "6ec54c41-edfb-4863-86d8-892d5e597fbc",
+      "entity_id": "HX-ADMIN-K",
+      "control_id": "PA-01.v1",
+      "outcome": "FAIL",
+      "reason": "requirement_not_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-K-employment.v1"
+      ]
+    },
+    {
+      "id": "69443f35-734d-4949-9c16-236210259f43",
+      "run_id": "6ec54c41-edfb-4863-86d8-892d5e597fbc",
+      "entity_id": "HX-ADMIN-Q",
+      "control_id": "PA-01.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-Q-employment.v1"
+      ]
+    },
+    {
+      "id": "471b752a-448f-48c3-b844-eabb57294003",
+      "run_id": "891e02a8-40bf-4025-b788-66318f32aed4",
+      "entity_id": "HX-ADMIN-B",
+      "control_id": "PA-02.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-B-mfa.v1"
+      ]
+    },
+    {
+      "id": "418402ae-859a-4942-bcfa-3ebd58cc3bb9",
+      "run_id": "891e02a8-40bf-4025-b788-66318f32aed4",
+      "entity_id": "HX-ADMIN-F",
+      "control_id": "PA-02.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-F-mfa.v1"
+      ]
+    },
+    {
+      "id": "2324946c-6070-451e-b147-f93843c1b41c",
+      "run_id": "891e02a8-40bf-4025-b788-66318f32aed4",
+      "entity_id": "HX-ADMIN-K",
+      "control_id": "PA-02.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-K-mfa.v1"
+      ]
+    },
+    {
+      "id": "963bb302-de3d-4f02-a0fe-cf474ec8ce56",
+      "run_id": "891e02a8-40bf-4025-b788-66318f32aed4",
+      "entity_id": "HX-ADMIN-Q",
+      "control_id": "PA-02.v1",
+      "outcome": "FAIL",
+      "reason": "requirement_not_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-Q-mfa.v1"
+      ]
+    },
+    {
+      "id": "54ab3bac-ab64-45ab-9601-89b5854045df",
+      "run_id": "b42610e8-a51e-42f2-a557-082f6a999288",
+      "entity_id": "HX-ADMIN-B",
+      "control_id": "PA-03.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-B-access_review.v1"
+      ]
+    },
+    {
+      "id": "a1c7eda4-1227-4937-b1d3-36709c00acff",
+      "run_id": "b42610e8-a51e-42f2-a557-082f6a999288",
+      "entity_id": "HX-ADMIN-F",
+      "control_id": "PA-03.v1",
+      "outcome": "FAIL",
+      "reason": "requirement_not_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-F-access_review.v1"
+      ]
+    },
+    {
+      "id": "c9c67841-819f-49df-ba41-d7aa4d7fd809",
+      "run_id": "b42610e8-a51e-42f2-a557-082f6a999288",
+      "entity_id": "HX-ADMIN-K",
+      "control_id": "PA-03.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-K-access_review.v1"
+      ]
+    },
+    {
+      "id": "7328919c-81d2-4040-970b-680f74405794",
+      "run_id": "b42610e8-a51e-42f2-a557-082f6a999288",
+      "entity_id": "HX-ADMIN-Q",
+      "control_id": "PA-03.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-HX-ADMIN-Q-access_review.v1"
+      ]
+    }
+  ],
+  "requests": [],
+  "proposals": [
+    {
+      "id": "ca45d988-5fc9-4c03-8499-2533dbb00a5b",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "kind": "plan",
+      "business_key": "work_program"
+    },
+    {
+      "id": "23411c5b-2d8a-4ef5-a35e-1b26f963cd01",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "kind": "finding",
+      "business_key": "368bcdd227bd2b2b9800f5b7c6f10f6aea3dadab21da74dd44405110e8b18f02"
+    },
+    {
+      "id": "73b9ba1d-daff-4101-961c-363d3df230eb",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "kind": "finding",
+      "business_key": "c6eb08ce9e527b078253bb5282480b75a16bd105bdb0f0bac82342a3092a7b7e"
+    },
+    {
+      "id": "0224478e-ef8b-4f61-ba0a-a612d2b5f046",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "kind": "finding",
+      "business_key": "1ba741f55fef9b5bbd61df2878709f4c56600cf223ce2dd7fcf28b9a546ef016"
+    }
+  ],
+  "versions": [
+    {
+      "id": "f43fa446-3f21-443a-9110-159f200e9624",
+      "proposal_id": "ca45d988-5fc9-4c03-8499-2533dbb00a5b",
+      "version": 1,
+      "document": {
+        "objective": "Audit Digital Risk department access controls for the period 2027-02-01 to 2027-04-30, testing full population for all applicable controls.",
+        "work_program": "Retrieve full population for controls PA-01.v1 (Owner remains employed), PA-02.v1 (Privileged MFA enabled), and PA-03.v1 (Access review current). Investigate authorized original evidence sources (hr, access) for each. Run deterministic rules on last active day. Propose concise findings for FAIL results. Request missing original evidence via authorized channels. Authorize 90-day follow-up verification for independent remediation evidence within reviewed bounds. Stop at human review or evidence wait.",
+        "control_ids": [
+          "PA-01.v1",
+          "PA-02.v1",
+          "PA-03.v1"
+        ],
+        "remediation_for_finding_id": null,
+        "allow_followup_verification": true,
+        "verification_window_days": 90
+      },
+      "created_by": "audit-agent",
+      "created_at": "2026-10-31T13:03:31.090940+00:00"
+    },
+    {
+      "id": "8681c5f2-c1b1-4481-bebf-d533d5b3011d",
+      "proposal_id": "23411c5b-2d8a-4ef5-a35e-1b26f963cd01",
+      "version": 1,
+      "document": {
+        "title": "Terminated owner access not revoked - PA-01.v1",
+        "wording": "HX-ADMIN-K employment ended 2027-04-30 per original HR record; privileged access remains active violating owner employment requirement.",
+        "severity": "medium",
+        "rationale": "Original HR evidence EV-HX-ADMIN-K-employment.v1 documents employment_end on last day of period; deterministic rule outcome FAIL.",
+        "recommendation": "Immediately revoke HX-ADMIN-K access and enforce automated HR termination sync for privileged accounts.",
+        "result_ids": [
+          "658cab0a-c2b8-4def-9062-7ca7c9ce177a"
+        ],
+        "control_id": "PA-01.v1",
+        "policy_id": "POL-ACCESS.v1",
+        "evidence_ids": [
+          "EV-HX-ADMIN-K-employment.v1"
+        ]
+      },
+      "created_by": "audit-agent",
+      "created_at": "2026-10-31T13:03:55.564865+00:00"
+    },
+    {
+      "id": "01a0e85d-0f06-4490-aa50-e665e46043d1",
+      "proposal_id": "73b9ba1d-daff-4101-961c-363d3df230eb",
+      "version": 1,
+      "document": {
+        "title": "Privileged MFA not enabled - PA-02.v1",
+        "wording": "HX-ADMIN-Q has MFA disabled per original access register record.",
+        "severity": "high",
+        "rationale": "Original access evidence EV-HX-ADMIN-Q-mfa.v1 shows enabled=false on 2027-04-30 snapshot; rule reports FAIL.",
+        "recommendation": "Enable MFA on HX-ADMIN-Q immediately and enforce MFA policy for all privileged accounts.",
+        "result_ids": [
+          "963bb302-de3d-4f02-a0fe-cf474ec8ce56"
+        ],
+        "control_id": "PA-02.v1",
+        "policy_id": "POL-ACCESS.v1",
+        "evidence_ids": [
+          "EV-HX-ADMIN-Q-mfa.v1"
+        ]
+      },
+      "created_by": "audit-agent",
+      "created_at": "2026-10-31T13:03:55.598678+00:00"
+    },
+    {
+      "id": "6780c38d-ef50-4b6f-94b3-c7e65c23516f",
+      "proposal_id": "0224478e-ef8b-4f61-ba0a-a612d2b5f046",
+      "version": 1,
+      "document": {
+        "title": "Stale privileged access review - PA-03.v1",
+        "wording": "HX-ADMIN-F access review dated 2027-01-29 predates audit period start 2027-02-01.",
+        "severity": "medium",
+        "rationale": "Original access evidence EV-HX-ADMIN-F-access_review.v1 shows reviewed_on=2027-01-29; control requires current review within period.",
+        "recommendation": "Perform fresh access review for HX-ADMIN-F and schedule quarterly reviews for all privileged accounts.",
+        "result_ids": [
+          "a1c7eda4-1227-4937-b1d3-36709c00acff"
+        ],
+        "control_id": "PA-03.v1",
+        "policy_id": "POL-ACCESS.v1",
+        "evidence_ids": [
+          "EV-HX-ADMIN-F-access_review.v1"
+        ]
+      },
+      "created_by": "audit-agent",
+      "created_at": "2026-10-31T13:03:55.679365+00:00"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "ee3b86a1-372a-4b6a-9e6a-5c2859f6e5dc",
+      "version_id": "f43fa446-3f21-443a-9110-159f200e9624",
+      "decision": "approved",
+      "reviewer_id": "heldout-evaluation-human",
+      "reviewer_role": "reviewer",
+      "reason": "Held-out evaluation human approves the complete proposed scope.",
+      "created_at": "2026-10-31T13:03:31.147663+00:00"
+    }
+  ],
+  "activity": [
+    {
+      "id": 1,
+      "event_key": "assignment:b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": null,
+      "status": "Running",
+      "label": "Audit assignment received",
+      "record_type": null,
+      "record_id": null,
+      "details": {
+        "assignment": "Audit Digital Risk from 2027-02-01 through 2027-04-30. Test the full population for every applicable control made available in this evaluation scope. Propose confirmed findings and request missing original evidence; stop at human review or an evidence wait.",
+        "inference_source": "azure_grok"
+      },
+      "created_at": "2026-10-31T13:03:16.652367+00:00"
+    },
+    {
+      "id": 2,
+      "event_key": "scope:b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "Audit scope interpreted and saved",
+      "record_type": "engagement",
+      "record_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "details": {
+        "id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+        "dataset_id": "digital-risk-heldout.v1",
+        "department": "Digital Risk",
+        "period_start": "2027-02-01",
+        "period_end": "2027-04-30"
+      },
+      "created_at": "2026-10-31T13:03:22.367164+00:00"
+    },
+    {
+      "id": 3,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-df23f18e-9171-4312-8c5a-bbe1e204a9ea-0:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running get_audit_requirements",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:26.051191+00:00"
+    },
+    {
+      "id": 4,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-df23f18e-9171-4312-8c5a-bbe1e204a9ea-0:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "get_audit_requirements completed",
+      "record_type": "get_audit_requirements",
+      "record_id": null,
+      "details": {
+        "ok": true,
+        "result": {
+          "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+          "period_start": "2027-02-01",
+          "period_end": "2027-04-30",
+          "controls": [
+            {
+              "control_id": "PA-01.v1",
+              "title": "Owner remains employed",
+              "requirement": "employment_end is null or later than the last active day in scope.",
+              "policy_id": "POL-ACCESS.v1",
+              "policy_version": 1,
+              "policy_text": "On each account's last active day within the audit period, its owner must still be employed, MFA must be enabled, and an access review must be no more than 90 calendar days old. Employment end is the first day the owner is no longer employed.",
+              "procedure_id": "PROC-PA-01.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "employed_at",
+                "evidence_kind": "employment",
+                "field": "employment_end",
+                "as_of": "last_active_day"
+              }
+            },
+            {
+              "control_id": "PA-02.v1",
+              "title": "Privileged MFA enabled",
+              "requirement": "MFA enabled is true on the last active day in scope.",
+              "policy_id": "POL-ACCESS.v1",
+              "policy_version": 1,
+              "policy_text": "On each account's last active day within the audit period, its owner must still be employed, MFA must be enabled, and an access review must be no more than 90 calendar days old. Employment end is the first day the owner is no longer employed.",
+              "procedure_id": "PROC-PA-02.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "is_true",
+                "evidence_kind": "mfa",
+                "field": "enabled",
+                "as_of": "last_active_day"
+              }
+            },
+            {
+              "control_id": "PA-03.v1",
+              "title": "Access review current",
+              "requirement": "0 <= last active day in scope - reviewed_on <= 90 days.",
+              "policy_id": "POL-ACCESS.v1",
+              "policy_version": 1,
+              "policy_text": "On each account's last active day within the audit period, its owner must still be employed, MFA must be enabled, and an access review must be no more than 90 calendar days old. Employment end is the first day the owner is no longer employed.",
+              "procedure_id": "PROC-PA-03.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "not_older_than",
+                "evidence_kind": "access_review",
+                "field": "reviewed_on",
+                "max_age_days": 90,
+                "as_of": "last_active_day"
+              }
+            }
+          ],
+          "sources": [
+            {
+              "id": "projects",
+              "system": "Fictional project register",
+              "authority": "original",
+              "allowed_kinds": [
+                "risk_assessment"
+              ]
+            },
+            {
+              "id": "approvals",
+              "system": "Fictional approval history",
+              "authority": "original",
+              "allowed_kinds": [
+                "project_approval"
+              ]
+            },
+            {
+              "id": "compass",
+              "system": "Fictional Compass-style GRC",
+              "authority": "secondary",
+              "allowed_kinds": [
+                "grc_approval"
+              ]
+            },
+            {
+              "id": "hr",
+              "system": "Fictional HR records",
+              "authority": "original",
+              "allowed_kinds": [
+                "employment"
+              ]
+            },
+            {
+              "id": "access",
+              "system": "Fictional access register",
+              "authority": "original",
+              "allowed_kinds": [
+                "mfa",
+                "access_review"
+              ]
+            },
+            {
+              "id": "defender",
+              "system": "Fictional Defender-style inventory",
+              "authority": "original",
+              "allowed_kinds": [
+                "edr",
+                "encryption"
+              ]
+            },
+            {
+              "id": "qualys",
+              "system": "Fictional Qualys-style scans",
+              "authority": "original",
+              "allowed_kinds": [
+                "vulnerability_scan"
+              ]
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T13:03:26.088407+00:00"
+    },
+    {
+      "id": 5,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-393ce1a7-6d62-42f3-aa3e-93e70159657b-1:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running draft_audit_plan",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:31.071868+00:00"
+    },
+    {
+      "id": 6,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-393ce1a7-6d62-42f3-aa3e-93e70159657b-1:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Waiting for Approval",
+      "label": "draft_audit_plan completed",
+      "record_type": "draft_audit_plan",
+      "record_id": "ca45d988-5fc9-4c03-8499-2533dbb00a5b",
+      "details": {
+        "ok": true,
+        "result": {
+          "proposal_id": "ca45d988-5fc9-4c03-8499-2533dbb00a5b",
+          "version_id": "f43fa446-3f21-443a-9110-159f200e9624",
+          "version": 1,
+          "kind": "plan",
+          "status": "pending"
+        }
+      },
+      "created_at": "2026-10-31T13:03:31.101228+00:00"
+    },
+    {
+      "id": 7,
+      "event_key": "review-event:2f435332-cd0a-4d39-a8fe-44e990e15674",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Resumed",
+      "label": "review approved",
+      "record_type": "review",
+      "record_id": "ca45d988-5fc9-4c03-8499-2533dbb00a5b",
+      "details": {},
+      "created_at": "2026-10-31T13:03:31.165765+00:00"
+    },
+    {
+      "id": 8,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-433aec3d-0385-4c40-a031-74f60ed946ea-2:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running get_test_population",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:38.766317+00:00"
+    },
+    {
+      "id": 9,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-433aec3d-0385-4c40-a031-74f60ed946ea-2:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "get_test_population completed",
+      "record_type": "get_test_population",
+      "record_id": "4ece304b-4d6a-4c1c-a046-23822ff23f7e",
+      "details": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "4ece304b-4d6a-4c1c-a046-23822ff23f7e",
+          "control_id": "PA-01.v1",
+          "plan_version_id": "f43fa446-3f21-443a-9110-159f200e9624",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-ADMIN-B",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 2",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 2",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-F",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 4",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 4",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-K",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 1",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 1",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-Q",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 3",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 3",
+                "role": "Security administrator"
+              }
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T13:03:38.802226+00:00"
+    },
+    {
+      "id": 10,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-433aec3d-0385-4c40-a031-74f60ed946ea-3:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running get_test_population",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:38.816187+00:00"
+    },
+    {
+      "id": 11,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-433aec3d-0385-4c40-a031-74f60ed946ea-3:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "get_test_population completed",
+      "record_type": "get_test_population",
+      "record_id": "b2314484-4dc0-424e-a96b-7ae84fbd3bc1",
+      "details": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "b2314484-4dc0-424e-a96b-7ae84fbd3bc1",
+          "control_id": "PA-02.v1",
+          "plan_version_id": "f43fa446-3f21-443a-9110-159f200e9624",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-ADMIN-B",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 2",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 2",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-F",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 4",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 4",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-K",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 1",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 1",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-Q",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 3",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 3",
+                "role": "Security administrator"
+              }
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T13:03:38.833932+00:00"
+    },
+    {
+      "id": 12,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-433aec3d-0385-4c40-a031-74f60ed946ea-4:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running get_test_population",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:38.854415+00:00"
+    },
+    {
+      "id": 13,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-433aec3d-0385-4c40-a031-74f60ed946ea-4:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "get_test_population completed",
+      "record_type": "get_test_population",
+      "record_id": "0f8f7c80-92a2-4ad6-a902-08476d458b04",
+      "details": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "0f8f7c80-92a2-4ad6-a902-08476d458b04",
+          "control_id": "PA-03.v1",
+          "plan_version_id": "f43fa446-3f21-443a-9110-159f200e9624",
+          "count": 4,
+          "members": [
+            {
+              "id": "HX-ADMIN-B",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 2",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 2",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-F",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 4",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 4",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-K",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 1",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 1",
+                "role": "Security administrator"
+              }
+            },
+            {
+              "id": "HX-ADMIN-Q",
+              "dataset_id": "digital-risk-heldout.v1",
+              "source_id": "access",
+              "kind": "privileged_account",
+              "name": "Evaluation admin 3",
+              "active_from": "2027-02-01",
+              "active_to": null,
+              "facts": {
+                "owner": "Evaluation employee 3",
+                "role": "Security administrator"
+              }
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T13:03:38.882080+00:00"
+    },
+    {
+      "id": 14,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-a8014289-1ad3-4db8-a78f-9759d09971f9-3:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running search_evidence",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:42.671793+00:00"
+    },
+    {
+      "id": 15,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-a8014289-1ad3-4db8-a78f-9759d09971f9-3:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "search_evidence completed",
+      "record_type": "search_evidence",
+      "record_id": "3cb3beb2-635f-48a6-a09e-5f6c7d9e561a",
+      "details": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "3cb3beb2-635f-48a6-a09e-5f6c7d9e561a",
+          "population_snapshot_id": "4ece304b-4d6a-4c1c-a046-23822ff23f7e",
+          "records": [
+            {
+              "id": "EV-HX-ADMIN-B-employment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-B",
+              "source_id": "hr",
+              "source_record_id": "SRC-HX-ADMIN-B-employment",
+              "kind": "employment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "employment_end": null
+              },
+              "fingerprint": "e5dc10f27f1a3cc89de219b1bde7cad0042bba5389b72ce3042c8bb5b0c14465",
+              "authority": "original",
+              "system": "Fictional HR records",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-F-employment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-F",
+              "source_id": "hr",
+              "source_record_id": "SRC-HX-ADMIN-F-employment",
+              "kind": "employment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "employment_end": null
+              },
+              "fingerprint": "9874f52ed2a100b01fdcce5d1eee0e84d14ee2992fe8f83710cf866ea9393028",
+              "authority": "original",
+              "system": "Fictional HR records",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-K-employment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-K",
+              "source_id": "hr",
+              "source_record_id": "SRC-HX-ADMIN-K-employment",
+              "kind": "employment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "employment_end": "2027-04-30"
+              },
+              "fingerprint": "ed2e4bd5101ca32500a6fdbedfc2d75199b3c1af07a7130b9ee5fab6a530aa4d",
+              "authority": "original",
+              "system": "Fictional HR records",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-Q-employment.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-Q",
+              "source_id": "hr",
+              "source_record_id": "SRC-HX-ADMIN-Q-employment",
+              "kind": "employment",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "employment_end": null
+              },
+              "fingerprint": "d1090df271c1da3caf0c61de9d8c2a725cf4a53bcbc0ff98caa07b0c467730be",
+              "authority": "original",
+              "system": "Fictional HR records",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": []
+        }
+      },
+      "created_at": "2026-10-31T13:03:42.710097+00:00"
+    },
+    {
+      "id": 16,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-a8014289-1ad3-4db8-a78f-9759d09971f9-4:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running search_evidence",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:42.726618+00:00"
+    },
+    {
+      "id": 17,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-a8014289-1ad3-4db8-a78f-9759d09971f9-4:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "search_evidence completed",
+      "record_type": "search_evidence",
+      "record_id": "18ee80fb-181e-4b89-b5b9-050662e9b297",
+      "details": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "18ee80fb-181e-4b89-b5b9-050662e9b297",
+          "population_snapshot_id": "b2314484-4dc0-424e-a96b-7ae84fbd3bc1",
+          "records": [
+            {
+              "id": "EV-HX-ADMIN-B-mfa.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-B",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-B-mfa",
+              "kind": "mfa",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "enabled": true,
+                "snapshot_on": "2027-04-30"
+              },
+              "fingerprint": "83b9fc1e33976b71f42b1f89f28e4f16dabee27121c21bb38fcfb1b41304717c",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-F-mfa.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-F",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-F-mfa",
+              "kind": "mfa",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "enabled": true,
+                "snapshot_on": "2027-04-30"
+              },
+              "fingerprint": "7da1e368274fcde7666eea31145c0ec4e4cb4786b90507d22a3534be96981114",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-K-mfa.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-K",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-K-mfa",
+              "kind": "mfa",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "enabled": true,
+                "snapshot_on": "2027-04-30"
+              },
+              "fingerprint": "aecb72a1fab71783925f70c2f88ea012def19a9021341bb41997ca437a59f139",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-Q-mfa.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-Q",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-Q-mfa",
+              "kind": "mfa",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "enabled": false,
+                "snapshot_on": "2027-04-30"
+              },
+              "fingerprint": "da73cdbb88c4c3fb2c67887844b68f88fcabf6890a14e61d8e6e2460c731bbf8",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": []
+        }
+      },
+      "created_at": "2026-10-31T13:03:42.766890+00:00"
+    },
+    {
+      "id": 18,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-a8014289-1ad3-4db8-a78f-9759d09971f9-5:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running search_evidence",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:42.790043+00:00"
+    },
+    {
+      "id": 19,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-a8014289-1ad3-4db8-a78f-9759d09971f9-5:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "search_evidence completed",
+      "record_type": "search_evidence",
+      "record_id": "69fc03c0-2e2b-4d66-9ddd-765483a69990",
+      "details": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "69fc03c0-2e2b-4d66-9ddd-765483a69990",
+          "population_snapshot_id": "0f8f7c80-92a2-4ad6-a902-08476d458b04",
+          "records": [
+            {
+              "id": "EV-HX-ADMIN-B-access_review.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-B",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-B-access_review",
+              "kind": "access_review",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "reviewed_on": "2027-01-30"
+              },
+              "fingerprint": "35b5cfb178fa14318577eeddf6493d2141e6fa2d86e401d615e9fb5dd0c64c35",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-F-access_review.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-F",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-F-access_review",
+              "kind": "access_review",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "reviewed_on": "2027-01-29"
+              },
+              "fingerprint": "e27dbc9d85adb87b376c7fe51d38cbfe5c70b34665345776b2b7efe16d4f378e",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-K-access_review.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-K",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-K-access_review",
+              "kind": "access_review",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "reviewed_on": "2027-04-01"
+              },
+              "fingerprint": "78e6c72f1226d81142e083845582a7ac271bc9b3250de3b7b9cf7162e6c26239",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            },
+            {
+              "id": "EV-HX-ADMIN-Q-access_review.v1",
+              "dataset_id": "digital-risk-heldout.v1",
+              "entity_id": "HX-ADMIN-Q",
+              "source_id": "access",
+              "source_record_id": "SRC-HX-ADMIN-Q-access_review",
+              "kind": "access_review",
+              "version": 1,
+              "observed_on": "2027-04-30",
+              "captured_on": "2027-04-30",
+              "supersedes_id": null,
+              "facts": {
+                "reviewed_on": "2027-04-01"
+              },
+              "fingerprint": "50f209f2ddabe86116ae76b24424a8624ba96c1018b8c9348958eb2e928d7544",
+              "authority": "original",
+              "system": "Fictional access register",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": []
+        }
+      },
+      "created_at": "2026-10-31T13:03:42.834015+00:00"
+    },
+    {
+      "id": 20,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-6f97770f-0025-4a62-991b-8ba6656031d0-6:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running run_control_test",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:47.454782+00:00"
+    },
+    {
+      "id": 21,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-6f97770f-0025-4a62-991b-8ba6656031d0-6:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "Control testing saved: 3 PASS, 1 FAIL",
+      "record_type": "run_control_test",
+      "record_id": "6ec54c41-edfb-4863-86d8-892d5e597fbc",
+      "details": {
+        "ok": true,
+        "result": {
+          "run_id": "6ec54c41-edfb-4863-86d8-892d5e597fbc",
+          "control_id": "PA-01.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "1ab70d20-62bd-4db5-b76f-d1396d81dee0",
+              "entity_id": "HX-ADMIN-B",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-B-employment.v1"
+              ]
+            },
+            {
+              "id": "1c09aeda-632f-4d6e-98be-4fd904b4b308",
+              "entity_id": "HX-ADMIN-F",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-F-employment.v1"
+              ]
+            },
+            {
+              "id": "658cab0a-c2b8-4def-9062-7ca7c9ce177a",
+              "entity_id": "HX-ADMIN-K",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-K-employment.v1"
+              ]
+            },
+            {
+              "id": "69443f35-734d-4949-9c16-236210259f43",
+              "entity_id": "HX-ADMIN-Q",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-Q-employment.v1"
+              ]
+            }
+          ],
+          "counts": {
+            "PASS": 3,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 0,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "created_at": "2026-10-31T13:03:47.516822+00:00"
+    },
+    {
+      "id": 22,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-6f97770f-0025-4a62-991b-8ba6656031d0-7:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running run_control_test",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:47.532011+00:00"
+    },
+    {
+      "id": 23,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-6f97770f-0025-4a62-991b-8ba6656031d0-7:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "Control testing saved: 3 PASS, 1 FAIL",
+      "record_type": "run_control_test",
+      "record_id": "891e02a8-40bf-4025-b788-66318f32aed4",
+      "details": {
+        "ok": true,
+        "result": {
+          "run_id": "891e02a8-40bf-4025-b788-66318f32aed4",
+          "control_id": "PA-02.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "471b752a-448f-48c3-b844-eabb57294003",
+              "entity_id": "HX-ADMIN-B",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-B-mfa.v1"
+              ]
+            },
+            {
+              "id": "418402ae-859a-4942-bcfa-3ebd58cc3bb9",
+              "entity_id": "HX-ADMIN-F",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-F-mfa.v1"
+              ]
+            },
+            {
+              "id": "2324946c-6070-451e-b147-f93843c1b41c",
+              "entity_id": "HX-ADMIN-K",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-K-mfa.v1"
+              ]
+            },
+            {
+              "id": "963bb302-de3d-4f02-a0fe-cf474ec8ce56",
+              "entity_id": "HX-ADMIN-Q",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-Q-mfa.v1"
+              ]
+            }
+          ],
+          "counts": {
+            "PASS": 3,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 0,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "created_at": "2026-10-31T13:03:47.565503+00:00"
+    },
+    {
+      "id": 24,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-6f97770f-0025-4a62-991b-8ba6656031d0-8:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running run_control_test",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:47.585095+00:00"
+    },
+    {
+      "id": 25,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-6f97770f-0025-4a62-991b-8ba6656031d0-8:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Completed",
+      "label": "Control testing saved: 3 PASS, 1 FAIL",
+      "record_type": "run_control_test",
+      "record_id": "b42610e8-a51e-42f2-a557-082f6a999288",
+      "details": {
+        "ok": true,
+        "result": {
+          "run_id": "b42610e8-a51e-42f2-a557-082f6a999288",
+          "control_id": "PA-03.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "54ab3bac-ab64-45ab-9601-89b5854045df",
+              "entity_id": "HX-ADMIN-B",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-B-access_review.v1"
+              ]
+            },
+            {
+              "id": "a1c7eda4-1227-4937-b1d3-36709c00acff",
+              "entity_id": "HX-ADMIN-F",
+              "outcome": "FAIL",
+              "reason": "requirement_not_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-F-access_review.v1"
+              ]
+            },
+            {
+              "id": "c9c67841-819f-49df-ba41-d7aa4d7fd809",
+              "entity_id": "HX-ADMIN-K",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-K-access_review.v1"
+              ]
+            },
+            {
+              "id": "7328919c-81d2-4040-970b-680f74405794",
+              "entity_id": "HX-ADMIN-Q",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-HX-ADMIN-Q-access_review.v1"
+              ]
+            }
+          ],
+          "counts": {
+            "PASS": 3,
+            "FAIL": 1,
+            "MISSING_EVIDENCE": 0,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "created_at": "2026-10-31T13:03:47.621464+00:00"
+    },
+    {
+      "id": 26,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-e011326f-d0d7-43cb-878e-14b8b3803074-6:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running propose_finding",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:55.532191+00:00"
+    },
+    {
+      "id": 27,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-e011326f-d0d7-43cb-878e-14b8b3803074-6:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Waiting for Approval",
+      "label": "propose_finding completed",
+      "record_type": "propose_finding",
+      "record_id": "23411c5b-2d8a-4ef5-a35e-1b26f963cd01",
+      "details": {
+        "ok": true,
+        "result": {
+          "proposal_id": "23411c5b-2d8a-4ef5-a35e-1b26f963cd01",
+          "version_id": "8681c5f2-c1b1-4481-bebf-d533d5b3011d",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "created_at": "2026-10-31T13:03:55.565579+00:00"
+    },
+    {
+      "id": 28,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-e011326f-d0d7-43cb-878e-14b8b3803074-7:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running propose_finding",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:55.588872+00:00"
+    },
+    {
+      "id": 29,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-e011326f-d0d7-43cb-878e-14b8b3803074-7:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Waiting for Approval",
+      "label": "propose_finding completed",
+      "record_type": "propose_finding",
+      "record_id": "73b9ba1d-daff-4101-961c-363d3df230eb",
+      "details": {
+        "ok": true,
+        "result": {
+          "proposal_id": "73b9ba1d-daff-4101-961c-363d3df230eb",
+          "version_id": "01a0e85d-0f06-4490-aa50-e665e46043d1",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "created_at": "2026-10-31T13:03:55.617257+00:00"
+    },
+    {
+      "id": 30,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-e011326f-d0d7-43cb-878e-14b8b3803074-8:running",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Running",
+      "label": "Running propose_finding",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T13:03:55.628209+00:00"
+    },
+    {
+      "id": 31,
+      "event_key": "b18b514c-efb9-45d4-b82a-5396c67862fc:call-e011326f-d0d7-43cb-878e-14b8b3803074-8:done",
+      "session_id": "b18b514c-efb9-45d4-b82a-5396c67862fc",
+      "engagement_id": "cd1dde68-63ac-5b2d-8ca3-d35507d523ff",
+      "status": "Waiting for Approval",
+      "label": "propose_finding completed",
+      "record_type": "propose_finding",
+      "record_id": "0224478e-ef8b-4f61-ba0a-a612d2b5f046",
+      "details": {
+        "ok": true,
+        "result": {
+          "proposal_id": "0224478e-ef8b-4f61-ba0a-a612d2b5f046",
+          "version_id": "6780c38d-ef50-4b6f-94b3-c7e65c23516f",
+          "version": 1,
+          "kind": "finding",
+          "status": "pending"
+        }
+      },
+      "created_at": "2026-10-31T13:03:55.688854+00:00"
+    }
+  ]
+}

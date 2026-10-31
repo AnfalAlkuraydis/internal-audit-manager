@@ -1,0 +1,17 @@
+# Backend API framework and automatic API documentation.
+fastapi==0.121.0
+# HTTP requests to Azure and mocked transports in adapter tests.
+httpx==0.28.1
+# Local server that runs the FastAPI application.
+uvicorn==0.38.0
+# Load local .env settings without embedding credentials in source.
+python-dotenv==1.2.1
+# Validate typed configuration-independent messages and audit data.
+pydantic==2.14.2
+# Define database tables and execute transactional SQLite queries.
+SQLAlchemy==2.0.44
+# Apply versioned changes to the database structure.
+alembic==1.17.1
+# Resumable single-agent coordination and local workflow checkpoints.
+langgraph==1.0.3
+langgraph-checkpoint-sqlite==3.0.0

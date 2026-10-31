@@ -1,0 +1,306 @@
+{
+  "event": "phase4_review_summary",
+  "execution_date_utc": "2026-10-31T12:10:35.939651+00:00",
+  "backend_regression": {
+    "run_id": "2f6898a9-0338-4b04-be0b-78c4d72aa9de",
+    "execution_date_utc": "2026-10-31T12:09:49.982562+00:00",
+    "execution_mode": "live",
+    "test_version": "phase4-v1",
+    "tests_executed_or_skipped": 75,
+    "counts": {
+      "PASS": 74,
+      "FAIL": 0,
+      "NOT RUN": 1
+    },
+    "successful": true,
+    "duration_seconds": 25.346438,
+    "live_results_are_not_autonomy_scores": true,
+    "requested_live_inference": false,
+    "api_cost": null,
+    "note": "Unknown cost is not zero. Phase 4 agent and simulated-mail tests; real autonomy results are reported separately."
+  },
+  "frontend_checks": {
+    "run_id": "fee40efd-ee3e-4583-bc96-0d7a323ecaab",
+    "event": "phase4_frontend_checks",
+    "results": [
+      {
+        "run_id": "fee40efd-ee3e-4583-bc96-0d7a323ecaab",
+        "event": "phase4_frontend_check",
+        "check": "production_build",
+        "status": "PASS",
+        "exit_code": 0,
+        "execution_date_utc": "2026-10-31T12:08:10.998737+00:00",
+        "test_version": "phase4-v1",
+        "duration_seconds": 26.51004229998216
+      },
+      {
+        "run_id": "fee40efd-ee3e-4583-bc96-0d7a323ecaab",
+        "event": "phase4_frontend_check",
+        "check": "dom_tests",
+        "status": "PASS",
+        "exit_code": 0,
+        "execution_date_utc": "2026-10-31T12:08:55.497274+00:00",
+        "test_version": "phase4-v1",
+        "duration_seconds": 44.49510079994798
+      },
+      {
+        "run_id": "fee40efd-ee3e-4583-bc96-0d7a323ecaab",
+        "event": "phase4_frontend_check",
+        "check": "dependency_audit",
+        "status": "PASS",
+        "exit_code": 0,
+        "execution_date_utc": "2026-10-31T12:09:22.865619+00:00",
+        "test_version": "phase4-v1",
+        "duration_seconds": 27.35625799978152
+      }
+    ]
+  },
+  "latest_real_grok_cases": {
+    "complete": {
+      "case": "complete",
+      "status": "PASS",
+      "checks": {
+        "no_runtime_error": true,
+        "all_arguments_schema_valid": true,
+        "tools_exercised": true,
+        "human_plan_gate": true,
+        "completed": true,
+        "pass_saved": true,
+        "no_unnecessary_email": true
+      },
+      "session_status": "completed",
+      "error_code": null,
+      "tool_calls": 5,
+      "failed_tool_calls": 0,
+      "duration_seconds": 44.74000500002876,
+      "human_decisions": [
+        {
+          "kind": "plan",
+          "id": "1868bb8c-2c6f-4138-ab9d-e1589c0df1fa"
+        }
+      ],
+      "inference_calls": 8,
+      "input_tokens": 30672,
+      "output_tokens": 320,
+      "api_cost": null
+    },
+    "alternate_source": {
+      "case": "alternate_source",
+      "status": "PASS",
+      "checks": {
+        "no_runtime_error": true,
+        "all_arguments_schema_valid": true,
+        "tools_exercised": true,
+        "human_plan_gate": true,
+        "completed": true,
+        "pass_saved": true,
+        "no_unnecessary_email": true,
+        "alternate_original_used": true
+      },
+      "session_status": "completed",
+      "error_code": null,
+      "tool_calls": 5,
+      "failed_tool_calls": 0,
+      "duration_seconds": 32.381306800059974,
+      "human_decisions": [
+        {
+          "kind": "plan",
+          "id": "b485a219-129d-41f4-8c47-7043177a981e"
+        }
+      ],
+      "inference_calls": 7,
+      "input_tokens": 24960,
+      "output_tokens": 348,
+      "api_cost": null
+    },
+    "missing_department": {
+      "case": "missing_department",
+      "status": "PASS",
+      "checks": {
+        "no_runtime_error": true,
+        "all_arguments_schema_valid": true,
+        "tools_exercised": true,
+        "human_plan_gate": true,
+        "correct_blocked_outcome": true,
+        "department_requested": true,
+        "no_guessed_finding": true
+      },
+      "session_status": "waiting",
+      "error_code": null,
+      "tool_calls": 6,
+      "failed_tool_calls": 0,
+      "duration_seconds": 41.78754870011471,
+      "human_decisions": [
+        {
+          "kind": "plan",
+          "id": "bfe7d7cc-4f5a-4dea-916e-e42420230c7a"
+        }
+      ],
+      "inference_calls": 9,
+      "input_tokens": 37487,
+      "output_tokens": 508,
+      "api_cost": null
+    },
+    "contradictory": {
+      "case": "contradictory",
+      "status": "PASS",
+      "checks": {
+        "no_runtime_error": true,
+        "all_arguments_schema_valid": true,
+        "tools_exercised": true,
+        "human_plan_gate": true,
+        "correct_blocked_outcome": true,
+        "department_requested": true,
+        "no_guessed_finding": true
+      },
+      "session_status": "waiting",
+      "error_code": null,
+      "tool_calls": 6,
+      "failed_tool_calls": 0,
+      "duration_seconds": 36.2635627000127,
+      "human_decisions": [
+        {
+          "kind": "plan",
+          "id": "a05d243c-d4e0-445a-a1df-8c9f045516a1"
+        }
+      ],
+      "inference_calls": 8,
+      "input_tokens": 32005,
+      "output_tokens": 482,
+      "api_cost": null
+    },
+    "resume_and_closure": {
+      "case": "resume_and_closure",
+      "status": "PASS",
+      "checks": {
+        "no_runtime_error": true,
+        "all_arguments_schema_valid": true,
+        "tools_exercised": true,
+        "human_plan_gate": true,
+        "restarted": true,
+        "original_failure_preserved": true,
+        "closure_human_approved": true,
+        "three_reply_types": true,
+        "completed": true
+      },
+      "session_status": "completed",
+      "error_code": null,
+      "tool_calls": 15,
+      "failed_tool_calls": 0,
+      "duration_seconds": 108.75067310011946,
+      "human_decisions": [
+        {
+          "kind": "plan",
+          "id": "ef49ee83-3070-48d9-9caf-0e6a453cdc96"
+        },
+        {
+          "kind": "finding",
+          "id": "9405a58a-0489-49de-b28e-2c11bb3ae344"
+        },
+        {
+          "kind": "closure",
+          "id": "7e5a56d8-6aeb-4107-b3e3-c5b1aeb3b233"
+        }
+      ],
+      "inference_calls": 23,
+      "input_tokens": 164083,
+      "output_tokens": 1701,
+      "api_cost": null
+    },
+    "tool_error_recovery": {
+      "case": "tool_error_recovery",
+      "status": "PASS",
+      "checks": {
+        "no_runtime_error": true,
+        "all_arguments_schema_valid": true,
+        "tools_exercised": true,
+        "human_plan_gate": true,
+        "completed": true,
+        "pass_saved": true,
+        "no_unnecessary_email": true,
+        "error_exercised_and_recovered": true
+      },
+      "session_status": "completed",
+      "error_code": null,
+      "tool_calls": 6,
+      "failed_tool_calls": 1,
+      "duration_seconds": 33.19533410016447,
+      "human_decisions": [
+        {
+          "kind": "plan",
+          "id": "a83e6f9c-bf41-4464-822d-bb0367b8d3a9"
+        }
+      ],
+      "inference_calls": 8,
+      "input_tokens": 30027,
+      "output_tokens": 406,
+      "api_cost": null
+    },
+    "full_population": {
+      "case": "full_population",
+      "status": "PASS",
+      "checks": {
+        "no_runtime_error": true,
+        "all_arguments_schema_valid": true,
+        "tools_exercised": true,
+        "human_plan_gate": true,
+        "all_nine_controls_tested": true,
+        "independent_work_continued": true,
+        "all_72_pairs_tested": true,
+        "confirmed_findings_proposed": true,
+        "department_requested": true
+      },
+      "session_status": "waiting",
+      "error_code": null,
+      "tool_calls": 40,
+      "failed_tool_calls": 0,
+      "duration_seconds": 5.714746700134128,
+      "human_decisions": [
+        {
+          "kind": "plan",
+          "id": "30a0d01e-786c-4518-880d-29f4ba3605eb",
+          "reused_prior_decision": true
+        }
+      ],
+      "inference_calls": 43,
+      "input_tokens": 492875,
+      "output_tokens": 2956,
+      "api_cost": null,
+      "trace_path": "evaluation\\phase4_traces\\ea5ab377-ca39-405a-9cf4-aa8a41b97481\\full_population-b5b0c11b-2874-4cae-921f-7f3b217a3554.json"
+    }
+  },
+  "development_full_population": {
+    "correct": 72,
+    "total": 72,
+    "actual_counts": {
+      "MISSING_EVIDENCE": 2,
+      "FAIL": 9,
+      "PASS": 61
+    }
+  },
+  "independent_controls_tested_after_first_block": [
+    "PR-03.v1"
+  ],
+  "shared_outstanding_requests": 1,
+  "simulated_messages_in_full_run": 1,
+  "measured_successful_inferences_across_retained_attempts": 119,
+  "measured_unique_tool_calls_across_retained_attempts": 92,
+  "measured_input_tokens": 874799,
+  "measured_output_tokens": 7500,
+  "api_cost": null,
+  "held_out_performance": "NOT RUN",
+  "browser_visual_qa": "NOT RUN",
+  "trace_archive": "evaluation/phase4_traces",
+  "archived_initial_traces": [
+    "evaluation\\phase4_traces\\8702cb22-a41d-41a2-a3ea-56096398814f\\tool_error_recovery-initial.json",
+    "evaluation\\phase4_traces\\df041e80-20c2-4c8a-89b7-fc2675fb0b8c\\complete-initial.json",
+    "evaluation\\phase4_traces\\e2ce63df-207f-40e9-807d-f62447ac9b7d\\alternate_source-initial.json",
+    "evaluation\\phase4_traces\\e2ce63df-207f-40e9-807d-f62447ac9b7d\\contradictory-initial.json",
+    "evaluation\\phase4_traces\\e2ce63df-207f-40e9-807d-f62447ac9b7d\\missing_department-initial.json",
+    "evaluation\\phase4_traces\\e2ce63df-207f-40e9-807d-f62447ac9b7d\\resume_and_closure-initial.json",
+    "evaluation\\phase4_traces\\e2ce63df-207f-40e9-807d-f62447ac9b7d\\tool_error_recovery-initial.json",
+    "evaluation\\phase4_traces\\ea5ab377-ca39-405a-9cf4-aa8a41b97481\\full_population-initial.json"
+  ],
+  "first_attempt_required_cases": "5 PASS / 1 FAIL; failed case passed targeted retest",
+  "full_population_note": "Passed after checkpoint recovery and targeted fixes; earlier failures retained."
+}

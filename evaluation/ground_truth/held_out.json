@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "dataset_id": "digital-risk-heldout.v1",
+  "split": "held_out",
+  "provenance": "Manually specified expected outcomes, authored without a control-testing implementation. Not human-validated; review before performance evaluation. Runtime code must not read this file.",
+  "engagement": {
+    "period_start": "2027-02-01",
+    "period_end": "2027-04-30"
+  },
+  "labels": [
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "HX-IRIS",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-HX-IRIS-risk_assessment.v1"
+      ],
+      "rationale": "Risk assessment occurred after deployment."
+    },
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "HX-LIME",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-LIME-risk_assessment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "HX-ONYX",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ONYX-risk_assessment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-01.v1",
+      "entity_id": "HX-TEAL",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-TEAL-risk_assessment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "HX-IRIS",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-IRIS-project_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "HX-LIME",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-HX-LIME-project_approval.v1"
+      ],
+      "rationale": "Approval occurred after deployment."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "HX-ONYX",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ONYX-project_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-02.v1",
+      "entity_id": "HX-TEAL",
+      "expected_outcome": "MISSING_EVIDENCE",
+      "evidence_ids": [],
+      "rationale": "Original approval is unavailable; a GRC claim does not substitute."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "HX-IRIS",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-IRIS-grc_approval.v1",
+        "EV-HX-IRIS-project_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "HX-LIME",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-LIME-grc_approval.v1",
+        "EV-HX-LIME-project_approval.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "HX-ONYX",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-HX-ONYX-grc_approval.v1",
+        "EV-HX-ONYX-project_approval.v1"
+      ],
+      "rationale": "GRC and original approval dates differ; investigate the discrepancy."
+    },
+    {
+      "control_id": "PR-03.v1",
+      "entity_id": "HX-TEAL",
+      "expected_outcome": "MISSING_EVIDENCE",
+      "evidence_ids": [
+        "EV-HX-TEAL-grc_approval.v1"
+      ],
+      "rationale": "Original approval is unavailable; a GRC claim does not substitute."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "HX-ADMIN-B",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ADMIN-B-employment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "HX-ADMIN-F",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ADMIN-F-employment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "HX-ADMIN-K",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-HX-ADMIN-K-employment.v1"
+      ],
+      "rationale": "Owner's employment ended on or before the in-scope date."
+    },
+    {
+      "control_id": "PA-01.v1",
+      "entity_id": "HX-ADMIN-Q",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ADMIN-Q-employment.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "HX-ADMIN-B",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ADMIN-B-mfa.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "HX-ADMIN-F",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ADMIN-F-mfa.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "HX-ADMIN-K",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ADMIN-K-mfa.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-02.v1",
+      "entity_id": "HX-ADMIN-Q",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-HX-ADMIN-Q-mfa.v1"
+      ],
+      "rationale": "MFA disabled."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "HX-ADMIN-B",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ADMIN-B-access_review.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "HX-ADMIN-F",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-HX-ADMIN-F-access_review.v1"
+      ],
+      "rationale": "Access review older than 90 days."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "HX-ADMIN-K",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ADMIN-K-access_review.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "PA-03.v1",
+      "entity_id": "HX-ADMIN-Q",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-ADMIN-Q-access_review.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "HX-NODE-C",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-NODE-C-edr.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "HX-NODE-J",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-NODE-J-edr.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "HX-NODE-N",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-HX-NODE-N-edr.v1"
+      ],
+      "rationale": "Endpoint coverage disabled."
+    },
+    {
+      "control_id": "ES-01.v1",
+      "entity_id": "HX-NODE-R",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-NODE-R-edr.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "HX-NODE-C",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-NODE-C-vulnerability_scan.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "HX-NODE-J",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-NODE-J-vulnerability_scan.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "HX-NODE-N",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-NODE-N-vulnerability_scan.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-02.v1",
+      "entity_id": "HX-NODE-R",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-HX-NODE-R-vulnerability_scan.v1"
+      ],
+      "rationale": "Vulnerability scan older than 30 days."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "HX-NODE-C",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-NODE-C-encryption.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "HX-NODE-J",
+      "expected_outcome": "FAIL",
+      "evidence_ids": [
+        "EV-HX-NODE-J-encryption.v1"
+      ],
+      "rationale": "Encryption disabled."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "HX-NODE-N",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-NODE-N-encryption.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    },
+    {
+      "control_id": "ES-03.v1",
+      "entity_id": "HX-NODE-R",
+      "expected_outcome": "PASS",
+      "evidence_ids": [
+        "EV-HX-NODE-R-encryption.v1"
+      ],
+      "rationale": "The supplied facts meet the documented requirement."
+    }
+  ]
+}

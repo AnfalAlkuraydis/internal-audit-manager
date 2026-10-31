@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "projects",
+      "system": "Fictional project register",
+      "authority": "original",
+      "allowed_kinds": [
+        "risk_assessment"
+      ]
+    },
+    {
+      "id": "approvals",
+      "system": "Fictional approval history",
+      "authority": "original",
+      "allowed_kinds": [
+        "project_approval"
+      ]
+    },
+    {
+      "id": "compass",
+      "system": "Fictional Compass-style GRC",
+      "authority": "secondary",
+      "allowed_kinds": [
+        "grc_approval"
+      ]
+    },
+    {
+      "id": "hr",
+      "system": "Fictional HR records",
+      "authority": "original",
+      "allowed_kinds": [
+        "employment"
+      ]
+    },
+    {
+      "id": "access",
+      "system": "Fictional access register",
+      "authority": "original",
+      "allowed_kinds": [
+        "mfa",
+        "access_review"
+      ]
+    },
+    {
+      "id": "defender",
+      "system": "Fictional Defender-style inventory",
+      "authority": "original",
+      "allowed_kinds": [
+        "edr",
+        "encryption"
+      ]
+    },
+    {
+      "id": "qualys",
+      "system": "Fictional Qualys-style scans",
+      "authority": "original",
+      "allowed_kinds": [
+        "vulnerability_scan"
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "id": "POL-PROJECT.v1",
+      "title": "Project Risk Management",
+      "version": 1,
+      "department": "Digital Risk",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "text": "Every deployed project must have a risk assessment and documented approval dated on or before deployment. The GRC approval date must agree with original approval history. A GRC claim alone is not approval evidence."
+    },
+    {
+      "id": "POL-ACCESS.v1",
+      "title": "Privileged Access Management",
+      "version": 1,
+      "department": "Digital Risk",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "text": "On each account's last active day within the audit period, its owner must still be employed, MFA must be enabled, and an access review must be no more than 90 calendar days old. Employment end is the first day the owner is no longer employed."
+    },
+    {
+      "id": "POL-ENDPOINT.v1",
+      "title": "Endpoint Security",
+      "version": 1,
+      "department": "Digital Risk",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "text": "On each device's last active day within the audit period, EDR coverage and disk encryption must be enabled. Its vulnerability scan must be no more than 30 calendar days old. Evidence must describe that in-scope date."
+    }
+  ],
+  "controls": [
+    {
+      "id": "PR-01.v1",
+      "policy_id": "POL-PROJECT.v1",
+      "title": "Risk assessment before deployment",
+      "entity_kind": "project",
+      "requirement": "A risk assessment exists and assessed_on <= deployed_on."
+    },
+    {
+      "id": "PR-02.v1",
+      "policy_id": "POL-PROJECT.v1",
+      "title": "Approval before deployment",
+      "entity_kind": "project",
+      "requirement": "Original approval history exists and approved_on <= deployed_on."
+    },
+    {
+      "id": "PR-03.v1",
+      "policy_id": "POL-PROJECT.v1",
+      "title": "GRC approval agrees with source",
+      "entity_kind": "project",
+      "requirement": "GRC and original approval dates are equal. Investigate mismatches before proposing a finding."
+    },
+    {
+      "id": "PA-01.v1",
+      "policy_id": "POL-ACCESS.v1",
+      "title": "Owner remains employed",
+      "entity_kind": "privileged_account",
+      "requirement": "employment_end is null or later than the last active day in scope."
+    },
+    {
+      "id": "PA-02.v1",
+      "policy_id": "POL-ACCESS.v1",
+      "title": "Privileged MFA enabled",
+      "entity_kind": "privileged_account",
+      "requirement": "MFA enabled is true on the last active day in scope."
+    },
+    {
+      "id": "PA-03.v1",
+      "policy_id": "POL-ACCESS.v1",
+      "title": "Access review current",
+      "entity_kind": "privileged_account",
+      "requirement": "0 <= last active day in scope - reviewed_on <= 90 days."
+    },
+    {
+      "id": "ES-01.v1",
+      "policy_id": "POL-ENDPOINT.v1",
+      "title": "EDR coverage active",
+      "entity_kind": "device",
+      "requirement": "EDR covered is true on the last active day in scope."
+    },
+    {
+      "id": "ES-02.v1",
+      "policy_id": "POL-ENDPOINT.v1",
+      "title": "Vulnerability scanning current",
+      "entity_kind": "device",
+      "requirement": "0 <= last active day in scope - scanned_on <= 30 days."
+    },
+    {
+      "id": "ES-03.v1",
+      "policy_id": "POL-ENDPOINT.v1",
+      "title": "Disk encryption enabled",
+      "entity_kind": "device",
+      "requirement": "Encryption enabled is true on the last active day in scope."
+    }
+  ],
+  "procedures": [
+    {
+      "id": "PROC-PR-01.v1",
+      "control_id": "PR-01.v1",
+      "version": 1,
+      "instructions": "A risk assessment exists and assessed_on <= deployed_on. Missing necessary evidence is MISSING_EVIDENCE, not an inferred pass or fail. Use all eligible records.",
+      "rule": {
+        "operation": "on_or_before",
+        "evidence_kind": "risk_assessment",
+        "evidence_field": "assessed_on",
+        "entity_field": "deployed_on"
+      }
+    },
+    {
+      "id": "PROC-PR-02.v1",
+      "control_id": "PR-02.v1",
+      "version": 1,
+      "instructions": "Original approval history exists and approved_on <= deployed_on. Missing necessary evidence is MISSING_EVIDENCE, not an inferred pass or fail. Use all eligible records.",
+      "rule": {
+        "operation": "on_or_before",
+        "evidence_kind": "project_approval",
+        "evidence_field": "approved_on",
+        "entity_field": "deployed_on"
+      }
+    },
+    {
+      "id": "PROC-PR-03.v1",
+      "control_id": "PR-03.v1",
+      "version": 1,
+      "instructions": "GRC and original approval dates are equal. Investigate mismatches before proposing a finding. Missing necessary evidence is MISSING_EVIDENCE, not an inferred pass or fail. Use all eligible records.",
+      "rule": {
+        "operation": "dates_agree",
+        "evidence_kind": "project_approval",
+        "other_evidence_kind": "grc_approval",
+        "field": "approved_on"
+      }
+    },
+    {
+      "id": "PROC-PA-01.v1",
+      "control_id": "PA-01.v1",
+      "version": 1,
+      "instructions": "employment_end is null or later than the last active day in scope. Missing necessary evidence is MISSING_EVIDENCE, not an inferred pass or fail. Use all eligible records.",
+      "rule": {
+        "operation": "employed_at",
+        "evidence_kind": "employment",
+        "field": "employment_end",
+        "as_of": "last_active_day"
+      }
+    },
+    {
+      "id": "PROC-PA-02.v1",
+      "control_id": "PA-02.v1",
+      "version": 1,
+      "instructions": "MFA enabled is true on the last active day in scope. Missing necessary evidence is MISSING_EVIDENCE, not an inferred pass or fail. Use all eligible records.",
+      "rule": {
+        "operation": "is_true",
+        "evidence_kind": "mfa",
+        "field": "enabled",
+        "as_of": "last_active_day"
+      }
+    },
+    {
+      "id": "PROC-PA-03.v1",
+      "control_id": "PA-03.v1",
+      "version": 1,
+      "instructions": "0 <= last active day in scope - reviewed_on <= 90 days. Missing necessary evidence is MISSING_EVIDENCE, not an inferred pass or fail. Use all eligible records.",
+      "rule": {
+        "operation": "not_older_than",
+        "evidence_kind": "access_review",
+        "field": "reviewed_on",
+        "max_age_days": 90,
+        "as_of": "last_active_day"
+      }
+    },
+    {
+      "id": "PROC-ES-01.v1",
+      "control_id": "ES-01.v1",
+      "version": 1,
+      "instructions": "EDR covered is true on the last active day in scope. Missing necessary evidence is MISSING_EVIDENCE, not an inferred pass or fail. Use all eligible records.",
+      "rule": {
+        "operation": "is_true",
+        "evidence_kind": "edr",
+        "field": "covered",
+        "as_of": "last_active_day"
+      }
+    },
+    {
+      "id": "PROC-ES-02.v1",
+      "control_id": "ES-02.v1",
+      "version": 1,
+      "instructions": "0 <= last active day in scope - scanned_on <= 30 days. Missing necessary evidence is MISSING_EVIDENCE, not an inferred pass or fail. Use all eligible records.",
+      "rule": {
+        "operation": "not_older_than",
+        "evidence_kind": "vulnerability_scan",
+        "field": "scanned_on",
+        "max_age_days": 30,
+        "as_of": "last_active_day"
+      }
+    },
+    {
+      "id": "PROC-ES-03.v1",
+      "control_id": "ES-03.v1",
+      "version": 1,
+      "instructions": "Encryption enabled is true on the last active day in scope. Missing necessary evidence is MISSING_EVIDENCE, not an inferred pass or fail. Use all eligible records.",
+      "rule": {
+        "operation": "is_true",
+        "evidence_kind": "encryption",
+        "field": "enabled",
+        "as_of": "last_active_day"
+      }
+    }
+  ]
+}

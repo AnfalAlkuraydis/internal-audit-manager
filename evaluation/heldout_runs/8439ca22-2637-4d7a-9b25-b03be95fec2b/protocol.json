@@ -1,0 +1,50 @@
+{
+  "run_id": "8439ca22-2637-4d7a-9b25-b03be95fec2b",
+  "execution_date_utc": "2026-10-31T13:02:28.655347+00:00",
+  "cases": [
+    "project_governance",
+    "privileged_access",
+    "endpoint_security"
+  ],
+  "period": [
+    "2027-02-01",
+    "2027-04-30"
+  ],
+  "frozen_inputs": {
+    "backend\\__init__.py": "cf98ff59a474706b485dac3665db0d825eaaf62d23a7cdcd77b86919457a3ded",
+    "backend\\agent\\__init__.py": "23fd0c19cc5fd13010bd14673aa9df5c5a0c6fe3780a5fd0082d71e0cdd90ea3",
+    "backend\\agent\\azure_grok.py": "8f45b22cb947150c5e6cedfda39d67f5fc567c9c70a6797cd6a70c2c0552521d",
+    "backend\\agent\\context.py": "dbd0a4d98e3b1ee379ee1ee781333c8a54ef7007d955c20614de7235cd99c879",
+    "backend\\agent\\llm_interface.py": "654429cd453335c266893740c98ddef9e1822b78cb15b3209d1d93da30d2ead7",
+    "backend\\agent\\orchestrator.py": "f46e8eb62bfa25663fcc54ee4862393ccc14bf96185d16c5669e588105797945",
+    "backend\\agent\\prompt.py": "85c631123fae1058310e202f3aa3976f4ff946f375c306225e51527ea8699fbb",
+    "backend\\agent\\tools\\__init__.py": "a0ae9cc4bd2c77c64bf5e45a886053d9b072b796c764ad6b2fb74fb6c108e65b",
+    "backend\\agent\\tools\\contracts.py": "29c1f0b7e25856ea026ca8ea0f99f79ed3cf1f1178eb8a0063031c61b97b3a92",
+    "backend\\api.py": "27668f964fd8f0fedabac5a7a4278b41c0f300ce66ca95b4a493e74cfdbff068",
+    "backend\\app.py": "e1cfa108aaf8ccbae51837fe97395336784e23cd5673658976e23ccac26b25cc",
+    "backend\\auth.py": "b51f8a5758fa7d15b663cb2af05aa3613e061753906516bb90c60c1319c8d754",
+    "backend\\config.py": "5d6a782effd0d40ddb284514f704f2a2a41cc91077c8e989bd938c29303cfbf3",
+    "backend\\database\\__init__.py": "e2367d8ae4c849db5e3f8cf4e981cdf4774c5cff5f440552db68a5ad877ea65b",
+    "backend\\database\\connection.py": "6d74cea18dab8c4ccb251fa7116df85dc849fad1acb318e2bba854004fc290c7",
+    "backend\\database\\migrate.py": "169ece45fc4fd2831b790b37d8f6826308ced1f15c194a3f5c8b04563b9902bb",
+    "backend\\database\\repository.py": "173ba71f52630c1270e5ff978c341e96f48cebe60fd40a5890b462a25b9a4ff8",
+    "backend\\database\\schemas.py": "bb5a6d4c3bf9cd932d999e061ce922cf7b7b3adeb71a35fb4973d49648693cd2",
+    "backend\\database\\tables.py": "bf48c01b31575eed1325956cbca6dd6cc2947657108447e939953eaccec896e2",
+    "backend\\email\\__init__.py": "7e1ad20af5cf3d85fb5a303e54580769857da1ba09a320d49993e0a7dfbd84f0",
+    "backend\\email\\models.py": "643d4d903046fd9e0e41cd877135a7eb7387895bdef2718b92229d78789f0ba4",
+    "backend\\email\\service.py": "1667d31fb1267c96d8fdae33fed1cde2fe85c22c72f54216d7cc2c337b5deebb",
+    "backend\\email\\simulated.py": "c96849b45bd24e1bb77fabb3a1ebf31d40f6a6fbbbe368a4a4090cc11974ace3",
+    "backend\\services\\__init__.py": "2c11ca65f279deab5f1887f235f2c9c8c4c3ec0014630987712288dddf3c0e3f",
+    "backend\\services\\activity.py": "c48e21574f857fface3f76988aabb5ac17f841d72b3b12af3e22d8d5a93448a3",
+    "backend\\services\\audit.py": "e3dcf54313fe8e119c23b7b9461bc18e02ed846f8360a3bdb58ad5c503bc5fe1",
+    "backend\\services\\control_testing.py": "b085cb0d0b6bc0a4572153560c5cea1d70127a6c966453756ad2497623212bbe",
+    "backend\\services\\errors.py": "166a31fcf7f7f4c8072371e8f3313476a0aabcbf1520b8db10aa100f9760d689",
+    "backend\\workspace.py": "e5c6f27a572e6d0a821c4ca4509bdeb11ceaefc8e6eed00872dd34dcfccbd7ab",
+    "data\\catalog.json": "ba14910b839cd7f0527599172aa5f8509e534f7dff0f16ba6b6d8bf02ddec7b3",
+    "data\\held_out\\dataset.json": "ff0c0ded99f1609b77ebb8a610b3229d88128e68c666ae19eddedbf605b01676",
+    "evaluation\\ground_truth\\held_out.json": "b16a3f489f4f70346925dfc5887edc91e0045c4976762082beb476080fe16ab3"
+  },
+  "stop_rule": "Finish all available control tests, propose confirmed findings and request missing evidence; human findings/closure remain pending.",
+  "exclusions": "No stress, adversarial, Gmail or standalone-prototype tests. No prompt/data/label tuning or selective reruns.",
+  "note": "Small pre-existing synthetic held-out partition; expected labels are provisional, not human-validated."
+}

@@ -1,0 +1,2078 @@
+{
+  "metric": {
+    "name": "Held-out control-result accuracy",
+    "correct": 36,
+    "total": 36,
+    "percent": 100.0,
+    "status": "PASS",
+    "outcomes": {
+      "FAIL": 9,
+      "PASS": 25,
+      "MISSING_EVIDENCE": 2
+    },
+    "comparison": [
+      {
+        "control_id": "PR-01.v1",
+        "entity_id": "HX-IRIS",
+        "expected": "FAIL",
+        "actual": "FAIL",
+        "correct": true
+      },
+      {
+        "control_id": "PR-01.v1",
+        "entity_id": "HX-LIME",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PR-01.v1",
+        "entity_id": "HX-ONYX",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PR-01.v1",
+        "entity_id": "HX-TEAL",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PR-02.v1",
+        "entity_id": "HX-IRIS",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PR-02.v1",
+        "entity_id": "HX-LIME",
+        "expected": "FAIL",
+        "actual": "FAIL",
+        "correct": true
+      },
+      {
+        "control_id": "PR-02.v1",
+        "entity_id": "HX-ONYX",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PR-02.v1",
+        "entity_id": "HX-TEAL",
+        "expected": "MISSING_EVIDENCE",
+        "actual": "MISSING_EVIDENCE",
+        "correct": true
+      },
+      {
+        "control_id": "PR-03.v1",
+        "entity_id": "HX-IRIS",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PR-03.v1",
+        "entity_id": "HX-LIME",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PR-03.v1",
+        "entity_id": "HX-ONYX",
+        "expected": "FAIL",
+        "actual": "FAIL",
+        "correct": true
+      },
+      {
+        "control_id": "PR-03.v1",
+        "entity_id": "HX-TEAL",
+        "expected": "MISSING_EVIDENCE",
+        "actual": "MISSING_EVIDENCE",
+        "correct": true
+      },
+      {
+        "control_id": "PA-01.v1",
+        "entity_id": "HX-ADMIN-B",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PA-01.v1",
+        "entity_id": "HX-ADMIN-F",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PA-01.v1",
+        "entity_id": "HX-ADMIN-K",
+        "expected": "FAIL",
+        "actual": "FAIL",
+        "correct": true
+      },
+      {
+        "control_id": "PA-01.v1",
+        "entity_id": "HX-ADMIN-Q",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PA-02.v1",
+        "entity_id": "HX-ADMIN-B",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PA-02.v1",
+        "entity_id": "HX-ADMIN-F",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PA-02.v1",
+        "entity_id": "HX-ADMIN-K",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PA-02.v1",
+        "entity_id": "HX-ADMIN-Q",
+        "expected": "FAIL",
+        "actual": "FAIL",
+        "correct": true
+      },
+      {
+        "control_id": "PA-03.v1",
+        "entity_id": "HX-ADMIN-B",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PA-03.v1",
+        "entity_id": "HX-ADMIN-F",
+        "expected": "FAIL",
+        "actual": "FAIL",
+        "correct": true
+      },
+      {
+        "control_id": "PA-03.v1",
+        "entity_id": "HX-ADMIN-K",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "PA-03.v1",
+        "entity_id": "HX-ADMIN-Q",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "ES-01.v1",
+        "entity_id": "HX-NODE-C",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "ES-01.v1",
+        "entity_id": "HX-NODE-J",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "ES-01.v1",
+        "entity_id": "HX-NODE-N",
+        "expected": "FAIL",
+        "actual": "FAIL",
+        "correct": true
+      },
+      {
+        "control_id": "ES-01.v1",
+        "entity_id": "HX-NODE-R",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "ES-02.v1",
+        "entity_id": "HX-NODE-C",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "ES-02.v1",
+        "entity_id": "HX-NODE-J",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "ES-02.v1",
+        "entity_id": "HX-NODE-N",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "ES-02.v1",
+        "entity_id": "HX-NODE-R",
+        "expected": "FAIL",
+        "actual": "FAIL",
+        "correct": true
+      },
+      {
+        "control_id": "ES-03.v1",
+        "entity_id": "HX-NODE-C",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "ES-03.v1",
+        "entity_id": "HX-NODE-J",
+        "expected": "FAIL",
+        "actual": "FAIL",
+        "correct": true
+      },
+      {
+        "control_id": "ES-03.v1",
+        "entity_id": "HX-NODE-N",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      },
+      {
+        "control_id": "ES-03.v1",
+        "entity_id": "HX-NODE-R",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true
+      }
+    ]
+  },
+  "trace": [
+    {
+      "control_id": "PR-01.v1",
+      "population": {
+        "population_snapshot_id": "10875cc9-16c9-424e-bed0-09081f7b6264",
+        "control_id": "PR-01.v1",
+        "plan_version_id": "4a776cf9-1413-465b-b92d-fcfa28cdcb99",
+        "count": 4,
+        "members": [
+          {
+            "id": "HX-IRIS",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 3",
+            "active_from": "2027-04-29",
+            "active_to": "2027-04-29",
+            "facts": {
+              "deployed_on": "2027-04-29"
+            }
+          },
+          {
+            "id": "HX-LIME",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 1",
+            "active_from": "2027-02-01",
+            "active_to": "2027-02-01",
+            "facts": {
+              "deployed_on": "2027-02-01"
+            }
+          },
+          {
+            "id": "HX-ONYX",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 2",
+            "active_from": "2027-03-17",
+            "active_to": "2027-03-17",
+            "facts": {
+              "deployed_on": "2027-03-17"
+            }
+          },
+          {
+            "id": "HX-TEAL",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 4",
+            "active_from": "2027-04-30",
+            "active_to": "2027-04-30",
+            "facts": {
+              "deployed_on": "2027-04-30"
+            }
+          }
+        ]
+      },
+      "evidence": {
+        "evidence_snapshot_id": "ca1efa94-0d06-4f24-8bab-7f15b1f5ef11",
+        "population_snapshot_id": "10875cc9-16c9-424e-bed0-09081f7b6264",
+        "records": [
+          {
+            "id": "EV-HX-IRIS-risk_assessment.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-IRIS",
+            "source_id": "projects",
+            "source_record_id": "SRC-HX-IRIS-risk_assessment",
+            "kind": "risk_assessment",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "assessed_on": "2027-04-30"
+            },
+            "fingerprint": "422a3b76fb14e463da0c9bfc938ebe577253424f1d94e3ff41d88973f412d0be",
+            "authority": "original",
+            "system": "Fictional project register",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-LIME-risk_assessment.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-LIME",
+            "source_id": "projects",
+            "source_record_id": "SRC-HX-LIME-risk_assessment",
+            "kind": "risk_assessment",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "assessed_on": "2027-01-31"
+            },
+            "fingerprint": "49cd4e6ae8b9a8283146048a7809c1b7ed4ff3f4861089a3b02dc2d5d26dc25b",
+            "authority": "original",
+            "system": "Fictional project register",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ONYX-risk_assessment.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ONYX",
+            "source_id": "projects",
+            "source_record_id": "SRC-HX-ONYX-risk_assessment",
+            "kind": "risk_assessment",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "assessed_on": "2027-03-15"
+            },
+            "fingerprint": "37f5c1fa498a576d32604bf92392258d3798bf2da8358ae8e50345b3bdf2ac65",
+            "authority": "original",
+            "system": "Fictional project register",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-TEAL-risk_assessment.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-TEAL",
+            "source_id": "projects",
+            "source_record_id": "SRC-HX-TEAL-risk_assessment",
+            "kind": "risk_assessment",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "assessed_on": "2027-04-28"
+            },
+            "fingerprint": "9515157bf140a583935748149729d69f5f7b164a87e58b875670235356596310",
+            "authority": "original",
+            "system": "Fictional project register",
+            "integrity_valid": true
+          }
+        ],
+        "gaps": []
+      },
+      "result": {
+        "run_id": "1b1e9c8d-5231-47bd-821b-f4df92eeb6d9",
+        "control_id": "PR-01.v1",
+        "purpose": "audit",
+        "results": [
+          {
+            "id": "043ea341-9e87-4203-882c-e82c3f123482",
+            "entity_id": "HX-IRIS",
+            "outcome": "FAIL",
+            "reason": "requirement_not_met",
+            "evidence_ids": [
+              "EV-HX-IRIS-risk_assessment.v1"
+            ]
+          },
+          {
+            "id": "e9d60986-202b-481d-85cb-cfb3a3f6e6cb",
+            "entity_id": "HX-LIME",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-LIME-risk_assessment.v1"
+            ]
+          },
+          {
+            "id": "888efc6d-15c0-4103-9d4b-07fd04648047",
+            "entity_id": "HX-ONYX",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ONYX-risk_assessment.v1"
+            ]
+          },
+          {
+            "id": "ca19687e-3ce1-4fec-b6f4-c04b99247f41",
+            "entity_id": "HX-TEAL",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-TEAL-risk_assessment.v1"
+            ]
+          }
+        ],
+        "counts": {
+          "PASS": 3,
+          "FAIL": 1,
+          "MISSING_EVIDENCE": 0,
+          "CONTRADICTORY_EVIDENCE": 0,
+          "ERROR": 0,
+          "NOT_APPLICABLE": 0
+        }
+      }
+    },
+    {
+      "control_id": "PR-02.v1",
+      "population": {
+        "population_snapshot_id": "f923dafd-4dc0-4e50-b56f-46a950b1e310",
+        "control_id": "PR-02.v1",
+        "plan_version_id": "4a776cf9-1413-465b-b92d-fcfa28cdcb99",
+        "count": 4,
+        "members": [
+          {
+            "id": "HX-IRIS",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 3",
+            "active_from": "2027-04-29",
+            "active_to": "2027-04-29",
+            "facts": {
+              "deployed_on": "2027-04-29"
+            }
+          },
+          {
+            "id": "HX-LIME",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 1",
+            "active_from": "2027-02-01",
+            "active_to": "2027-02-01",
+            "facts": {
+              "deployed_on": "2027-02-01"
+            }
+          },
+          {
+            "id": "HX-ONYX",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 2",
+            "active_from": "2027-03-17",
+            "active_to": "2027-03-17",
+            "facts": {
+              "deployed_on": "2027-03-17"
+            }
+          },
+          {
+            "id": "HX-TEAL",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 4",
+            "active_from": "2027-04-30",
+            "active_to": "2027-04-30",
+            "facts": {
+              "deployed_on": "2027-04-30"
+            }
+          }
+        ]
+      },
+      "evidence": {
+        "evidence_snapshot_id": "066ab6ed-da9d-46a0-87df-9f54cfc124ac",
+        "population_snapshot_id": "f923dafd-4dc0-4e50-b56f-46a950b1e310",
+        "records": [
+          {
+            "id": "EV-HX-IRIS-project_approval.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-IRIS",
+            "source_id": "approvals",
+            "source_record_id": "SRC-HX-IRIS-project_approval",
+            "kind": "project_approval",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "approved_on": "2027-04-28"
+            },
+            "fingerprint": "892aa0e7ef860b39563b3e32860dfcbc3a74f0ae45ea6a850e2d3dd77fa71cc4",
+            "authority": "original",
+            "system": "Fictional approval history",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-LIME-project_approval.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-LIME",
+            "source_id": "approvals",
+            "source_record_id": "SRC-HX-LIME-project_approval",
+            "kind": "project_approval",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "approved_on": "2027-02-02"
+            },
+            "fingerprint": "c00131143bf5f1f6049ec025b7e3a07fdbb572d91179faef7ec2fda36178dc79",
+            "authority": "original",
+            "system": "Fictional approval history",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ONYX-project_approval.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ONYX",
+            "source_id": "approvals",
+            "source_record_id": "SRC-HX-ONYX-project_approval",
+            "kind": "project_approval",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "approved_on": "2027-03-16"
+            },
+            "fingerprint": "9b847f7c3cae04ac7b806d78aee753b894b5f34676c79078e73c68e68dd7a7de",
+            "authority": "original",
+            "system": "Fictional approval history",
+            "integrity_valid": true
+          }
+        ],
+        "gaps": [
+          {
+            "entity_id": "HX-TEAL",
+            "evidence_kind": "project_approval"
+          }
+        ]
+      },
+      "result": {
+        "run_id": "02220544-0124-433b-b0b4-229faf7c7c88",
+        "control_id": "PR-02.v1",
+        "purpose": "audit",
+        "results": [
+          {
+            "id": "96efc21e-4ae7-459f-92d3-cc1852b57743",
+            "entity_id": "HX-IRIS",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-IRIS-project_approval.v1"
+            ]
+          },
+          {
+            "id": "297e0376-fea8-4d47-88e6-3240a3634007",
+            "entity_id": "HX-LIME",
+            "outcome": "FAIL",
+            "reason": "requirement_not_met",
+            "evidence_ids": [
+              "EV-HX-LIME-project_approval.v1"
+            ]
+          },
+          {
+            "id": "82b15955-e317-49e9-82c2-76c76c5b5538",
+            "entity_id": "HX-ONYX",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ONYX-project_approval.v1"
+            ]
+          },
+          {
+            "id": "e07aa190-d706-47bf-9e7b-cfb0f541b309",
+            "entity_id": "HX-TEAL",
+            "outcome": "MISSING_EVIDENCE",
+            "reason": "missing_project_approval",
+            "evidence_ids": []
+          }
+        ],
+        "counts": {
+          "PASS": 2,
+          "FAIL": 1,
+          "MISSING_EVIDENCE": 1,
+          "CONTRADICTORY_EVIDENCE": 0,
+          "ERROR": 0,
+          "NOT_APPLICABLE": 0
+        }
+      }
+    },
+    {
+      "control_id": "PR-03.v1",
+      "population": {
+        "population_snapshot_id": "a9a35454-e672-42fa-ae36-f15486c5bdc1",
+        "control_id": "PR-03.v1",
+        "plan_version_id": "4a776cf9-1413-465b-b92d-fcfa28cdcb99",
+        "count": 4,
+        "members": [
+          {
+            "id": "HX-IRIS",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 3",
+            "active_from": "2027-04-29",
+            "active_to": "2027-04-29",
+            "facts": {
+              "deployed_on": "2027-04-29"
+            }
+          },
+          {
+            "id": "HX-LIME",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 1",
+            "active_from": "2027-02-01",
+            "active_to": "2027-02-01",
+            "facts": {
+              "deployed_on": "2027-02-01"
+            }
+          },
+          {
+            "id": "HX-ONYX",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 2",
+            "active_from": "2027-03-17",
+            "active_to": "2027-03-17",
+            "facts": {
+              "deployed_on": "2027-03-17"
+            }
+          },
+          {
+            "id": "HX-TEAL",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "projects",
+            "kind": "project",
+            "name": "Evaluation project 4",
+            "active_from": "2027-04-30",
+            "active_to": "2027-04-30",
+            "facts": {
+              "deployed_on": "2027-04-30"
+            }
+          }
+        ]
+      },
+      "evidence": {
+        "evidence_snapshot_id": "630f4f48-72d0-4f65-a52e-2b171f443e27",
+        "population_snapshot_id": "a9a35454-e672-42fa-ae36-f15486c5bdc1",
+        "records": [
+          {
+            "id": "EV-HX-IRIS-grc_approval.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-IRIS",
+            "source_id": "compass",
+            "source_record_id": "SRC-HX-IRIS-grc_approval",
+            "kind": "grc_approval",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "approved_on": "2027-04-28"
+            },
+            "fingerprint": "f3ee73beea70313293a337727140c39f5f6c59536372a5673cf67dda7798566e",
+            "authority": "secondary",
+            "system": "Fictional Compass-style GRC",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-IRIS-project_approval.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-IRIS",
+            "source_id": "approvals",
+            "source_record_id": "SRC-HX-IRIS-project_approval",
+            "kind": "project_approval",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "approved_on": "2027-04-28"
+            },
+            "fingerprint": "892aa0e7ef860b39563b3e32860dfcbc3a74f0ae45ea6a850e2d3dd77fa71cc4",
+            "authority": "original",
+            "system": "Fictional approval history",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-LIME-grc_approval.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-LIME",
+            "source_id": "compass",
+            "source_record_id": "SRC-HX-LIME-grc_approval",
+            "kind": "grc_approval",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "approved_on": "2027-02-02"
+            },
+            "fingerprint": "12ad8afa83cb38141f7d183d34fcd4e5ac918a0c8cc3fd694c9d8e829e245375",
+            "authority": "secondary",
+            "system": "Fictional Compass-style GRC",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-LIME-project_approval.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-LIME",
+            "source_id": "approvals",
+            "source_record_id": "SRC-HX-LIME-project_approval",
+            "kind": "project_approval",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "approved_on": "2027-02-02"
+            },
+            "fingerprint": "c00131143bf5f1f6049ec025b7e3a07fdbb572d91179faef7ec2fda36178dc79",
+            "authority": "original",
+            "system": "Fictional approval history",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ONYX-grc_approval.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ONYX",
+            "source_id": "compass",
+            "source_record_id": "SRC-HX-ONYX-grc_approval",
+            "kind": "grc_approval",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "approved_on": "2027-03-14"
+            },
+            "fingerprint": "8152b8c14144d15d23c65d91c2d2df7802ac556ff30352a8849b583884a544e2",
+            "authority": "secondary",
+            "system": "Fictional Compass-style GRC",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ONYX-project_approval.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ONYX",
+            "source_id": "approvals",
+            "source_record_id": "SRC-HX-ONYX-project_approval",
+            "kind": "project_approval",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "approved_on": "2027-03-16"
+            },
+            "fingerprint": "9b847f7c3cae04ac7b806d78aee753b894b5f34676c79078e73c68e68dd7a7de",
+            "authority": "original",
+            "system": "Fictional approval history",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-TEAL-grc_approval.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-TEAL",
+            "source_id": "compass",
+            "source_record_id": "SRC-HX-TEAL-grc_approval",
+            "kind": "grc_approval",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "approved_on": "2027-04-30"
+            },
+            "fingerprint": "c098c1c2e0039d8cb39cd9ec203d5da86d936d2a8a7d061904957194a7ca3f1e",
+            "authority": "secondary",
+            "system": "Fictional Compass-style GRC",
+            "integrity_valid": true
+          }
+        ],
+        "gaps": [
+          {
+            "entity_id": "HX-TEAL",
+            "evidence_kind": "project_approval"
+          }
+        ]
+      },
+      "result": {
+        "run_id": "8990dfa8-e200-4816-8a95-3ed6cd47f379",
+        "control_id": "PR-03.v1",
+        "purpose": "audit",
+        "results": [
+          {
+            "id": "66667169-5cf6-4863-8d4d-9338684286dc",
+            "entity_id": "HX-IRIS",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-IRIS-grc_approval.v1",
+              "EV-HX-IRIS-project_approval.v1"
+            ]
+          },
+          {
+            "id": "fdf4dd4d-55cc-4c90-8ba8-6946aa1c71c8",
+            "entity_id": "HX-LIME",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-LIME-grc_approval.v1",
+              "EV-HX-LIME-project_approval.v1"
+            ]
+          },
+          {
+            "id": "86d5912a-24b2-4df5-9cf3-71b79fc61e58",
+            "entity_id": "HX-ONYX",
+            "outcome": "FAIL",
+            "reason": "requirement_not_met",
+            "evidence_ids": [
+              "EV-HX-ONYX-grc_approval.v1",
+              "EV-HX-ONYX-project_approval.v1"
+            ]
+          },
+          {
+            "id": "a3f4124e-734f-43bc-b2ea-8ba7cc3cfa97",
+            "entity_id": "HX-TEAL",
+            "outcome": "MISSING_EVIDENCE",
+            "reason": "missing_project_approval",
+            "evidence_ids": []
+          }
+        ],
+        "counts": {
+          "PASS": 2,
+          "FAIL": 1,
+          "MISSING_EVIDENCE": 1,
+          "CONTRADICTORY_EVIDENCE": 0,
+          "ERROR": 0,
+          "NOT_APPLICABLE": 0
+        }
+      }
+    },
+    {
+      "control_id": "PA-01.v1",
+      "population": {
+        "population_snapshot_id": "5699c2b4-2c74-45f0-8dd8-3877ec9edea8",
+        "control_id": "PA-01.v1",
+        "plan_version_id": "4a776cf9-1413-465b-b92d-fcfa28cdcb99",
+        "count": 4,
+        "members": [
+          {
+            "id": "HX-ADMIN-B",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 2",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 2",
+              "role": "Security administrator"
+            }
+          },
+          {
+            "id": "HX-ADMIN-F",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 4",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 4",
+              "role": "Security administrator"
+            }
+          },
+          {
+            "id": "HX-ADMIN-K",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 1",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 1",
+              "role": "Security administrator"
+            }
+          },
+          {
+            "id": "HX-ADMIN-Q",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 3",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 3",
+              "role": "Security administrator"
+            }
+          }
+        ]
+      },
+      "evidence": {
+        "evidence_snapshot_id": "74a2c404-c096-4b2b-b0f5-5aa3a618af04",
+        "population_snapshot_id": "5699c2b4-2c74-45f0-8dd8-3877ec9edea8",
+        "records": [
+          {
+            "id": "EV-HX-ADMIN-B-employment.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-B",
+            "source_id": "hr",
+            "source_record_id": "SRC-HX-ADMIN-B-employment",
+            "kind": "employment",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "employment_end": null
+            },
+            "fingerprint": "e5dc10f27f1a3cc89de219b1bde7cad0042bba5389b72ce3042c8bb5b0c14465",
+            "authority": "original",
+            "system": "Fictional HR records",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ADMIN-F-employment.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-F",
+            "source_id": "hr",
+            "source_record_id": "SRC-HX-ADMIN-F-employment",
+            "kind": "employment",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "employment_end": null
+            },
+            "fingerprint": "9874f52ed2a100b01fdcce5d1eee0e84d14ee2992fe8f83710cf866ea9393028",
+            "authority": "original",
+            "system": "Fictional HR records",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ADMIN-K-employment.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-K",
+            "source_id": "hr",
+            "source_record_id": "SRC-HX-ADMIN-K-employment",
+            "kind": "employment",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "employment_end": "2027-04-30"
+            },
+            "fingerprint": "ed2e4bd5101ca32500a6fdbedfc2d75199b3c1af07a7130b9ee5fab6a530aa4d",
+            "authority": "original",
+            "system": "Fictional HR records",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ADMIN-Q-employment.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-Q",
+            "source_id": "hr",
+            "source_record_id": "SRC-HX-ADMIN-Q-employment",
+            "kind": "employment",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "employment_end": null
+            },
+            "fingerprint": "d1090df271c1da3caf0c61de9d8c2a725cf4a53bcbc0ff98caa07b0c467730be",
+            "authority": "original",
+            "system": "Fictional HR records",
+            "integrity_valid": true
+          }
+        ],
+        "gaps": []
+      },
+      "result": {
+        "run_id": "4c88bb25-92f6-4fc0-a03b-18bc7ab40b55",
+        "control_id": "PA-01.v1",
+        "purpose": "audit",
+        "results": [
+          {
+            "id": "168a79a7-20b8-4ba8-8158-be35fbbfa647",
+            "entity_id": "HX-ADMIN-B",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-B-employment.v1"
+            ]
+          },
+          {
+            "id": "859692f9-0d13-4c29-80c1-d2e37c4873aa",
+            "entity_id": "HX-ADMIN-F",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-F-employment.v1"
+            ]
+          },
+          {
+            "id": "bdd8bd42-3312-4476-8371-26fa16d71a18",
+            "entity_id": "HX-ADMIN-K",
+            "outcome": "FAIL",
+            "reason": "requirement_not_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-K-employment.v1"
+            ]
+          },
+          {
+            "id": "51588690-213f-4162-ab02-5ca1a253e9fd",
+            "entity_id": "HX-ADMIN-Q",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-Q-employment.v1"
+            ]
+          }
+        ],
+        "counts": {
+          "PASS": 3,
+          "FAIL": 1,
+          "MISSING_EVIDENCE": 0,
+          "CONTRADICTORY_EVIDENCE": 0,
+          "ERROR": 0,
+          "NOT_APPLICABLE": 0
+        }
+      }
+    },
+    {
+      "control_id": "PA-02.v1",
+      "population": {
+        "population_snapshot_id": "2b444f76-2624-4dc3-bcab-b8ae0a731bfb",
+        "control_id": "PA-02.v1",
+        "plan_version_id": "4a776cf9-1413-465b-b92d-fcfa28cdcb99",
+        "count": 4,
+        "members": [
+          {
+            "id": "HX-ADMIN-B",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 2",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 2",
+              "role": "Security administrator"
+            }
+          },
+          {
+            "id": "HX-ADMIN-F",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 4",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 4",
+              "role": "Security administrator"
+            }
+          },
+          {
+            "id": "HX-ADMIN-K",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 1",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 1",
+              "role": "Security administrator"
+            }
+          },
+          {
+            "id": "HX-ADMIN-Q",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 3",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 3",
+              "role": "Security administrator"
+            }
+          }
+        ]
+      },
+      "evidence": {
+        "evidence_snapshot_id": "f925038c-eae4-4a9e-abc8-ea7243cdb70b",
+        "population_snapshot_id": "2b444f76-2624-4dc3-bcab-b8ae0a731bfb",
+        "records": [
+          {
+            "id": "EV-HX-ADMIN-B-mfa.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-B",
+            "source_id": "access",
+            "source_record_id": "SRC-HX-ADMIN-B-mfa",
+            "kind": "mfa",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "enabled": true,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "83b9fc1e33976b71f42b1f89f28e4f16dabee27121c21bb38fcfb1b41304717c",
+            "authority": "original",
+            "system": "Fictional access register",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ADMIN-F-mfa.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-F",
+            "source_id": "access",
+            "source_record_id": "SRC-HX-ADMIN-F-mfa",
+            "kind": "mfa",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "enabled": true,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "7da1e368274fcde7666eea31145c0ec4e4cb4786b90507d22a3534be96981114",
+            "authority": "original",
+            "system": "Fictional access register",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ADMIN-K-mfa.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-K",
+            "source_id": "access",
+            "source_record_id": "SRC-HX-ADMIN-K-mfa",
+            "kind": "mfa",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "enabled": true,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "aecb72a1fab71783925f70c2f88ea012def19a9021341bb41997ca437a59f139",
+            "authority": "original",
+            "system": "Fictional access register",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ADMIN-Q-mfa.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-Q",
+            "source_id": "access",
+            "source_record_id": "SRC-HX-ADMIN-Q-mfa",
+            "kind": "mfa",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "enabled": false,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "da73cdbb88c4c3fb2c67887844b68f88fcabf6890a14e61d8e6e2460c731bbf8",
+            "authority": "original",
+            "system": "Fictional access register",
+            "integrity_valid": true
+          }
+        ],
+        "gaps": []
+      },
+      "result": {
+        "run_id": "71982136-9920-4f65-a883-883cad9fb469",
+        "control_id": "PA-02.v1",
+        "purpose": "audit",
+        "results": [
+          {
+            "id": "50ebf7c1-ef68-4fed-a19a-8099669e4bd9",
+            "entity_id": "HX-ADMIN-B",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-B-mfa.v1"
+            ]
+          },
+          {
+            "id": "8908d1d1-637d-4bbf-8e7b-e38f12811b3f",
+            "entity_id": "HX-ADMIN-F",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-F-mfa.v1"
+            ]
+          },
+          {
+            "id": "24ddbdc4-ccfe-4c7d-b5ed-111d3805c288",
+            "entity_id": "HX-ADMIN-K",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-K-mfa.v1"
+            ]
+          },
+          {
+            "id": "fcd788ae-d655-4b87-8665-44f3e49f7e6b",
+            "entity_id": "HX-ADMIN-Q",
+            "outcome": "FAIL",
+            "reason": "requirement_not_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-Q-mfa.v1"
+            ]
+          }
+        ],
+        "counts": {
+          "PASS": 3,
+          "FAIL": 1,
+          "MISSING_EVIDENCE": 0,
+          "CONTRADICTORY_EVIDENCE": 0,
+          "ERROR": 0,
+          "NOT_APPLICABLE": 0
+        }
+      }
+    },
+    {
+      "control_id": "PA-03.v1",
+      "population": {
+        "population_snapshot_id": "af02bc76-1081-46cf-b2e0-9fdf1eb6ff2e",
+        "control_id": "PA-03.v1",
+        "plan_version_id": "4a776cf9-1413-465b-b92d-fcfa28cdcb99",
+        "count": 4,
+        "members": [
+          {
+            "id": "HX-ADMIN-B",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 2",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 2",
+              "role": "Security administrator"
+            }
+          },
+          {
+            "id": "HX-ADMIN-F",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 4",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 4",
+              "role": "Security administrator"
+            }
+          },
+          {
+            "id": "HX-ADMIN-K",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 1",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 1",
+              "role": "Security administrator"
+            }
+          },
+          {
+            "id": "HX-ADMIN-Q",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "access",
+            "kind": "privileged_account",
+            "name": "Evaluation admin 3",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "owner": "Evaluation employee 3",
+              "role": "Security administrator"
+            }
+          }
+        ]
+      },
+      "evidence": {
+        "evidence_snapshot_id": "0e1a163f-fcec-4f36-9888-bb459b609741",
+        "population_snapshot_id": "af02bc76-1081-46cf-b2e0-9fdf1eb6ff2e",
+        "records": [
+          {
+            "id": "EV-HX-ADMIN-B-access_review.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-B",
+            "source_id": "access",
+            "source_record_id": "SRC-HX-ADMIN-B-access_review",
+            "kind": "access_review",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "reviewed_on": "2027-01-30"
+            },
+            "fingerprint": "35b5cfb178fa14318577eeddf6493d2141e6fa2d86e401d615e9fb5dd0c64c35",
+            "authority": "original",
+            "system": "Fictional access register",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ADMIN-F-access_review.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-F",
+            "source_id": "access",
+            "source_record_id": "SRC-HX-ADMIN-F-access_review",
+            "kind": "access_review",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "reviewed_on": "2027-01-29"
+            },
+            "fingerprint": "e27dbc9d85adb87b376c7fe51d38cbfe5c70b34665345776b2b7efe16d4f378e",
+            "authority": "original",
+            "system": "Fictional access register",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ADMIN-K-access_review.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-K",
+            "source_id": "access",
+            "source_record_id": "SRC-HX-ADMIN-K-access_review",
+            "kind": "access_review",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "reviewed_on": "2027-04-01"
+            },
+            "fingerprint": "78e6c72f1226d81142e083845582a7ac271bc9b3250de3b7b9cf7162e6c26239",
+            "authority": "original",
+            "system": "Fictional access register",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-ADMIN-Q-access_review.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-ADMIN-Q",
+            "source_id": "access",
+            "source_record_id": "SRC-HX-ADMIN-Q-access_review",
+            "kind": "access_review",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "reviewed_on": "2027-04-01"
+            },
+            "fingerprint": "50f209f2ddabe86116ae76b24424a8624ba96c1018b8c9348958eb2e928d7544",
+            "authority": "original",
+            "system": "Fictional access register",
+            "integrity_valid": true
+          }
+        ],
+        "gaps": []
+      },
+      "result": {
+        "run_id": "29965359-c0d4-4a76-8192-3393eb499796",
+        "control_id": "PA-03.v1",
+        "purpose": "audit",
+        "results": [
+          {
+            "id": "8978dd9a-4d24-435b-b4cb-69168b85051a",
+            "entity_id": "HX-ADMIN-B",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-B-access_review.v1"
+            ]
+          },
+          {
+            "id": "57b4ac9c-bea9-411a-954e-e6a4e52b7ee2",
+            "entity_id": "HX-ADMIN-F",
+            "outcome": "FAIL",
+            "reason": "requirement_not_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-F-access_review.v1"
+            ]
+          },
+          {
+            "id": "ab2926d7-f052-4689-b82b-d5b2771bb82b",
+            "entity_id": "HX-ADMIN-K",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-K-access_review.v1"
+            ]
+          },
+          {
+            "id": "9a278119-88e2-45a7-bb20-aed7139d426c",
+            "entity_id": "HX-ADMIN-Q",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-ADMIN-Q-access_review.v1"
+            ]
+          }
+        ],
+        "counts": {
+          "PASS": 3,
+          "FAIL": 1,
+          "MISSING_EVIDENCE": 0,
+          "CONTRADICTORY_EVIDENCE": 0,
+          "ERROR": 0,
+          "NOT_APPLICABLE": 0
+        }
+      }
+    },
+    {
+      "control_id": "ES-01.v1",
+      "population": {
+        "population_snapshot_id": "99ac0f31-2713-4f37-8dc7-c4498e868118",
+        "control_id": "ES-01.v1",
+        "plan_version_id": "4a776cf9-1413-465b-b92d-fcfa28cdcb99",
+        "count": 4,
+        "members": [
+          {
+            "id": "HX-NODE-C",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 2",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-1"
+            }
+          },
+          {
+            "id": "HX-NODE-J",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 4",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-3"
+            }
+          },
+          {
+            "id": "HX-NODE-N",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 1",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-0"
+            }
+          },
+          {
+            "id": "HX-NODE-R",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 3",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-2"
+            }
+          }
+        ]
+      },
+      "evidence": {
+        "evidence_snapshot_id": "0967d3e9-e1c2-456b-ae13-9da8326468ef",
+        "population_snapshot_id": "99ac0f31-2713-4f37-8dc7-c4498e868118",
+        "records": [
+          {
+            "id": "EV-HX-NODE-C-edr.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-C",
+            "source_id": "defender",
+            "source_record_id": "SRC-HX-NODE-C-edr",
+            "kind": "edr",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "covered": true,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "a2f2b0feabb141a2366bf16d076fec9bed5db810a93b217399e27ca82528bff7",
+            "authority": "original",
+            "system": "Fictional Defender-style inventory",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-NODE-J-edr.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-J",
+            "source_id": "defender",
+            "source_record_id": "SRC-HX-NODE-J-edr",
+            "kind": "edr",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "covered": true,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "b291ab658d99d215e575d7abe5db2b7f51b7a8c084a429f951a6334b589ca0b3",
+            "authority": "original",
+            "system": "Fictional Defender-style inventory",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-NODE-N-edr.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-N",
+            "source_id": "defender",
+            "source_record_id": "SRC-HX-NODE-N-edr",
+            "kind": "edr",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "covered": false,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "3359609530e9c2b131cca3e573cc2c50c2224f4ec9e1033f7a34e20178deb4de",
+            "authority": "original",
+            "system": "Fictional Defender-style inventory",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-NODE-R-edr.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-R",
+            "source_id": "defender",
+            "source_record_id": "SRC-HX-NODE-R-edr",
+            "kind": "edr",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "covered": true,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "fed7baebdd28dbdba6f2d9008bd55131a59213205acec693cac18d65a89b48f1",
+            "authority": "original",
+            "system": "Fictional Defender-style inventory",
+            "integrity_valid": true
+          }
+        ],
+        "gaps": []
+      },
+      "result": {
+        "run_id": "68d536e2-9f0c-406d-b4be-c9a2df820daa",
+        "control_id": "ES-01.v1",
+        "purpose": "audit",
+        "results": [
+          {
+            "id": "c5a87629-1001-42e6-a63c-8567e264b703",
+            "entity_id": "HX-NODE-C",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-NODE-C-edr.v1"
+            ]
+          },
+          {
+            "id": "9c9b6869-dff5-4182-9f10-8acce02a7d81",
+            "entity_id": "HX-NODE-J",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-NODE-J-edr.v1"
+            ]
+          },
+          {
+            "id": "0d831f70-0e5d-49cf-85ee-2e74ea1804fe",
+            "entity_id": "HX-NODE-N",
+            "outcome": "FAIL",
+            "reason": "requirement_not_met",
+            "evidence_ids": [
+              "EV-HX-NODE-N-edr.v1"
+            ]
+          },
+          {
+            "id": "6093e3ce-93c1-4109-b120-b6c2b78e6aac",
+            "entity_id": "HX-NODE-R",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-NODE-R-edr.v1"
+            ]
+          }
+        ],
+        "counts": {
+          "PASS": 3,
+          "FAIL": 1,
+          "MISSING_EVIDENCE": 0,
+          "CONTRADICTORY_EVIDENCE": 0,
+          "ERROR": 0,
+          "NOT_APPLICABLE": 0
+        }
+      }
+    },
+    {
+      "control_id": "ES-02.v1",
+      "population": {
+        "population_snapshot_id": "a41ad010-d2cb-4a86-af2b-a5a9a466cf97",
+        "control_id": "ES-02.v1",
+        "plan_version_id": "4a776cf9-1413-465b-b92d-fcfa28cdcb99",
+        "count": 4,
+        "members": [
+          {
+            "id": "HX-NODE-C",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 2",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-1"
+            }
+          },
+          {
+            "id": "HX-NODE-J",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 4",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-3"
+            }
+          },
+          {
+            "id": "HX-NODE-N",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 1",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-0"
+            }
+          },
+          {
+            "id": "HX-NODE-R",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 3",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-2"
+            }
+          }
+        ]
+      },
+      "evidence": {
+        "evidence_snapshot_id": "b81fc0e8-673e-42a3-ad6d-8e69af8177f4",
+        "population_snapshot_id": "a41ad010-d2cb-4a86-af2b-a5a9a466cf97",
+        "records": [
+          {
+            "id": "EV-HX-NODE-C-vulnerability_scan.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-C",
+            "source_id": "qualys",
+            "source_record_id": "SRC-HX-NODE-C-vulnerability_scan",
+            "kind": "vulnerability_scan",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "scanned_on": "2027-03-31"
+            },
+            "fingerprint": "71a8736fb64f4ed87a7fd6dac117485dd7159427c02c668a3466ce7cae9059a3",
+            "authority": "original",
+            "system": "Fictional Qualys-style scans",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-NODE-J-vulnerability_scan.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-J",
+            "source_id": "qualys",
+            "source_record_id": "SRC-HX-NODE-J-vulnerability_scan",
+            "kind": "vulnerability_scan",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "scanned_on": "2027-03-31"
+            },
+            "fingerprint": "bd2d152f8879761a7e82473e4471cf0fdb74a0ed5d544524531c750b6bdfcc9a",
+            "authority": "original",
+            "system": "Fictional Qualys-style scans",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-NODE-N-vulnerability_scan.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-N",
+            "source_id": "qualys",
+            "source_record_id": "SRC-HX-NODE-N-vulnerability_scan",
+            "kind": "vulnerability_scan",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "scanned_on": "2027-03-31"
+            },
+            "fingerprint": "76c65a4699ac8ec696efb7938cd9d360fca98ff7b226e91542f09ef341bbada4",
+            "authority": "original",
+            "system": "Fictional Qualys-style scans",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-NODE-R-vulnerability_scan.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-R",
+            "source_id": "qualys",
+            "source_record_id": "SRC-HX-NODE-R-vulnerability_scan",
+            "kind": "vulnerability_scan",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "scanned_on": "2027-03-30"
+            },
+            "fingerprint": "2258e000956fdec44349307c903201a21f1f00f65f7315ea4069209495d51d8c",
+            "authority": "original",
+            "system": "Fictional Qualys-style scans",
+            "integrity_valid": true
+          }
+        ],
+        "gaps": []
+      },
+      "result": {
+        "run_id": "e64aed80-23f0-43d3-97bb-c4673d19f457",
+        "control_id": "ES-02.v1",
+        "purpose": "audit",
+        "results": [
+          {
+            "id": "f2dde57c-3d3b-453a-8e9a-053ff440d593",
+            "entity_id": "HX-NODE-C",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-NODE-C-vulnerability_scan.v1"
+            ]
+          },
+          {
+            "id": "ae052392-f72c-428b-8194-7f584312e6d7",
+            "entity_id": "HX-NODE-J",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-NODE-J-vulnerability_scan.v1"
+            ]
+          },
+          {
+            "id": "d4632e3a-0798-4230-b86d-297cf50b5133",
+            "entity_id": "HX-NODE-N",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-NODE-N-vulnerability_scan.v1"
+            ]
+          },
+          {
+            "id": "081b5c54-9a95-445a-a31f-0ea1b721b2ca",
+            "entity_id": "HX-NODE-R",
+            "outcome": "FAIL",
+            "reason": "requirement_not_met",
+            "evidence_ids": [
+              "EV-HX-NODE-R-vulnerability_scan.v1"
+            ]
+          }
+        ],
+        "counts": {
+          "PASS": 3,
+          "FAIL": 1,
+          "MISSING_EVIDENCE": 0,
+          "CONTRADICTORY_EVIDENCE": 0,
+          "ERROR": 0,
+          "NOT_APPLICABLE": 0
+        }
+      }
+    },
+    {
+      "control_id": "ES-03.v1",
+      "population": {
+        "population_snapshot_id": "1723f43e-4b35-4ffd-970a-0798501ab65c",
+        "control_id": "ES-03.v1",
+        "plan_version_id": "4a776cf9-1413-465b-b92d-fcfa28cdcb99",
+        "count": 4,
+        "members": [
+          {
+            "id": "HX-NODE-C",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 2",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-1"
+            }
+          },
+          {
+            "id": "HX-NODE-J",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 4",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-3"
+            }
+          },
+          {
+            "id": "HX-NODE-N",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 1",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-0"
+            }
+          },
+          {
+            "id": "HX-NODE-R",
+            "dataset_id": "digital-risk-heldout.v1",
+            "source_id": "defender",
+            "kind": "device",
+            "name": "Evaluation endpoint 3",
+            "active_from": "2027-02-01",
+            "active_to": null,
+            "facts": {
+              "hostname": "eval-endpoint-2"
+            }
+          }
+        ]
+      },
+      "evidence": {
+        "evidence_snapshot_id": "b404f44e-4740-4880-a04f-bd1ea301c09a",
+        "population_snapshot_id": "1723f43e-4b35-4ffd-970a-0798501ab65c",
+        "records": [
+          {
+            "id": "EV-HX-NODE-C-encryption.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-C",
+            "source_id": "defender",
+            "source_record_id": "SRC-HX-NODE-C-encryption",
+            "kind": "encryption",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "enabled": true,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "fa356f5ada26a327f125e251edc56aad83cb6ac582257d5b1196b73d9154c1f5",
+            "authority": "original",
+            "system": "Fictional Defender-style inventory",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-NODE-J-encryption.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-J",
+            "source_id": "defender",
+            "source_record_id": "SRC-HX-NODE-J-encryption",
+            "kind": "encryption",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "enabled": false,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "d9f0fa165281e7de29b3f99a5a82a6b142cb5385ffee3fe19becd081be0216f6",
+            "authority": "original",
+            "system": "Fictional Defender-style inventory",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-NODE-N-encryption.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-N",
+            "source_id": "defender",
+            "source_record_id": "SRC-HX-NODE-N-encryption",
+            "kind": "encryption",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "enabled": true,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "fef02c5cf909ade30214a7dec69e8194e701c36598891c18cc8ce094292ffd2f",
+            "authority": "original",
+            "system": "Fictional Defender-style inventory",
+            "integrity_valid": true
+          },
+          {
+            "id": "EV-HX-NODE-R-encryption.v1",
+            "dataset_id": "digital-risk-heldout.v1",
+            "entity_id": "HX-NODE-R",
+            "source_id": "defender",
+            "source_record_id": "SRC-HX-NODE-R-encryption",
+            "kind": "encryption",
+            "version": 1,
+            "observed_on": "2027-04-30",
+            "captured_on": "2027-04-30",
+            "supersedes_id": null,
+            "facts": {
+              "enabled": true,
+              "snapshot_on": "2027-04-30"
+            },
+            "fingerprint": "333d514be0ed3d1812c8b5258a0ab3592d3a2cd399621bc89e7bd292ee98d998",
+            "authority": "original",
+            "system": "Fictional Defender-style inventory",
+            "integrity_valid": true
+          }
+        ],
+        "gaps": []
+      },
+      "result": {
+        "run_id": "cc95c315-f9bd-45e0-807b-41025875ff60",
+        "control_id": "ES-03.v1",
+        "purpose": "audit",
+        "results": [
+          {
+            "id": "8656ff9f-c69e-48f4-97f8-4bcc382d19a4",
+            "entity_id": "HX-NODE-C",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-NODE-C-encryption.v1"
+            ]
+          },
+          {
+            "id": "de115569-b0ce-4119-b96f-1b287b034d09",
+            "entity_id": "HX-NODE-J",
+            "outcome": "FAIL",
+            "reason": "requirement_not_met",
+            "evidence_ids": [
+              "EV-HX-NODE-J-encryption.v1"
+            ]
+          },
+          {
+            "id": "037afb3e-93b2-4a14-8a32-3bed02d0f080",
+            "entity_id": "HX-NODE-N",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-NODE-N-encryption.v1"
+            ]
+          },
+          {
+            "id": "54571e2d-9b25-4e22-b025-67f5f5b7255c",
+            "entity_id": "HX-NODE-R",
+            "outcome": "PASS",
+            "reason": "requirement_met",
+            "evidence_ids": [
+              "EV-HX-NODE-R-encryption.v1"
+            ]
+          }
+        ],
+        "counts": {
+          "PASS": 3,
+          "FAIL": 1,
+          "MISSING_EVIDENCE": 0,
+          "CONTRADICTORY_EVIDENCE": 0,
+          "ERROR": 0,
+          "NOT_APPLICABLE": 0
+        }
+      }
+    }
+  ]
+}

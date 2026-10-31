@@ -1,0 +1,926 @@
+{
+  "report": {
+    "case": "alternate_source",
+    "status": "PASS",
+    "checks": {
+      "no_runtime_error": true,
+      "all_arguments_schema_valid": true,
+      "tools_exercised": true,
+      "human_plan_gate": true,
+      "completed": true,
+      "pass_saved": true,
+      "no_unnecessary_email": true,
+      "alternate_original_used": true
+    },
+    "session_status": "completed",
+    "error_code": null,
+    "tool_calls": 5,
+    "failed_tool_calls": 0,
+    "duration_seconds": 32.381306800059974,
+    "human_decisions": [
+      {
+        "kind": "plan",
+        "id": "b485a219-129d-41f4-8c47-7043177a981e"
+      }
+    ],
+    "inference_calls": 7,
+    "input_tokens": 24960,
+    "output_tokens": 348,
+    "api_cost": null
+  },
+  "inferences": [
+    {
+      "id": "e9db773b-eb1a-49c5-96c7-99cdd041acb7",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "turn_key": "scope",
+      "request_digest": "98778ee14d57c42e53669ba7b74d43178e17afc2a68b29f3852c6eee8f263270",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"department\": \"Digital Risk\",\n  \"period_start\": \"2026-01-01\",\n  \"period_end\": \"2026-08-31\"\n}",
+          "tool_calls": [],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 70,
+          "output_tokens": 36,
+          "total_tokens": 458
+        },
+        "finish_reason": "stop",
+        "latency_ms": 4071.4930999092758,
+        "mode": "live"
+      },
+      "offered_tools": [],
+      "created_at": "2026-10-31T11:12:52.699965+00:00"
+    },
+    {
+      "id": "209032b1-8351-48c3-81e7-801ad3eecfeb",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "turn_key": "turn:0",
+      "request_digest": "8203bda0c70effad59befb2f8432a576d2f419e0a348a879efcf1305fa9efe09",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-2bbad1a1-c5e2-4e25-b307-fff499d8e8e1-0",
+              "name": "get_audit_requirements",
+              "arguments": {}
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 1253,
+          "output_tokens": 8,
+          "total_tokens": 1704
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 5013.983800075948,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan"
+      ],
+      "created_at": "2026-10-31T11:12:57.766261+00:00"
+    },
+    {
+      "id": "300e50c8-1662-4379-9927-1847155a3fd6",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "turn_key": "turn:1",
+      "request_digest": "be8f9714b86063744235638b4a158266e41f8de69b36519e29289258785184ea",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-c8e66178-6e1d-4258-8e7c-7cd66502b12c-1",
+              "name": "draft_audit_plan",
+              "arguments": {
+                "plan": {
+                  "objective": "Audit Digital Risk for 2026-01-01 through 2026-08-31. Test all applicable controls and follow approved findings through independent remediation.",
+                  "work_program": "Full-population test of PR-02.v1: Retrieve all deployed projects in scope, obtain original approval history evidence, verify approved_on <= deployed_on and that GRC claims are supported by original records. Authorize 90-day follow-up verification for any findings.",
+                  "control_ids": [
+                    "PR-02.v1"
+                  ],
+                  "allow_followup_verification": true,
+                  "verification_window_days": 90
+                }
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 2101,
+          "output_tokens": 133,
+          "total_tokens": 2599
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 5867.659500101581,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan"
+      ],
+      "created_at": "2026-10-31T11:13:03.863896+00:00"
+    },
+    {
+      "id": "553a3e3d-6df9-49f6-8f59-93fad1be1430",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "turn_key": "turn:2",
+      "request_digest": "2b932f9930db5faa14c0897d5205b6d179e022f6af369c886abd1dc43ec86e85",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-6aa76196-46f2-42c3-a31e-f465935e5d24-2",
+              "name": "get_test_population",
+              "arguments": {
+                "control_id": "PR-02.v1"
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 4523,
+          "output_tokens": 17,
+          "total_tokens": 4946
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 4583.838500082493,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T11:13:08.731539+00:00"
+    },
+    {
+      "id": "91321df6-358b-415b-b745-e7d2bc699d15",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "turn_key": "turn:3",
+      "request_digest": "badadc02c21f6be824f63a0acd9e618c343614b64aadee09dda31e99edcac61b",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-19154352-cb64-4cce-841c-09478f1fce4c-3",
+              "name": "search_evidence",
+              "arguments": {
+                "population_snapshot_id": "1c5d21a3-5d50-4f89-99e3-bc78aaa77ce6",
+                "source_ids": [
+                  "approvals",
+                  "approval_archive"
+                ]
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 5142,
+          "output_tokens": 50,
+          "total_tokens": 5358
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 4179.335799999535,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T11:13:13.073300+00:00"
+    },
+    {
+      "id": "0f7cbf38-d014-4c6d-95fb-e5689a704b37",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "turn_key": "turn:4",
+      "request_digest": "54af12587ff4efd8b7ff047d9e1573578c5b83f332677bd7510a2721d8d51ab2",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call-036cf9a2-295d-4fdb-87be-44df4d54d6c9-4",
+              "name": "run_control_test",
+              "arguments": {
+                "population_snapshot_id": "1c5d21a3-5d50-4f89-99e3-bc78aaa77ce6",
+                "evidence_snapshot_id": "731c4cf1-3f97-4f84-bef0-7953e4bfeed0"
+              }
+            }
+          ],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 5659,
+          "output_tokens": 69,
+          "total_tokens": 5819
+        },
+        "finish_reason": "tool_calls",
+        "latency_ms": 3479.8807001207024,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T11:13:16.779820+00:00"
+    },
+    {
+      "id": "a0eabf52-ddcd-4635-b974-488e4916db07",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "turn_key": "turn:5",
+      "request_digest": "009d2e492322fc5312ac8cf7d268f343f47e28aad0e468cd76ba0d7c24823cc3",
+      "response": {
+        "message": {
+          "role": "assistant",
+          "content": "Control PR-02.v1: full population (1 entity) retrieved, original evidence searched, deterministic rule executed. All PASS; no findings. Audit complete per approved plan.",
+          "tool_calls": [],
+          "tool_call_id": null
+        },
+        "usage": {
+          "input_tokens": 6212,
+          "output_tokens": 35,
+          "total_tokens": 6440
+        },
+        "finish_reason": "stop",
+        "latency_ms": 3520.257000112906,
+        "mode": "live"
+      },
+      "offered_tools": [
+        "get_audit_requirements",
+        "draft_audit_plan",
+        "get_test_population",
+        "search_evidence",
+        "run_control_test",
+        "request_department_input",
+        "propose_finding"
+      ],
+      "created_at": "2026-10-31T11:13:20.546465+00:00"
+    }
+  ],
+  "tool_calls": [
+    {
+      "id": "08b67155-b29a-4bd1-b610-811bec164e70",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "call_id": "call-2bbad1a1-c5e2-4e25-b307-fff499d8e8e1-0",
+      "tool": "get_audit_requirements",
+      "arguments": {},
+      "result": {
+        "ok": true,
+        "result": {
+          "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+          "period_start": "2026-01-01",
+          "period_end": "2026-08-31",
+          "controls": [
+            {
+              "control_id": "PR-02.v1",
+              "title": "Approval before deployment",
+              "requirement": "Original approval history exists and approved_on <= deployed_on.",
+              "policy_id": "POL-PROJECT.v1",
+              "policy_version": 1,
+              "policy_text": "Every deployed project must have a risk assessment and documented approval dated on or before deployment. The GRC approval date must agree with original approval history. A GRC claim alone is not approval evidence.",
+              "procedure_id": "PROC-PR-02.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "on_or_before",
+                "evidence_kind": "project_approval",
+                "evidence_field": "approved_on",
+                "entity_field": "deployed_on"
+              }
+            }
+          ],
+          "sources": [
+            {
+              "id": "projects",
+              "system": "Fictional project register",
+              "authority": "original",
+              "allowed_kinds": [
+                "risk_assessment"
+              ]
+            },
+            {
+              "id": "approvals",
+              "system": "Fictional approval history",
+              "authority": "original",
+              "allowed_kinds": [
+                "project_approval"
+              ]
+            },
+            {
+              "id": "compass",
+              "system": "Fictional Compass-style GRC",
+              "authority": "secondary",
+              "allowed_kinds": [
+                "grc_approval"
+              ]
+            },
+            {
+              "id": "hr",
+              "system": "Fictional HR records",
+              "authority": "original",
+              "allowed_kinds": [
+                "employment"
+              ]
+            },
+            {
+              "id": "access",
+              "system": "Fictional access register",
+              "authority": "original",
+              "allowed_kinds": [
+                "mfa",
+                "access_review"
+              ]
+            },
+            {
+              "id": "defender",
+              "system": "Fictional Defender-style inventory",
+              "authority": "original",
+              "allowed_kinds": [
+                "edr",
+                "encryption"
+              ]
+            },
+            {
+              "id": "qualys",
+              "system": "Fictional Qualys-style scans",
+              "authority": "original",
+              "allowed_kinds": [
+                "vulnerability_scan"
+              ]
+            },
+            {
+              "id": "approval_archive",
+              "system": "Authorized original approval archive",
+              "authority": "original",
+              "allowed_kinds": [
+                "project_approval"
+              ]
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 40.032099932432175,
+      "created_at": "2026-10-31T11:12:57.933519+00:00"
+    },
+    {
+      "id": "b6059b04-25c1-4f68-85dd-1859e7b02c4a",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "call_id": "call-c8e66178-6e1d-4258-8e7c-7cd66502b12c-1",
+      "tool": "draft_audit_plan",
+      "arguments": {
+        "plan": {
+          "objective": "Audit Digital Risk for 2026-01-01 through 2026-08-31. Test all applicable controls and follow approved findings through independent remediation.",
+          "work_program": "Full-population test of PR-02.v1: Retrieve all deployed projects in scope, obtain original approval history evidence, verify approved_on <= deployed_on and that GRC claims are supported by original records. Authorize 90-day follow-up verification for any findings.",
+          "control_ids": [
+            "PR-02.v1"
+          ],
+          "allow_followup_verification": true,
+          "verification_window_days": 90
+        }
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "proposal_id": "b485a219-129d-41f4-8c47-7043177a981e",
+          "version_id": "2ff91a61-e7c9-44e2-95a6-d13bde37c6ad",
+          "version": 1,
+          "kind": "plan",
+          "status": "pending"
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 36.46550001576543,
+      "created_at": "2026-10-31T11:13:03.997451+00:00"
+    },
+    {
+      "id": "58bcf5bf-5175-4288-ae36-17d1144e8adc",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "call_id": "call-6aa76196-46f2-42c3-a31e-f465935e5d24-2",
+      "tool": "get_test_population",
+      "arguments": {
+        "control_id": "PR-02.v1"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "1c5d21a3-5d50-4f89-99e3-bc78aaa77ce6",
+          "control_id": "PR-02.v1",
+          "plan_version_id": "2ff91a61-e7c9-44e2-95a6-d13bde37c6ad",
+          "count": 1,
+          "members": [
+            {
+              "id": "PRJ-001",
+              "dataset_id": "digital-risk-dev.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Fictional project 1",
+              "active_from": "2026-01-01",
+              "active_to": "2026-01-01",
+              "facts": {
+                "deployed_on": "2026-01-01"
+              }
+            }
+          ]
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 50.182499922811985,
+      "created_at": "2026-10-31T11:13:08.827430+00:00"
+    },
+    {
+      "id": "99f937d9-68d6-4210-b754-c8a71f723b1e",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "call_id": "call-19154352-cb64-4cce-841c-09478f1fce4c-3",
+      "tool": "search_evidence",
+      "arguments": {
+        "population_snapshot_id": "1c5d21a3-5d50-4f89-99e3-bc78aaa77ce6",
+        "source_ids": [
+          "approvals",
+          "approval_archive"
+        ]
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "731c4cf1-3f97-4f84-bef0-7953e4bfeed0",
+          "population_snapshot_id": "1c5d21a3-5d50-4f89-99e3-bc78aaa77ce6",
+          "records": [
+            {
+              "id": "EV-PRJ-001-project_approval.v1",
+              "dataset_id": "digital-risk-dev.v1",
+              "entity_id": "PRJ-001",
+              "source_id": "approval_archive",
+              "source_record_id": "SRC-PRJ-001-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2026-08-31",
+              "captured_on": "2026-08-31",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2026-01-01"
+              },
+              "fingerprint": "b3f87fd35be838fb3c252d2dad286ca97090534d2ddf3e21de9f81a465ef0001",
+              "authority": "original",
+              "system": "Authorized original approval archive",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": []
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 47.39809990860522,
+      "created_at": "2026-10-31T11:13:13.232034+00:00"
+    },
+    {
+      "id": "43ce2c2d-de5e-4297-8ed8-0e15640504c2",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "call_id": "call-036cf9a2-295d-4fdb-87be-44df4d54d6c9-4",
+      "tool": "run_control_test",
+      "arguments": {
+        "population_snapshot_id": "1c5d21a3-5d50-4f89-99e3-bc78aaa77ce6",
+        "evidence_snapshot_id": "731c4cf1-3f97-4f84-bef0-7953e4bfeed0"
+      },
+      "result": {
+        "ok": true,
+        "result": {
+          "run_id": "8bedf0fe-a63a-4f25-9c9a-d002172de229",
+          "control_id": "PR-02.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "b70c81ba-ea2a-4972-8acf-821bd7cf78b9",
+              "entity_id": "PRJ-001",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-PRJ-001-project_approval.v1"
+              ]
+            }
+          ],
+          "counts": {
+            "PASS": 1,
+            "FAIL": 0,
+            "MISSING_EVIDENCE": 0,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "success": true,
+      "schema_valid": true,
+      "duration_ms": 79.27539991214871,
+      "created_at": "2026-10-31T11:13:16.964718+00:00"
+    }
+  ],
+  "results": [
+    {
+      "id": "b70c81ba-ea2a-4972-8acf-821bd7cf78b9",
+      "run_id": "8bedf0fe-a63a-4f25-9c9a-d002172de229",
+      "entity_id": "PRJ-001",
+      "control_id": "PR-02.v1",
+      "outcome": "PASS",
+      "reason": "requirement_met",
+      "evidence_ids": [
+        "EV-PRJ-001-project_approval.v1"
+      ]
+    }
+  ],
+  "requests": [],
+  "inbox": [],
+  "outbox": [],
+  "activity": [
+    {
+      "id": 1,
+      "event_key": "assignment:fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": null,
+      "status": "Running",
+      "label": "Audit assignment received",
+      "record_type": null,
+      "record_id": null,
+      "details": {
+        "assignment": "Audit Digital Risk for 2026-01-01 through 2026-08-31. Test all applicable controls and follow approved findings through independent remediation.",
+        "inference_source": "azure_grok"
+      },
+      "created_at": "2026-10-31T11:12:48.535399+00:00"
+    },
+    {
+      "id": 2,
+      "event_key": "scope:fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Completed",
+      "label": "Audit scope interpreted and saved",
+      "record_type": "engagement",
+      "record_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "details": {
+        "id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+        "dataset_id": "digital-risk-dev.v1",
+        "department": "Digital Risk",
+        "period_start": "2026-01-01",
+        "period_end": "2026-08-31"
+      },
+      "created_at": "2026-10-31T11:12:52.714853+00:00"
+    },
+    {
+      "id": 3,
+      "event_key": "fd5d2b78-34b8-44a4-825f-a38f80e35e73:call-2bbad1a1-c5e2-4e25-b307-fff499d8e8e1-0:running",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Running",
+      "label": "Running get_audit_requirements",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T11:12:57.853326+00:00"
+    },
+    {
+      "id": 4,
+      "event_key": "fd5d2b78-34b8-44a4-825f-a38f80e35e73:call-2bbad1a1-c5e2-4e25-b307-fff499d8e8e1-0:done",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Completed",
+      "label": "get_audit_requirements completed",
+      "record_type": "get_audit_requirements",
+      "record_id": null,
+      "details": {
+        "ok": true,
+        "result": {
+          "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+          "period_start": "2026-01-01",
+          "period_end": "2026-08-31",
+          "controls": [
+            {
+              "control_id": "PR-02.v1",
+              "title": "Approval before deployment",
+              "requirement": "Original approval history exists and approved_on <= deployed_on.",
+              "policy_id": "POL-PROJECT.v1",
+              "policy_version": 1,
+              "policy_text": "Every deployed project must have a risk assessment and documented approval dated on or before deployment. The GRC approval date must agree with original approval history. A GRC claim alone is not approval evidence.",
+              "procedure_id": "PROC-PR-02.v1",
+              "procedure_version": 1,
+              "rule": {
+                "operation": "on_or_before",
+                "evidence_kind": "project_approval",
+                "evidence_field": "approved_on",
+                "entity_field": "deployed_on"
+              }
+            }
+          ],
+          "sources": [
+            {
+              "id": "projects",
+              "system": "Fictional project register",
+              "authority": "original",
+              "allowed_kinds": [
+                "risk_assessment"
+              ]
+            },
+            {
+              "id": "approvals",
+              "system": "Fictional approval history",
+              "authority": "original",
+              "allowed_kinds": [
+                "project_approval"
+              ]
+            },
+            {
+              "id": "compass",
+              "system": "Fictional Compass-style GRC",
+              "authority": "secondary",
+              "allowed_kinds": [
+                "grc_approval"
+              ]
+            },
+            {
+              "id": "hr",
+              "system": "Fictional HR records",
+              "authority": "original",
+              "allowed_kinds": [
+                "employment"
+              ]
+            },
+            {
+              "id": "access",
+              "system": "Fictional access register",
+              "authority": "original",
+              "allowed_kinds": [
+                "mfa",
+                "access_review"
+              ]
+            },
+            {
+              "id": "defender",
+              "system": "Fictional Defender-style inventory",
+              "authority": "original",
+              "allowed_kinds": [
+                "edr",
+                "encryption"
+              ]
+            },
+            {
+              "id": "qualys",
+              "system": "Fictional Qualys-style scans",
+              "authority": "original",
+              "allowed_kinds": [
+                "vulnerability_scan"
+              ]
+            },
+            {
+              "id": "approval_archive",
+              "system": "Authorized original approval archive",
+              "authority": "original",
+              "allowed_kinds": [
+                "project_approval"
+              ]
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T11:12:57.935155+00:00"
+    },
+    {
+      "id": 5,
+      "event_key": "fd5d2b78-34b8-44a4-825f-a38f80e35e73:call-c8e66178-6e1d-4258-8e7c-7cd66502b12c-1:running",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Running",
+      "label": "Running draft_audit_plan",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T11:13:03.951932+00:00"
+    },
+    {
+      "id": 6,
+      "event_key": "fd5d2b78-34b8-44a4-825f-a38f80e35e73:call-c8e66178-6e1d-4258-8e7c-7cd66502b12c-1:done",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Waiting for Approval",
+      "label": "draft_audit_plan completed",
+      "record_type": "draft_audit_plan",
+      "record_id": "b485a219-129d-41f4-8c47-7043177a981e",
+      "details": {
+        "ok": true,
+        "result": {
+          "proposal_id": "b485a219-129d-41f4-8c47-7043177a981e",
+          "version_id": "2ff91a61-e7c9-44e2-95a6-d13bde37c6ad",
+          "version": 1,
+          "kind": "plan",
+          "status": "pending"
+        }
+      },
+      "created_at": "2026-10-31T11:13:03.997451+00:00"
+    },
+    {
+      "id": 7,
+      "event_key": "review-event:a50ae378-cb06-478c-b5e8-a656b52c922c",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Resumed",
+      "label": "review approved",
+      "record_type": "review",
+      "record_id": "b485a219-129d-41f4-8c47-7043177a981e",
+      "details": {},
+      "created_at": "2026-10-31T11:13:04.075689+00:00"
+    },
+    {
+      "id": 8,
+      "event_key": "fd5d2b78-34b8-44a4-825f-a38f80e35e73:call-6aa76196-46f2-42c3-a31e-f465935e5d24-2:running",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Running",
+      "label": "Running get_test_population",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T11:13:08.762757+00:00"
+    },
+    {
+      "id": 9,
+      "event_key": "fd5d2b78-34b8-44a4-825f-a38f80e35e73:call-6aa76196-46f2-42c3-a31e-f465935e5d24-2:done",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Completed",
+      "label": "get_test_population completed",
+      "record_type": "get_test_population",
+      "record_id": "1c5d21a3-5d50-4f89-99e3-bc78aaa77ce6",
+      "details": {
+        "ok": true,
+        "result": {
+          "population_snapshot_id": "1c5d21a3-5d50-4f89-99e3-bc78aaa77ce6",
+          "control_id": "PR-02.v1",
+          "plan_version_id": "2ff91a61-e7c9-44e2-95a6-d13bde37c6ad",
+          "count": 1,
+          "members": [
+            {
+              "id": "PRJ-001",
+              "dataset_id": "digital-risk-dev.v1",
+              "source_id": "projects",
+              "kind": "project",
+              "name": "Fictional project 1",
+              "active_from": "2026-01-01",
+              "active_to": "2026-01-01",
+              "facts": {
+                "deployed_on": "2026-01-01"
+              }
+            }
+          ]
+        }
+      },
+      "created_at": "2026-10-31T11:13:08.831180+00:00"
+    },
+    {
+      "id": 10,
+      "event_key": "fd5d2b78-34b8-44a4-825f-a38f80e35e73:call-19154352-cb64-4cce-841c-09478f1fce4c-3:running",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Running",
+      "label": "Running search_evidence",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T11:13:13.171340+00:00"
+    },
+    {
+      "id": 11,
+      "event_key": "fd5d2b78-34b8-44a4-825f-a38f80e35e73:call-19154352-cb64-4cce-841c-09478f1fce4c-3:done",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Completed",
+      "label": "search_evidence completed",
+      "record_type": "search_evidence",
+      "record_id": "731c4cf1-3f97-4f84-bef0-7953e4bfeed0",
+      "details": {
+        "ok": true,
+        "result": {
+          "evidence_snapshot_id": "731c4cf1-3f97-4f84-bef0-7953e4bfeed0",
+          "population_snapshot_id": "1c5d21a3-5d50-4f89-99e3-bc78aaa77ce6",
+          "records": [
+            {
+              "id": "EV-PRJ-001-project_approval.v1",
+              "dataset_id": "digital-risk-dev.v1",
+              "entity_id": "PRJ-001",
+              "source_id": "approval_archive",
+              "source_record_id": "SRC-PRJ-001-project_approval",
+              "kind": "project_approval",
+              "version": 1,
+              "observed_on": "2026-08-31",
+              "captured_on": "2026-08-31",
+              "supersedes_id": null,
+              "facts": {
+                "approved_on": "2026-01-01"
+              },
+              "fingerprint": "b3f87fd35be838fb3c252d2dad286ca97090534d2ddf3e21de9f81a465ef0001",
+              "authority": "original",
+              "system": "Authorized original approval archive",
+              "integrity_valid": true
+            }
+          ],
+          "gaps": []
+        }
+      },
+      "created_at": "2026-10-31T11:13:13.236227+00:00"
+    },
+    {
+      "id": 12,
+      "event_key": "fd5d2b78-34b8-44a4-825f-a38f80e35e73:call-036cf9a2-295d-4fdb-87be-44df4d54d6c9-4:running",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Running",
+      "label": "Running run_control_test",
+      "record_type": null,
+      "record_id": null,
+      "details": {},
+      "created_at": "2026-10-31T11:13:16.867818+00:00"
+    },
+    {
+      "id": 13,
+      "event_key": "fd5d2b78-34b8-44a4-825f-a38f80e35e73:call-036cf9a2-295d-4fdb-87be-44df4d54d6c9-4:done",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Completed",
+      "label": "Control testing saved: 1 PASS",
+      "record_type": "run_control_test",
+      "record_id": "8bedf0fe-a63a-4f25-9c9a-d002172de229",
+      "details": {
+        "ok": true,
+        "result": {
+          "run_id": "8bedf0fe-a63a-4f25-9c9a-d002172de229",
+          "control_id": "PR-02.v1",
+          "purpose": "audit",
+          "results": [
+            {
+              "id": "b70c81ba-ea2a-4972-8acf-821bd7cf78b9",
+              "entity_id": "PRJ-001",
+              "outcome": "PASS",
+              "reason": "requirement_met",
+              "evidence_ids": [
+                "EV-PRJ-001-project_approval.v1"
+              ]
+            }
+          ],
+          "counts": {
+            "PASS": 1,
+            "FAIL": 0,
+            "MISSING_EVIDENCE": 0,
+            "CONTRADICTORY_EVIDENCE": 0,
+            "ERROR": 0,
+            "NOT_APPLICABLE": 0
+          }
+        }
+      },
+      "created_at": "2026-10-31T11:13:16.966730+00:00"
+    },
+    {
+      "id": 14,
+      "event_key": "complete:fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "session_id": "fd5d2b78-34b8-44a4-825f-a38f80e35e73",
+      "engagement_id": "8ec13c99-7eee-5d07-a1a9-bdb33934e484",
+      "status": "Completed",
+      "label": "Audit execution and approved follow-up completed",
+      "record_type": null,
+      "record_id": null,
+      "details": {
+        "summary": "Control PR-02.v1: full population (1 entity) retrieved, original evidence searched, deterministic rule executed. All PASS; no findings. Audit complete per approved plan."
+      },
+      "created_at": "2026-10-31T11:13:20.563285+00:00"
+    }
+  ]
+}

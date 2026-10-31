@@ -1,0 +1,354 @@
+{
+  "run_id": "8439ca22-2637-4d7a-9b25-b03be95fec2b",
+  "event": "minimal_phase1_to_phase4_heldout",
+  "metrics": [
+    {
+      "name": "Held-out control-result accuracy",
+      "correct": 36,
+      "total": 36,
+      "percent": 100.0,
+      "status": "PASS",
+      "outcomes": {
+        "FAIL": 9,
+        "PASS": 25,
+        "MISSING_EVIDENCE": 2
+      },
+      "comparison": [
+        {
+          "control_id": "PR-01.v1",
+          "entity_id": "HX-IRIS",
+          "expected": "FAIL",
+          "actual": "FAIL",
+          "correct": true
+        },
+        {
+          "control_id": "PR-01.v1",
+          "entity_id": "HX-LIME",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PR-01.v1",
+          "entity_id": "HX-ONYX",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PR-01.v1",
+          "entity_id": "HX-TEAL",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PR-02.v1",
+          "entity_id": "HX-IRIS",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PR-02.v1",
+          "entity_id": "HX-LIME",
+          "expected": "FAIL",
+          "actual": "FAIL",
+          "correct": true
+        },
+        {
+          "control_id": "PR-02.v1",
+          "entity_id": "HX-ONYX",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PR-02.v1",
+          "entity_id": "HX-TEAL",
+          "expected": "MISSING_EVIDENCE",
+          "actual": "MISSING_EVIDENCE",
+          "correct": true
+        },
+        {
+          "control_id": "PR-03.v1",
+          "entity_id": "HX-IRIS",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PR-03.v1",
+          "entity_id": "HX-LIME",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PR-03.v1",
+          "entity_id": "HX-ONYX",
+          "expected": "FAIL",
+          "actual": "FAIL",
+          "correct": true
+        },
+        {
+          "control_id": "PR-03.v1",
+          "entity_id": "HX-TEAL",
+          "expected": "MISSING_EVIDENCE",
+          "actual": "MISSING_EVIDENCE",
+          "correct": true
+        },
+        {
+          "control_id": "PA-01.v1",
+          "entity_id": "HX-ADMIN-B",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PA-01.v1",
+          "entity_id": "HX-ADMIN-F",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PA-01.v1",
+          "entity_id": "HX-ADMIN-K",
+          "expected": "FAIL",
+          "actual": "FAIL",
+          "correct": true
+        },
+        {
+          "control_id": "PA-01.v1",
+          "entity_id": "HX-ADMIN-Q",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PA-02.v1",
+          "entity_id": "HX-ADMIN-B",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PA-02.v1",
+          "entity_id": "HX-ADMIN-F",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PA-02.v1",
+          "entity_id": "HX-ADMIN-K",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PA-02.v1",
+          "entity_id": "HX-ADMIN-Q",
+          "expected": "FAIL",
+          "actual": "FAIL",
+          "correct": true
+        },
+        {
+          "control_id": "PA-03.v1",
+          "entity_id": "HX-ADMIN-B",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PA-03.v1",
+          "entity_id": "HX-ADMIN-F",
+          "expected": "FAIL",
+          "actual": "FAIL",
+          "correct": true
+        },
+        {
+          "control_id": "PA-03.v1",
+          "entity_id": "HX-ADMIN-K",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "PA-03.v1",
+          "entity_id": "HX-ADMIN-Q",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "ES-01.v1",
+          "entity_id": "HX-NODE-C",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "ES-01.v1",
+          "entity_id": "HX-NODE-J",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "ES-01.v1",
+          "entity_id": "HX-NODE-N",
+          "expected": "FAIL",
+          "actual": "FAIL",
+          "correct": true
+        },
+        {
+          "control_id": "ES-01.v1",
+          "entity_id": "HX-NODE-R",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "ES-02.v1",
+          "entity_id": "HX-NODE-C",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "ES-02.v1",
+          "entity_id": "HX-NODE-J",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "ES-02.v1",
+          "entity_id": "HX-NODE-N",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "ES-02.v1",
+          "entity_id": "HX-NODE-R",
+          "expected": "FAIL",
+          "actual": "FAIL",
+          "correct": true
+        },
+        {
+          "control_id": "ES-03.v1",
+          "entity_id": "HX-NODE-C",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "ES-03.v1",
+          "entity_id": "HX-NODE-J",
+          "expected": "FAIL",
+          "actual": "FAIL",
+          "correct": true
+        },
+        {
+          "control_id": "ES-03.v1",
+          "entity_id": "HX-NODE-N",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        },
+        {
+          "control_id": "ES-03.v1",
+          "entity_id": "HX-NODE-R",
+          "expected": "PASS",
+          "actual": "PASS",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "name": "Held-out real-agent task completion",
+      "passed": 3,
+      "total": 3,
+      "not_run": 0,
+      "percent": 100.0,
+      "cases": [
+        {
+          "case": "project_governance",
+          "status": "PASS",
+          "checks": {
+            "correct_scope": true,
+            "full_population_tested": true,
+            "results_match_frozen_labels": true,
+            "confirmed_exceptions_proposed": true,
+            "missing_evidence_requested": true,
+            "valid_tool_arguments": true,
+            "no_self_approval": true,
+            "appropriate_stop": true
+          },
+          "execution_date_utc": "2026-10-31T13:03:16.466257+00:00",
+          "session_status": "waiting",
+          "error_code": null,
+          "tool_calls": 16,
+          "failed_tool_calls": 0,
+          "duration_seconds": 46.258
+        },
+        {
+          "case": "privileged_access",
+          "status": "PASS",
+          "checks": {
+            "correct_scope": true,
+            "full_population_tested": true,
+            "results_match_frozen_labels": true,
+            "confirmed_exceptions_proposed": true,
+            "missing_evidence_requested": true,
+            "valid_tool_arguments": true,
+            "no_self_approval": true,
+            "appropriate_stop": true
+          },
+          "execution_date_utc": "2026-10-31T13:03:58.298909+00:00",
+          "session_status": "waiting",
+          "error_code": null,
+          "tool_calls": 14,
+          "failed_tool_calls": 0,
+          "duration_seconds": 41.814
+        },
+        {
+          "case": "endpoint_security",
+          "status": "PASS",
+          "checks": {
+            "correct_scope": true,
+            "full_population_tested": true,
+            "results_match_frozen_labels": true,
+            "confirmed_exceptions_proposed": true,
+            "missing_evidence_requested": true,
+            "valid_tool_arguments": true,
+            "no_self_approval": true,
+            "appropriate_stop": true
+          },
+          "execution_date_utc": "2026-10-31T13:04:37.831588+00:00",
+          "session_status": "waiting",
+          "error_code": null,
+          "tool_calls": 14,
+          "failed_tool_calls": 0,
+          "duration_seconds": 39.507
+        }
+      ]
+    }
+  ],
+  "component_proof": {
+    "counts": {
+      "PASS": 21,
+      "FAIL": 0,
+      "NOT RUN": 0
+    },
+    "test_count": 21,
+    "path": "evaluation\\heldout_runs\\8439ca22-2637-4d7a-9b25-b03be95fec2b\\component_proof.json"
+  },
+  "artifact_directory": "evaluation\\heldout_runs\\8439ca22-2637-4d7a-9b25-b03be95fec2b",
+  "production_and_evaluation_inputs_unchanged": true,
+  "cost": null,
+  "note": "Small pre-existing synthetic held-out partition; expected labels are provisional, not human-validated."
+}
