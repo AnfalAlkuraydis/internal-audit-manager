@@ -501,8 +501,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3791,
-      "sha256": "2e1e679644559adb97739d51b30cad6e1159f5df0508b8383070f2e26c40639a"
+      "bytes": 19408,
+      "sha256": "3b20ec3d45e9a8f3abb394433bbe8f79285a43d9a1bd035da4a4bb1f4cbb24a1"
     },
     {
       "path": "requirements-lock.txt",
